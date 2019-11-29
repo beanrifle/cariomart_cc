@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "lcd.h"
+#include "drivers/mss_uart/mss_uart.h"
+#include "drivers/mss_rtc/drivers/mss_rtc/mss_rtc.h"
+
+int main() {
+	LCD_init();
+	MSS_RTC_init();
+	MSS_RTC_start();
+
+
+	//LCD_startCountdown();
+
+	while(1) {
+		printf("RTC: %i", MSS_RTC_get_rtc_count());
+	}
+}

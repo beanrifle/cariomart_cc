@@ -3,37 +3,37 @@ cariomart_mss_MSS_CM3_0_app:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000fec  20000000  20000000  00008000  2**4
+  0 .text         00001240  20000000  20000000  00008000  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         0000001c  20000fec  20000fec  00008fec  2**2
+  1 .data         0000001c  20001240  20001240  00009240  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000068  20001008  20001008  00009008  2**2
+  2 .bss          0000006c  2000125c  2000125c  0000925c  2**2
                   ALLOC
-  3 .stack        00003000  20001070  20001070  00009008  2**0
+  3 .stack        00003000  200012c8  200012c8  0000925c  2**0
                   ALLOC
-  4 .comment      000000d7  00000000  00000000  00009008  2**0
+  4 .comment      000000d7  00000000  00000000  0000925c  2**0
                   CONTENTS, READONLY
-  5 .debug_aranges 00000288  00000000  00000000  000090df  2**0
+  5 .debug_aranges 000002b8  00000000  00000000  00009333  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 0000058d  00000000  00000000  00009367  2**0
+  6 .debug_pubnames 00000588  00000000  00000000  000095eb  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   00003169  00000000  00000000  000098f4  2**0
+  7 .debug_info   00004455  00000000  00000000  00009b73  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000006da  00000000  00000000  0000ca5d  2**0
+  8 .debug_abbrev 00000837  00000000  00000000  0000dfc8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   0000144e  00000000  00000000  0000d137  2**0
+  9 .debug_line   000016b1  00000000  00000000  0000e7ff  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  00000834  00000000  00000000  0000e588  2**2
+ 10 .debug_frame  000008e0  00000000  00000000  0000feb0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    00001910  00000000  00000000  0000edbc  2**0
+ 11 .debug_str    00001ba9  00000000  00000000  00010790  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00000d6e  00000000  00000000  000106cc  2**0
+ 12 .debug_loc    00000eac  00000000  00000000  00012339  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macinfo 00020b74  00000000  00000000  0001143a  2**0
+ 13 .debug_macinfo 00025935  00000000  00000000  000131e5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .ARM.attributes 00000025  00000000  00000000  00031fae  2**0
+ 14 .ARM.attributes 00000025  00000000  00000000  00038b1a  2**0
                   CONTENTS, READONLY
- 15 .debug_ranges 00000260  00000000  00000000  00031fd3  2**0
+ 15 .debug_ranges 00000290  00000000  00000000  00038b3f  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -62,8 +62,8 @@ Disassembly of section .text:
 2000005c:	20000329 	.word	0x20000329
 20000060:	2000032b 	.word	0x2000032b
 20000064:	2000032d 	.word	0x2000032d
-20000068:	20000cd1 	.word	0x20000cd1
-2000006c:	20000cfd 	.word	0x20000cfd
+20000068:	20000f25 	.word	0x20000f25
+2000006c:	20000f51 	.word	0x20000f51
 20000070:	20000333 	.word	0x20000333
 20000074:	20000335 	.word	0x20000335
 20000078:	20000337 	.word	0x20000337
@@ -711,22 +711,22 @@ Disassembly of section .text:
 20000438 <ACE_PPE_Flag31_IRQHandler>:
 20000438:	e7fe      	b.n	20000438 <ACE_PPE_Flag31_IRQHandler>
 2000043a:	0000      	.short	0x0000
-2000043c:	20000d29 	.word	0x20000d29
+2000043c:	20000f7d 	.word	0x20000f7d
 20000440:	00000000 	.word	0x00000000
 20000444:	20000000 	.word	0x20000000
 20000448:	20000000 	.word	0x20000000
-2000044c:	20000fec 	.word	0x20000fec
-20000450:	20000fec 	.word	0x20000fec
-20000454:	20000fec 	.word	0x20000fec
-20000458:	20001008 	.word	0x20001008
+2000044c:	20001240 	.word	0x20001240
+20000450:	20001240 	.word	0x20001240
+20000454:	20001240 	.word	0x20001240
+20000458:	2000125c 	.word	0x2000125c
 2000045c:	00000000 	.word	0x00000000
-20000460:	20001008 	.word	0x20001008
-20000464:	20001070 	.word	0x20001070
-20000468:	20000f6d 	.word	0x20000f6d
-2000046c:	20000779 	.word	0x20000779
+20000460:	2000125c 	.word	0x2000125c
+20000464:	200012c8 	.word	0x200012c8
+20000468:	200011c1 	.word	0x200011c1
+2000046c:	200009cd 	.word	0x200009cd
 
 20000470 <__do_global_dtors_aux>:
-20000470:	f241 0308 	movw	r3, #4104	; 0x1008
+20000470:	f241 235c 	movw	r3, #4700	; 0x125c
 20000474:	f2c2 0300 	movt	r3, #8192	; 0x2000
 20000478:	781a      	ldrb	r2, [r3, #0]
 2000047a:	b90a      	cbnz	r2, 20000480 <__do_global_dtors_aux+0x10>
@@ -736,7 +736,7 @@ Disassembly of section .text:
 20000482:	bf00      	nop
 
 20000484 <frame_dummy>:
-20000484:	f640 70ec 	movw	r0, #4076	; 0xfec
+20000484:	f241 2040 	movw	r0, #4672	; 0x1240
 20000488:	f2c2 0000 	movt	r0, #8192	; 0x2000
 2000048c:	b508      	push	{r3, lr}
 2000048e:	6803      	ldr	r3, [r0, #0]
@@ -747,1692 +747,1989 @@ Disassembly of section .text:
 2000049c:	4798      	blx	r3
 2000049e:	bd08      	pop	{r3, pc}
 
-200004a0 <LCD_init>:
-#include "lcd.h"
-#include "drivers/mss_uart/mss_uart.h"
-
-
-void LCD_init(void) {
-200004a0:	b580      	push	{r7, lr}
-200004a2:	af00      	add	r7, sp, #0
-	MSS_UART_init(
-200004a4:	f241 0020 	movw	r0, #4128	; 0x1020
-200004a8:	f2c2 0000 	movt	r0, #8192	; 0x2000
-200004ac:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
-200004b0:	f04f 0203 	mov.w	r2, #3
-200004b4:	f000 f986 	bl	200007c4 <MSS_UART_init>
-		&g_mss_uart1,
-		MSS_UART_115200_BAUD,
-		MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
-	);
-
-	LCD_defaultTextSettings();
-200004b8:	f000 f8c2 	bl	20000640 <LCD_defaultTextSettings>
+200004a0 <NVIC_DisableIRQ>:
+ * 
+ * Disable a device specific interupt in the NVIC interrupt controller.
+ * The interrupt number cannot be a negative value.
+ */
+static __INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
+{
+200004a0:	b480      	push	{r7}
+200004a2:	b083      	sub	sp, #12
+200004a4:	af00      	add	r7, sp, #0
+200004a6:	4603      	mov	r3, r0
+200004a8:	80fb      	strh	r3, [r7, #6]
+  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
+200004aa:	f24e 1300 	movw	r3, #57600	; 0xe100
+200004ae:	f2ce 0300 	movt	r3, #57344	; 0xe000
+200004b2:	f9b7 2006 	ldrsh.w	r2, [r7, #6]
+200004b6:	ea4f 1252 	mov.w	r2, r2, lsr #5
+200004ba:	88f9      	ldrh	r1, [r7, #6]
+200004bc:	f001 011f 	and.w	r1, r1, #31
+200004c0:	f04f 0001 	mov.w	r0, #1
+200004c4:	fa00 f101 	lsl.w	r1, r0, r1
+200004c8:	f102 0220 	add.w	r2, r2, #32
+200004cc:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
 }
-200004bc:	bd80      	pop	{r7, pc}
-200004be:	bf00      	nop
+200004d0:	f107 070c 	add.w	r7, r7, #12
+200004d4:	46bd      	mov	sp, r7
+200004d6:	bc80      	pop	{r7}
+200004d8:	4770      	bx	lr
+200004da:	bf00      	nop
 
-200004c0 <LCD_clear>:
-
-void LCD_clear(void) {
-200004c0:	b580      	push	{r7, lr}
-200004c2:	b082      	sub	sp, #8
-200004c4:	af00      	add	r7, sp, #0
-	uint8_t bytes[2] = { 0x7c , 0x00 };
-200004c6:	f04f 037c 	mov.w	r3, #124	; 0x7c
-200004ca:	713b      	strb	r3, [r7, #4]
-200004cc:	f04f 0300 	mov.w	r3, #0
-200004d0:	717b      	strb	r3, [r7, #5]
-	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
-200004d2:	f107 0304 	add.w	r3, r7, #4
-200004d6:	f241 0020 	movw	r0, #4128	; 0x1020
-200004da:	f2c2 0000 	movt	r0, #8192	; 0x2000
-200004de:	4619      	mov	r1, r3
-200004e0:	f04f 0202 	mov.w	r2, #2
-200004e4:	f000 fa70 	bl	200009c8 <MSS_UART_polled_tx>
-	LCD_setHome();
-200004e8:	f000 f86a 	bl	200005c0 <LCD_setHome>
-}
-200004ec:	f107 0708 	add.w	r7, r7, #8
-200004f0:	46bd      	mov	sp, r7
-200004f2:	bd80      	pop	{r7, pc}
-
-200004f4 <LCD_drawLine>:
-
-void LCD_newLine() {
-	LCD_setLineNum(++textProps.line_num);
-}
-
-void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
-200004f4:	b580      	push	{r7, lr}
-200004f6:	b084      	sub	sp, #16
-200004f8:	af00      	add	r7, sp, #0
-200004fa:	71f8      	strb	r0, [r7, #7]
-200004fc:	71b9      	strb	r1, [r7, #6]
-200004fe:	717a      	strb	r2, [r7, #5]
-20000500:	713b      	strb	r3, [r7, #4]
-	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
-20000502:	79bb      	ldrb	r3, [r7, #6]
-20000504:	f1c3 037f 	rsb	r3, r3, #127	; 0x7f
-20000508:	b2da      	uxtb	r2, r3
-2000050a:	793b      	ldrb	r3, [r7, #4]
-2000050c:	f1c3 037f 	rsb	r3, r3, #127	; 0x7f
-20000510:	b2db      	uxtb	r3, r3
-20000512:	f04f 017c 	mov.w	r1, #124	; 0x7c
-20000516:	7239      	strb	r1, [r7, #8]
-20000518:	f04f 010c 	mov.w	r1, #12
-2000051c:	7279      	strb	r1, [r7, #9]
-2000051e:	79f9      	ldrb	r1, [r7, #7]
-20000520:	72b9      	strb	r1, [r7, #10]
-20000522:	72fa      	strb	r2, [r7, #11]
-20000524:	797a      	ldrb	r2, [r7, #5]
-20000526:	733a      	strb	r2, [r7, #12]
-20000528:	737b      	strb	r3, [r7, #13]
-2000052a:	f04f 0301 	mov.w	r3, #1
-2000052e:	73bb      	strb	r3, [r7, #14]
-	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
-20000530:	f107 0308 	add.w	r3, r7, #8
-20000534:	f241 0020 	movw	r0, #4128	; 0x1020
-20000538:	f2c2 0000 	movt	r0, #8192	; 0x2000
-2000053c:	4619      	mov	r1, r3
-2000053e:	f04f 0207 	mov.w	r2, #7
-20000542:	f000 fa41 	bl	200009c8 <MSS_UART_polled_tx>
-}
-20000546:	f107 0710 	add.w	r7, r7, #16
-2000054a:	46bd      	mov	sp, r7
-2000054c:	bd80      	pop	{r7, pc}
-2000054e:	bf00      	nop
-
-20000550 <LCD_setX>:
-void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
-	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , 0x7f - y1 , x2 , 0x7f - y2 };
-	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
-}
-
-void LCD_setX(uint8_t x) {
-20000550:	b580      	push	{r7, lr}
-20000552:	b084      	sub	sp, #16
-20000554:	af00      	add	r7, sp, #0
-20000556:	4603      	mov	r3, r0
-20000558:	71fb      	strb	r3, [r7, #7]
-	uint8_t bytes[3] = { 0x7c , 0x18 , x };
-2000055a:	f04f 037c 	mov.w	r3, #124	; 0x7c
-2000055e:	733b      	strb	r3, [r7, #12]
-20000560:	f04f 0318 	mov.w	r3, #24
-20000564:	737b      	strb	r3, [r7, #13]
-20000566:	79fb      	ldrb	r3, [r7, #7]
-20000568:	73bb      	strb	r3, [r7, #14]
-	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
-2000056a:	f107 030c 	add.w	r3, r7, #12
-2000056e:	f241 0020 	movw	r0, #4128	; 0x1020
-20000572:	f2c2 0000 	movt	r0, #8192	; 0x2000
-20000576:	4619      	mov	r1, r3
-20000578:	f04f 0203 	mov.w	r2, #3
-2000057c:	f000 fa24 	bl	200009c8 <MSS_UART_polled_tx>
-}
-20000580:	f107 0710 	add.w	r7, r7, #16
-20000584:	46bd      	mov	sp, r7
-20000586:	bd80      	pop	{r7, pc}
-
-20000588 <LCD_setY>:
-
-void LCD_setY(uint8_t y) {
-20000588:	b580      	push	{r7, lr}
-2000058a:	b084      	sub	sp, #16
-2000058c:	af00      	add	r7, sp, #0
-2000058e:	4603      	mov	r3, r0
-20000590:	71fb      	strb	r3, [r7, #7]
-	uint8_t bytes[3] = { 0x7c , 0x19 , y };
-20000592:	f04f 037c 	mov.w	r3, #124	; 0x7c
-20000596:	733b      	strb	r3, [r7, #12]
-20000598:	f04f 0319 	mov.w	r3, #25
-2000059c:	737b      	strb	r3, [r7, #13]
-2000059e:	79fb      	ldrb	r3, [r7, #7]
-200005a0:	73bb      	strb	r3, [r7, #14]
-	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
-200005a2:	f107 030c 	add.w	r3, r7, #12
-200005a6:	f241 0020 	movw	r0, #4128	; 0x1020
-200005aa:	f2c2 0000 	movt	r0, #8192	; 0x2000
-200005ae:	4619      	mov	r1, r3
-200005b0:	f04f 0203 	mov.w	r2, #3
-200005b4:	f000 fa08 	bl	200009c8 <MSS_UART_polled_tx>
-}
-200005b8:	f107 0710 	add.w	r7, r7, #16
-200005bc:	46bd      	mov	sp, r7
-200005be:	bd80      	pop	{r7, pc}
-
-200005c0 <LCD_setHome>:
-
-void LCD_setHome() {
-200005c0:	b580      	push	{r7, lr}
-200005c2:	af00      	add	r7, sp, #0
-	LCD_setLineNum(0);
-200005c4:	f04f 0000 	mov.w	r0, #0
-200005c8:	f000 f802 	bl	200005d0 <LCD_setLineNum>
-}
-200005cc:	bd80      	pop	{r7, pc}
-200005ce:	bf00      	nop
-
-200005d0 <LCD_setLineNum>:
-
-void LCD_setLineNum(int line) {
-200005d0:	b580      	push	{r7, lr}
-200005d2:	b082      	sub	sp, #8
-200005d4:	af00      	add	r7, sp, #0
-200005d6:	6078      	str	r0, [r7, #4]
-	LCD_setX(textProps.horiz_indent);
-200005d8:	f241 030c 	movw	r3, #4108	; 0x100c
-200005dc:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200005e0:	685b      	ldr	r3, [r3, #4]
-200005e2:	b2db      	uxtb	r3, r3
-200005e4:	4618      	mov	r0, r3
-200005e6:	f7ff ffb3 	bl	20000550 <LCD_setX>
-	LCD_setY((127 - textProps.vert_indent) - (line * (8 + textProps.padding)));
-200005ea:	f241 030c 	movw	r3, #4108	; 0x100c
-200005ee:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200005f2:	68da      	ldr	r2, [r3, #12]
-200005f4:	f64f 73f8 	movw	r3, #65528	; 0xfff8
-200005f8:	f6cf 73ff 	movt	r3, #65535	; 0xffff
-200005fc:	ebc2 0303 	rsb	r3, r2, r3
-20000600:	b2db      	uxtb	r3, r3
-20000602:	687a      	ldr	r2, [r7, #4]
-20000604:	b2d2      	uxtb	r2, r2
-20000606:	fb02 f303 	mul.w	r3, r2, r3
-2000060a:	b2da      	uxtb	r2, r3
-2000060c:	f241 030c 	movw	r3, #4108	; 0x100c
-20000610:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000614:	689b      	ldr	r3, [r3, #8]
-20000616:	b2db      	uxtb	r3, r3
-20000618:	ebc3 0302 	rsb	r3, r3, r2
-2000061c:	b2db      	uxtb	r3, r3
-2000061e:	f103 037f 	add.w	r3, r3, #127	; 0x7f
-20000622:	b2db      	uxtb	r3, r3
-20000624:	4618      	mov	r0, r3
-20000626:	f7ff ffaf 	bl	20000588 <LCD_setY>
-	textProps.line_num = line;
-2000062a:	f241 030c 	movw	r3, #4108	; 0x100c
-2000062e:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000632:	687a      	ldr	r2, [r7, #4]
-20000634:	601a      	str	r2, [r3, #0]
-}
-20000636:	f107 0708 	add.w	r7, r7, #8
-2000063a:	46bd      	mov	sp, r7
-2000063c:	bd80      	pop	{r7, pc}
-2000063e:	bf00      	nop
-
-20000640 <LCD_defaultTextSettings>:
-	textProps.horiz_indent = horiz_indent;
-	textProps.padding = padding;
-	LCD_setHome();
-}
-
-void LCD_defaultTextSettings() {
-20000640:	b580      	push	{r7, lr}
-20000642:	af00      	add	r7, sp, #0
-	textProps.horiz_indent = 1;
-20000644:	f241 030c 	movw	r3, #4108	; 0x100c
-20000648:	f2c2 0300 	movt	r3, #8192	; 0x2000
-2000064c:	f04f 0201 	mov.w	r2, #1
-20000650:	605a      	str	r2, [r3, #4]
-	textProps.vert_indent = 1;
-20000652:	f241 030c 	movw	r3, #4108	; 0x100c
-20000656:	f2c2 0300 	movt	r3, #8192	; 0x2000
-2000065a:	f04f 0201 	mov.w	r2, #1
-2000065e:	609a      	str	r2, [r3, #8]
-	textProps.padding = 0;
-20000660:	f241 030c 	movw	r3, #4108	; 0x100c
-20000664:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000668:	f04f 0200 	mov.w	r2, #0
-2000066c:	60da      	str	r2, [r3, #12]
-	LCD_setHome();
-2000066e:	f7ff ffa7 	bl	200005c0 <LCD_setHome>
-}
-20000672:	bd80      	pop	{r7, pc}
-
-20000674 <LCD_startCountdown>:
-	LCD_drawBox(9,10,150,22);
-	LCD_drawBox(5,5,155,25);
-	LCD_defaultTextSettings();
-}
-
-void LCD_startCountdown() {
-20000674:	b580      	push	{r7, lr}
-20000676:	af00      	add	r7, sp, #0
-	// Draw large 3
-	LCD_clear();
-20000678:	f7ff ff22 	bl	200004c0 <LCD_clear>
-	LCD_drawLine(60,30,99,30);	// top
-2000067c:	f04f 003c 	mov.w	r0, #60	; 0x3c
-20000680:	f04f 011e 	mov.w	r1, #30
-20000684:	f04f 0263 	mov.w	r2, #99	; 0x63
-20000688:	f04f 031e 	mov.w	r3, #30
-2000068c:	f7ff ff32 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(60,98,99,98);	// bottom
-20000690:	f04f 003c 	mov.w	r0, #60	; 0x3c
-20000694:	f04f 0162 	mov.w	r1, #98	; 0x62
-20000698:	f04f 0263 	mov.w	r2, #99	; 0x63
-2000069c:	f04f 0362 	mov.w	r3, #98	; 0x62
-200006a0:	f7ff ff28 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(99,30,99,98);	// vert
-200006a4:	f04f 0063 	mov.w	r0, #99	; 0x63
-200006a8:	f04f 011e 	mov.w	r1, #30
-200006ac:	f04f 0263 	mov.w	r2, #99	; 0x63
-200006b0:	f04f 0362 	mov.w	r3, #98	; 0x62
-200006b4:	f7ff ff1e 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(60,63,99,63);	// middle
-200006b8:	f04f 003c 	mov.w	r0, #60	; 0x3c
-200006bc:	f04f 013f 	mov.w	r1, #63	; 0x3f
-200006c0:	f04f 0263 	mov.w	r2, #99	; 0x63
-200006c4:	f04f 033f 	mov.w	r3, #63	; 0x3f
-200006c8:	f7ff ff14 	bl	200004f4 <LCD_drawLine>
-
-	// Stall for 1 second
-
-	// Draw large 2
-	LCD_clear();
-200006cc:	f7ff fef8 	bl	200004c0 <LCD_clear>
-	LCD_drawLine(59,30,99,30);	// top
-200006d0:	f04f 003b 	mov.w	r0, #59	; 0x3b
-200006d4:	f04f 011e 	mov.w	r1, #30
-200006d8:	f04f 0263 	mov.w	r2, #99	; 0x63
-200006dc:	f04f 031e 	mov.w	r3, #30
-200006e0:	f7ff ff08 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(59,98,99,98);	// bottom
-200006e4:	f04f 003b 	mov.w	r0, #59	; 0x3b
-200006e8:	f04f 0162 	mov.w	r1, #98	; 0x62
-200006ec:	f04f 0263 	mov.w	r2, #99	; 0x63
-200006f0:	f04f 0362 	mov.w	r3, #98	; 0x62
-200006f4:	f7ff fefe 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(59,63,99,63);	// middle
-200006f8:	f04f 003b 	mov.w	r0, #59	; 0x3b
-200006fc:	f04f 013f 	mov.w	r1, #63	; 0x3f
-20000700:	f04f 0263 	mov.w	r2, #99	; 0x63
-20000704:	f04f 033f 	mov.w	r3, #63	; 0x3f
-20000708:	f7ff fef4 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(99,30,99,63);
-2000070c:	f04f 0063 	mov.w	r0, #99	; 0x63
-20000710:	f04f 011e 	mov.w	r1, #30
-20000714:	f04f 0263 	mov.w	r2, #99	; 0x63
-20000718:	f04f 033f 	mov.w	r3, #63	; 0x3f
-2000071c:	f7ff feea 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(59,63,59,98);
-20000720:	f04f 003b 	mov.w	r0, #59	; 0x3b
-20000724:	f04f 013f 	mov.w	r1, #63	; 0x3f
-20000728:	f04f 023b 	mov.w	r2, #59	; 0x3b
-2000072c:	f04f 0362 	mov.w	r3, #98	; 0x62
-20000730:	f7ff fee0 	bl	200004f4 <LCD_drawLine>
-
-	// Stall for 1 second
-
-	// Draw large 1
-	LCD_clear();
-20000734:	f7ff fec4 	bl	200004c0 <LCD_clear>
-	LCD_drawLine(59,98,99,98);	// bottom
-20000738:	f04f 003b 	mov.w	r0, #59	; 0x3b
-2000073c:	f04f 0162 	mov.w	r1, #98	; 0x62
-20000740:	f04f 0263 	mov.w	r2, #99	; 0x63
-20000744:	f04f 0362 	mov.w	r3, #98	; 0x62
-20000748:	f7ff fed4 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(79,98,79,30);	// middle
-2000074c:	f04f 004f 	mov.w	r0, #79	; 0x4f
-20000750:	f04f 0162 	mov.w	r1, #98	; 0x62
-20000754:	f04f 024f 	mov.w	r2, #79	; 0x4f
-20000758:	f04f 031e 	mov.w	r3, #30
-2000075c:	f7ff feca 	bl	200004f4 <LCD_drawLine>
-	LCD_drawLine(59,38,79,30);	// top
-20000760:	f04f 003b 	mov.w	r0, #59	; 0x3b
-20000764:	f04f 0126 	mov.w	r1, #38	; 0x26
-20000768:	f04f 024f 	mov.w	r2, #79	; 0x4f
-2000076c:	f04f 031e 	mov.w	r3, #30
-20000770:	f7ff fec0 	bl	200004f4 <LCD_drawLine>
-
-	// Stall for 1 second
-
-}
-20000774:	bd80      	pop	{r7, pc}
-20000776:	bf00      	nop
-
-20000778 <main>:
-#include <stdio.h>
-#include "lcd.h"
-#include "drivers/mss_uart/mss_uart.h"
-
-int main() {
-20000778:	b580      	push	{r7, lr}
-2000077a:	af00      	add	r7, sp, #0
-	LCD_init();
-2000077c:	f7ff fe90 	bl	200004a0 <LCD_init>
-
-	LCD_startCountdown();
-20000780:	f7ff ff78 	bl	20000674 <LCD_startCountdown>
-
-	while(1) {
-
-	}
-20000784:	e7fe      	b.n	20000784 <main+0xc>
-20000786:	bf00      	nop
-
-20000788 <NVIC_ClearPendingIRQ>:
+200004dc <NVIC_ClearPendingIRQ>:
  *
  * Clear the pending bit for the specified interrupt. 
  * The interrupt number cannot be a negative value.
  */
 static __INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
 {
-20000788:	b480      	push	{r7}
-2000078a:	b083      	sub	sp, #12
-2000078c:	af00      	add	r7, sp, #0
-2000078e:	4603      	mov	r3, r0
-20000790:	80fb      	strh	r3, [r7, #6]
+200004dc:	b480      	push	{r7}
+200004de:	b083      	sub	sp, #12
+200004e0:	af00      	add	r7, sp, #0
+200004e2:	4603      	mov	r3, r0
+200004e4:	80fb      	strh	r3, [r7, #6]
   NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
-20000792:	f24e 1300 	movw	r3, #57600	; 0xe100
-20000796:	f2ce 0300 	movt	r3, #57344	; 0xe000
-2000079a:	f9b7 2006 	ldrsh.w	r2, [r7, #6]
-2000079e:	ea4f 1252 	mov.w	r2, r2, lsr #5
-200007a2:	88f9      	ldrh	r1, [r7, #6]
-200007a4:	f001 011f 	and.w	r1, r1, #31
-200007a8:	f04f 0001 	mov.w	r0, #1
-200007ac:	fa00 f101 	lsl.w	r1, r0, r1
-200007b0:	f102 0260 	add.w	r2, r2, #96	; 0x60
-200007b4:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+200004e6:	f24e 1300 	movw	r3, #57600	; 0xe100
+200004ea:	f2ce 0300 	movt	r3, #57344	; 0xe000
+200004ee:	f9b7 2006 	ldrsh.w	r2, [r7, #6]
+200004f2:	ea4f 1252 	mov.w	r2, r2, lsr #5
+200004f6:	88f9      	ldrh	r1, [r7, #6]
+200004f8:	f001 011f 	and.w	r1, r1, #31
+200004fc:	f04f 0001 	mov.w	r0, #1
+20000500:	fa00 f101 	lsl.w	r1, r0, r1
+20000504:	f102 0260 	add.w	r2, r2, #96	; 0x60
+20000508:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
 }
-200007b8:	f107 070c 	add.w	r7, r7, #12
-200007bc:	46bd      	mov	sp, r7
-200007be:	bc80      	pop	{r7}
-200007c0:	4770      	bx	lr
-200007c2:	bf00      	nop
+2000050c:	f107 070c 	add.w	r7, r7, #12
+20000510:	46bd      	mov	sp, r7
+20000512:	bc80      	pop	{r7}
+20000514:	4770      	bx	lr
+20000516:	bf00      	nop
 
-200007c4 <MSS_UART_init>:
+20000518 <MSS_TIM1_init>:
+    one-shot mode. Allowed values for this parameter are:
+        - MSS_TIMER_PERIODIC_MODE
+        - MSS_TIMER_ONE_SHOT_MODE
+ */
+static __INLINE void MSS_TIM1_init( mss_timer_mode_t mode )
+{
+20000518:	b580      	push	{r7, lr}
+2000051a:	b082      	sub	sp, #8
+2000051c:	af00      	add	r7, sp, #0
+2000051e:	4603      	mov	r3, r0
+20000520:	71fb      	strb	r3, [r7, #7]
+    NVIC_DisableIRQ( Timer1_IRQn );             /* Disable timer 1 irq in the Cortex-M3 NVIC */  
+20000522:	f04f 0014 	mov.w	r0, #20
+20000526:	f7ff ffbb 	bl	200004a0 <NVIC_DisableIRQ>
+    
+    SYSREG->SOFT_RST_CR &= ~SYSREG_TIMER_SOFTRESET_MASK; /* Take timer block out of reset */
+2000052a:	f242 0300 	movw	r3, #8192	; 0x2000
+2000052e:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000532:	f242 0200 	movw	r2, #8192	; 0x2000
+20000536:	f2ce 0204 	movt	r2, #57348	; 0xe004
+2000053a:	6b12      	ldr	r2, [r2, #48]	; 0x30
+2000053c:	f022 0240 	bic.w	r2, r2, #64	; 0x40
+20000540:	631a      	str	r2, [r3, #48]	; 0x30
+    
+    TIMER->TIM64_MODE = 0U;                     /* switch to 32 bits mode */
+20000542:	f245 0300 	movw	r3, #20480	; 0x5000
+20000546:	f2c4 0300 	movt	r3, #16384	; 0x4000
+2000054a:	f04f 0200 	mov.w	r2, #0
+2000054e:	655a      	str	r2, [r3, #84]	; 0x54
+    
+    TIMER_BITBAND->TIM1ENABLE = 0U;             /* disable timer */
+20000550:	f240 0300 	movw	r3, #0
+20000554:	f2c4 230a 	movt	r3, #16906	; 0x420a
+20000558:	f04f 0200 	mov.w	r2, #0
+2000055c:	f8c3 2180 	str.w	r2, [r3, #384]	; 0x180
+    TIMER_BITBAND->TIM1INTEN = 0U;              /* disable interrupt */
+20000560:	f240 0300 	movw	r3, #0
+20000564:	f2c4 230a 	movt	r3, #16906	; 0x420a
+20000568:	f04f 0200 	mov.w	r2, #0
+2000056c:	f8c3 2188 	str.w	r2, [r3, #392]	; 0x188
+    TIMER_BITBAND->TIM1MODE = (uint32_t)mode;   /* set mode (continuous/one-shot) */
+20000570:	f240 0300 	movw	r3, #0
+20000574:	f2c4 230a 	movt	r3, #16906	; 0x420a
+20000578:	79fa      	ldrb	r2, [r7, #7]
+2000057a:	f8c3 2184 	str.w	r2, [r3, #388]	; 0x184
+    
+    TIMER->TIM1_RIS = 1U;                       /* clear timer 1 interrupt */
+2000057e:	f245 0300 	movw	r3, #20480	; 0x5000
+20000582:	f2c4 0300 	movt	r3, #16384	; 0x4000
+20000586:	f04f 0201 	mov.w	r2, #1
+2000058a:	611a      	str	r2, [r3, #16]
+    NVIC_ClearPendingIRQ( Timer1_IRQn );        /* clear timer 1 interrupt within NVIC */
+2000058c:	f04f 0014 	mov.w	r0, #20
+20000590:	f7ff ffa4 	bl	200004dc <NVIC_ClearPendingIRQ>
+}
+20000594:	f107 0708 	add.w	r7, r7, #8
+20000598:	46bd      	mov	sp, r7
+2000059a:	bd80      	pop	{r7, pc}
+
+2000059c <MSS_TIM1_start>:
+  MSS_TIM1_load_immediate() or MSS_TIM1_load_background() functions. 
+  Note: The MSS_TIM1_start() function is also used to resume the down-counter
+        if previously stopped using MSS_TIM1_stop() function.
+ */
+static __INLINE void MSS_TIM1_start( void )
+{
+2000059c:	b480      	push	{r7}
+2000059e:	af00      	add	r7, sp, #0
+    TIMER_BITBAND->TIM1ENABLE = 1U;    /* enable timer */
+200005a0:	f240 0300 	movw	r3, #0
+200005a4:	f2c4 230a 	movt	r3, #16906	; 0x420a
+200005a8:	f04f 0201 	mov.w	r2, #1
+200005ac:	f8c3 2180 	str.w	r2, [r3, #384]	; 0x180
+}
+200005b0:	46bd      	mov	sp, r7
+200005b2:	bc80      	pop	{r7}
+200005b4:	4770      	bx	lr
+200005b6:	bf00      	nop
+
+200005b8 <MSS_TIM1_get_current_value>:
+  
+  @return
+    This function returns the 32-bits current value of the Timer 1 down-counter.
+ */
+static __INLINE uint32_t MSS_TIM1_get_current_value( void )
+{
+200005b8:	b480      	push	{r7}
+200005ba:	af00      	add	r7, sp, #0
+    return TIMER->TIM1_VAL;
+200005bc:	f245 0300 	movw	r3, #20480	; 0x5000
+200005c0:	f2c4 0300 	movt	r3, #16384	; 0x4000
+200005c4:	681b      	ldr	r3, [r3, #0]
+}
+200005c6:	4618      	mov	r0, r3
+200005c8:	46bd      	mov	sp, r7
+200005ca:	bc80      	pop	{r7}
+200005cc:	4770      	bx	lr
+200005ce:	bf00      	nop
+
+200005d0 <MSS_TIM1_load_immediate>:
+  @param load_value
+    The load_value parameter specifies the value from which the Timer 1 
+    down-counter will start decrementing.
+ */
+static __INLINE void MSS_TIM1_load_immediate( uint32_t load_value )
+{
+200005d0:	b480      	push	{r7}
+200005d2:	b083      	sub	sp, #12
+200005d4:	af00      	add	r7, sp, #0
+200005d6:	6078      	str	r0, [r7, #4]
+    TIMER->TIM1_LOADVAL = load_value;
+200005d8:	f245 0300 	movw	r3, #20480	; 0x5000
+200005dc:	f2c4 0300 	movt	r3, #16384	; 0x4000
+200005e0:	687a      	ldr	r2, [r7, #4]
+200005e2:	605a      	str	r2, [r3, #4]
+}
+200005e4:	f107 070c 	add.w	r7, r7, #12
+200005e8:	46bd      	mov	sp, r7
+200005ea:	bc80      	pop	{r7}
+200005ec:	4770      	bx	lr
+200005ee:	bf00      	nop
+
+200005f0 <LCD_init>:
+#include "lcd.h"
+#include "drivers/mss_uart/mss_uart.h"
+#include "drivers/mss_timer/mss_timer.h"
+
+
+void LCD_init(void) {
+200005f0:	b580      	push	{r7, lr}
+200005f2:	af00      	add	r7, sp, #0
+	MSS_UART_init(
+200005f4:	f241 2074 	movw	r0, #4724	; 0x1274
+200005f8:	f2c2 0000 	movt	r0, #8192	; 0x2000
+200005fc:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
+20000600:	f04f 0203 	mov.w	r2, #3
+20000604:	f000 fa08 	bl	20000a18 <MSS_UART_init>
+		&g_mss_uart1,
+		MSS_UART_115200_BAUD,
+		MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
+	);
+
+	LCD_defaultTextSettings();
+20000608:	f000 f8ec 	bl	200007e4 <LCD_defaultTextSettings>
+}
+2000060c:	bd80      	pop	{r7, pc}
+2000060e:	bf00      	nop
+
+20000610 <LCD_clear>:
+
+void LCD_clear(void) {
+20000610:	b580      	push	{r7, lr}
+20000612:	b082      	sub	sp, #8
+20000614:	af00      	add	r7, sp, #0
+	uint8_t bytes[2] = { 0x7c , 0x00 };
+20000616:	f04f 037c 	mov.w	r3, #124	; 0x7c
+2000061a:	713b      	strb	r3, [r7, #4]
+2000061c:	f04f 0300 	mov.w	r3, #0
+20000620:	717b      	strb	r3, [r7, #5]
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+20000622:	f107 0304 	add.w	r3, r7, #4
+20000626:	f241 2074 	movw	r0, #4724	; 0x1274
+2000062a:	f2c2 0000 	movt	r0, #8192	; 0x2000
+2000062e:	4619      	mov	r1, r3
+20000630:	f04f 0202 	mov.w	r2, #2
+20000634:	f000 faf2 	bl	20000c1c <MSS_UART_polled_tx>
+	LCD_setHome();
+20000638:	f000 f894 	bl	20000764 <LCD_setHome>
+}
+2000063c:	f107 0708 	add.w	r7, r7, #8
+20000640:	46bd      	mov	sp, r7
+20000642:	bd80      	pop	{r7, pc}
+
+20000644 <LCD_drawLine>:
+
+void LCD_newLine() {
+	LCD_setLineNum(++textProps.line_num);
+}
+
+void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+20000644:	b580      	push	{r7, lr}
+20000646:	b084      	sub	sp, #16
+20000648:	af00      	add	r7, sp, #0
+2000064a:	71f8      	strb	r0, [r7, #7]
+2000064c:	71b9      	strb	r1, [r7, #6]
+2000064e:	717a      	strb	r2, [r7, #5]
+20000650:	713b      	strb	r3, [r7, #4]
+	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+20000652:	79bb      	ldrb	r3, [r7, #6]
+20000654:	f1c3 037f 	rsb	r3, r3, #127	; 0x7f
+20000658:	b2da      	uxtb	r2, r3
+2000065a:	793b      	ldrb	r3, [r7, #4]
+2000065c:	f1c3 037f 	rsb	r3, r3, #127	; 0x7f
+20000660:	b2db      	uxtb	r3, r3
+20000662:	f04f 017c 	mov.w	r1, #124	; 0x7c
+20000666:	7239      	strb	r1, [r7, #8]
+20000668:	f04f 010c 	mov.w	r1, #12
+2000066c:	7279      	strb	r1, [r7, #9]
+2000066e:	79f9      	ldrb	r1, [r7, #7]
+20000670:	72b9      	strb	r1, [r7, #10]
+20000672:	72fa      	strb	r2, [r7, #11]
+20000674:	797a      	ldrb	r2, [r7, #5]
+20000676:	733a      	strb	r2, [r7, #12]
+20000678:	737b      	strb	r3, [r7, #13]
+2000067a:	f04f 0301 	mov.w	r3, #1
+2000067e:	73bb      	strb	r3, [r7, #14]
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+20000680:	f107 0308 	add.w	r3, r7, #8
+20000684:	f241 2074 	movw	r0, #4724	; 0x1274
+20000688:	f2c2 0000 	movt	r0, #8192	; 0x2000
+2000068c:	4619      	mov	r1, r3
+2000068e:	f04f 0207 	mov.w	r2, #7
+20000692:	f000 fac3 	bl	20000c1c <MSS_UART_polled_tx>
+}
+20000696:	f107 0710 	add.w	r7, r7, #16
+2000069a:	46bd      	mov	sp, r7
+2000069c:	bd80      	pop	{r7, pc}
+2000069e:	bf00      	nop
+
+200006a0 <LCD_drawCircle>:
+void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius) {
+200006a0:	b580      	push	{r7, lr}
+200006a2:	b084      	sub	sp, #16
+200006a4:	af00      	add	r7, sp, #0
+200006a6:	4613      	mov	r3, r2
+200006a8:	4602      	mov	r2, r0
+200006aa:	71fa      	strb	r2, [r7, #7]
+200006ac:	460a      	mov	r2, r1
+200006ae:	71ba      	strb	r2, [r7, #6]
+200006b0:	717b      	strb	r3, [r7, #5]
+	uint8_t bytes[6] = { 0x7c , 0x03 , x , 0x7f - y , radius , 0x01 };
+200006b2:	79bb      	ldrb	r3, [r7, #6]
+200006b4:	f1c3 037f 	rsb	r3, r3, #127	; 0x7f
+200006b8:	b2db      	uxtb	r3, r3
+200006ba:	f04f 027c 	mov.w	r2, #124	; 0x7c
+200006be:	723a      	strb	r2, [r7, #8]
+200006c0:	f04f 0203 	mov.w	r2, #3
+200006c4:	727a      	strb	r2, [r7, #9]
+200006c6:	79fa      	ldrb	r2, [r7, #7]
+200006c8:	72ba      	strb	r2, [r7, #10]
+200006ca:	72fb      	strb	r3, [r7, #11]
+200006cc:	797b      	ldrb	r3, [r7, #5]
+200006ce:	733b      	strb	r3, [r7, #12]
+200006d0:	f04f 0301 	mov.w	r3, #1
+200006d4:	737b      	strb	r3, [r7, #13]
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+200006d6:	f107 0308 	add.w	r3, r7, #8
+200006da:	f241 2074 	movw	r0, #4724	; 0x1274
+200006de:	f2c2 0000 	movt	r0, #8192	; 0x2000
+200006e2:	4619      	mov	r1, r3
+200006e4:	f04f 0206 	mov.w	r2, #6
+200006e8:	f000 fa98 	bl	20000c1c <MSS_UART_polled_tx>
+}
+200006ec:	f107 0710 	add.w	r7, r7, #16
+200006f0:	46bd      	mov	sp, r7
+200006f2:	bd80      	pop	{r7, pc}
+
+200006f4 <LCD_setX>:
+void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , 0x7f - y1 , x2 , 0x7f - y2 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setX(uint8_t x) {
+200006f4:	b580      	push	{r7, lr}
+200006f6:	b084      	sub	sp, #16
+200006f8:	af00      	add	r7, sp, #0
+200006fa:	4603      	mov	r3, r0
+200006fc:	71fb      	strb	r3, [r7, #7]
+	uint8_t bytes[3] = { 0x7c , 0x18 , x };
+200006fe:	f04f 037c 	mov.w	r3, #124	; 0x7c
+20000702:	733b      	strb	r3, [r7, #12]
+20000704:	f04f 0318 	mov.w	r3, #24
+20000708:	737b      	strb	r3, [r7, #13]
+2000070a:	79fb      	ldrb	r3, [r7, #7]
+2000070c:	73bb      	strb	r3, [r7, #14]
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+2000070e:	f107 030c 	add.w	r3, r7, #12
+20000712:	f241 2074 	movw	r0, #4724	; 0x1274
+20000716:	f2c2 0000 	movt	r0, #8192	; 0x2000
+2000071a:	4619      	mov	r1, r3
+2000071c:	f04f 0203 	mov.w	r2, #3
+20000720:	f000 fa7c 	bl	20000c1c <MSS_UART_polled_tx>
+}
+20000724:	f107 0710 	add.w	r7, r7, #16
+20000728:	46bd      	mov	sp, r7
+2000072a:	bd80      	pop	{r7, pc}
+
+2000072c <LCD_setY>:
+
+void LCD_setY(uint8_t y) {
+2000072c:	b580      	push	{r7, lr}
+2000072e:	b084      	sub	sp, #16
+20000730:	af00      	add	r7, sp, #0
+20000732:	4603      	mov	r3, r0
+20000734:	71fb      	strb	r3, [r7, #7]
+	uint8_t bytes[3] = { 0x7c , 0x19 , y };
+20000736:	f04f 037c 	mov.w	r3, #124	; 0x7c
+2000073a:	733b      	strb	r3, [r7, #12]
+2000073c:	f04f 0319 	mov.w	r3, #25
+20000740:	737b      	strb	r3, [r7, #13]
+20000742:	79fb      	ldrb	r3, [r7, #7]
+20000744:	73bb      	strb	r3, [r7, #14]
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+20000746:	f107 030c 	add.w	r3, r7, #12
+2000074a:	f241 2074 	movw	r0, #4724	; 0x1274
+2000074e:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000752:	4619      	mov	r1, r3
+20000754:	f04f 0203 	mov.w	r2, #3
+20000758:	f000 fa60 	bl	20000c1c <MSS_UART_polled_tx>
+}
+2000075c:	f107 0710 	add.w	r7, r7, #16
+20000760:	46bd      	mov	sp, r7
+20000762:	bd80      	pop	{r7, pc}
+
+20000764 <LCD_setHome>:
+
+void LCD_setHome() {
+20000764:	b580      	push	{r7, lr}
+20000766:	af00      	add	r7, sp, #0
+	LCD_setLineNum(0);
+20000768:	f04f 0000 	mov.w	r0, #0
+2000076c:	f000 f802 	bl	20000774 <LCD_setLineNum>
+}
+20000770:	bd80      	pop	{r7, pc}
+20000772:	bf00      	nop
+
+20000774 <LCD_setLineNum>:
+
+void LCD_setLineNum(int line) {
+20000774:	b580      	push	{r7, lr}
+20000776:	b082      	sub	sp, #8
+20000778:	af00      	add	r7, sp, #0
+2000077a:	6078      	str	r0, [r7, #4]
+	LCD_setX(textProps.horiz_indent);
+2000077c:	f241 2360 	movw	r3, #4704	; 0x1260
+20000780:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000784:	685b      	ldr	r3, [r3, #4]
+20000786:	b2db      	uxtb	r3, r3
+20000788:	4618      	mov	r0, r3
+2000078a:	f7ff ffb3 	bl	200006f4 <LCD_setX>
+	LCD_setY((127 - textProps.vert_indent) - (line * (8 + textProps.padding)));
+2000078e:	f241 2360 	movw	r3, #4704	; 0x1260
+20000792:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000796:	68da      	ldr	r2, [r3, #12]
+20000798:	f64f 73f8 	movw	r3, #65528	; 0xfff8
+2000079c:	f6cf 73ff 	movt	r3, #65535	; 0xffff
+200007a0:	ebc2 0303 	rsb	r3, r2, r3
+200007a4:	b2db      	uxtb	r3, r3
+200007a6:	687a      	ldr	r2, [r7, #4]
+200007a8:	b2d2      	uxtb	r2, r2
+200007aa:	fb02 f303 	mul.w	r3, r2, r3
+200007ae:	b2da      	uxtb	r2, r3
+200007b0:	f241 2360 	movw	r3, #4704	; 0x1260
+200007b4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200007b8:	689b      	ldr	r3, [r3, #8]
+200007ba:	b2db      	uxtb	r3, r3
+200007bc:	ebc3 0302 	rsb	r3, r3, r2
+200007c0:	b2db      	uxtb	r3, r3
+200007c2:	f103 037f 	add.w	r3, r3, #127	; 0x7f
+200007c6:	b2db      	uxtb	r3, r3
+200007c8:	4618      	mov	r0, r3
+200007ca:	f7ff ffaf 	bl	2000072c <LCD_setY>
+	textProps.line_num = line;
+200007ce:	f241 2360 	movw	r3, #4704	; 0x1260
+200007d2:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200007d6:	687a      	ldr	r2, [r7, #4]
+200007d8:	601a      	str	r2, [r3, #0]
+}
+200007da:	f107 0708 	add.w	r7, r7, #8
+200007de:	46bd      	mov	sp, r7
+200007e0:	bd80      	pop	{r7, pc}
+200007e2:	bf00      	nop
+
+200007e4 <LCD_defaultTextSettings>:
+	textProps.horiz_indent = horiz_indent;
+	textProps.padding = padding;
+	LCD_setHome();
+}
+
+void LCD_defaultTextSettings() {
+200007e4:	b580      	push	{r7, lr}
+200007e6:	af00      	add	r7, sp, #0
+	textProps.horiz_indent = 1;
+200007e8:	f241 2360 	movw	r3, #4704	; 0x1260
+200007ec:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200007f0:	f04f 0201 	mov.w	r2, #1
+200007f4:	605a      	str	r2, [r3, #4]
+	textProps.vert_indent = 1;
+200007f6:	f241 2360 	movw	r3, #4704	; 0x1260
+200007fa:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200007fe:	f04f 0201 	mov.w	r2, #1
+20000802:	609a      	str	r2, [r3, #8]
+	textProps.padding = 0;
+20000804:	f241 2360 	movw	r3, #4704	; 0x1260
+20000808:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000080c:	f04f 0200 	mov.w	r2, #0
+20000810:	60da      	str	r2, [r3, #12]
+	LCD_setHome();
+20000812:	f7ff ffa7 	bl	20000764 <LCD_setHome>
+}
+20000816:	bd80      	pop	{r7, pc}
+
+20000818 <LCD_countdown>:
+	LCD_drawBox(9,10,150,22);
+	LCD_drawBox(5,5,155,25);
+	LCD_defaultTextSettings();
+}
+
+void LCD_countdown() {
+20000818:	b580      	push	{r7, lr}
+2000081a:	b082      	sub	sp, #8
+2000081c:	af00      	add	r7, sp, #0
+	MSS_TIM1_init(MSS_TIMER_ONE_SHOT_MODE);
+2000081e:	f04f 0001 	mov.w	r0, #1
+20000822:	f7ff fe79 	bl	20000518 <MSS_TIM1_init>
+	MSS_TIM1_load_immediate(0x7fffffff);
+20000826:	f06f 4000 	mvn.w	r0, #2147483648	; 0x80000000
+2000082a:	f7ff fed1 	bl	200005d0 <MSS_TIM1_load_immediate>
+	MSS_TIM1_start();
+2000082e:	f7ff feb5 	bl	2000059c <MSS_TIM1_start>
+
+	// Draw large 3
+	LCD_clear();
+20000832:	f7ff feed 	bl	20000610 <LCD_clear>
+	LCD_drawCircle(79,63,60);
+20000836:	f04f 004f 	mov.w	r0, #79	; 0x4f
+2000083a:	f04f 013f 	mov.w	r1, #63	; 0x3f
+2000083e:	f04f 023c 	mov.w	r2, #60	; 0x3c
+20000842:	f7ff ff2d 	bl	200006a0 <LCD_drawCircle>
+	LCD_drawLine(60,30,99,30);	// top
+20000846:	f04f 003c 	mov.w	r0, #60	; 0x3c
+2000084a:	f04f 011e 	mov.w	r1, #30
+2000084e:	f04f 0263 	mov.w	r2, #99	; 0x63
+20000852:	f04f 031e 	mov.w	r3, #30
+20000856:	f7ff fef5 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(60,98,99,98);	// bottom
+2000085a:	f04f 003c 	mov.w	r0, #60	; 0x3c
+2000085e:	f04f 0162 	mov.w	r1, #98	; 0x62
+20000862:	f04f 0263 	mov.w	r2, #99	; 0x63
+20000866:	f04f 0362 	mov.w	r3, #98	; 0x62
+2000086a:	f7ff feeb 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(99,30,99,98);	// vert
+2000086e:	f04f 0063 	mov.w	r0, #99	; 0x63
+20000872:	f04f 011e 	mov.w	r1, #30
+20000876:	f04f 0263 	mov.w	r2, #99	; 0x63
+2000087a:	f04f 0362 	mov.w	r3, #98	; 0x62
+2000087e:	f7ff fee1 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(60,63,99,63);	// middle
+20000882:	f04f 003c 	mov.w	r0, #60	; 0x3c
+20000886:	f04f 013f 	mov.w	r1, #63	; 0x3f
+2000088a:	f04f 0263 	mov.w	r2, #99	; 0x63
+2000088e:	f04f 033f 	mov.w	r3, #63	; 0x3f
+20000892:	f7ff fed7 	bl	20000644 <LCD_drawLine>
+
+	// Stall for 1 second
+	uint32_t start_time = MSS_TIM1_get_current_value();
+20000896:	f7ff fe8f 	bl	200005b8 <MSS_TIM1_get_current_value>
+2000089a:	4603      	mov	r3, r0
+2000089c:	607b      	str	r3, [r7, #4]
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+2000089e:	f7ff fe8b 	bl	200005b8 <MSS_TIM1_get_current_value>
+200008a2:	4603      	mov	r3, r0
+200008a4:	687a      	ldr	r2, [r7, #4]
+200008a6:	ebc3 0202 	rsb	r2, r3, r2
+200008aa:	f24e 03ff 	movw	r3, #57599	; 0xe0ff
+200008ae:	f2c0 53f5 	movt	r3, #1525	; 0x5f5
+200008b2:	429a      	cmp	r2, r3
+200008b4:	d9f3      	bls.n	2000089e <LCD_countdown+0x86>
+
+	// Draw large 2
+	LCD_clear();
+200008b6:	f7ff feab 	bl	20000610 <LCD_clear>
+	LCD_drawCircle(79,63,60);
+200008ba:	f04f 004f 	mov.w	r0, #79	; 0x4f
+200008be:	f04f 013f 	mov.w	r1, #63	; 0x3f
+200008c2:	f04f 023c 	mov.w	r2, #60	; 0x3c
+200008c6:	f7ff feeb 	bl	200006a0 <LCD_drawCircle>
+	LCD_drawLine(59,30,99,30);	// top
+200008ca:	f04f 003b 	mov.w	r0, #59	; 0x3b
+200008ce:	f04f 011e 	mov.w	r1, #30
+200008d2:	f04f 0263 	mov.w	r2, #99	; 0x63
+200008d6:	f04f 031e 	mov.w	r3, #30
+200008da:	f7ff feb3 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(59,98,99,98);	// bottom
+200008de:	f04f 003b 	mov.w	r0, #59	; 0x3b
+200008e2:	f04f 0162 	mov.w	r1, #98	; 0x62
+200008e6:	f04f 0263 	mov.w	r2, #99	; 0x63
+200008ea:	f04f 0362 	mov.w	r3, #98	; 0x62
+200008ee:	f7ff fea9 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(59,63,99,63);	// middle
+200008f2:	f04f 003b 	mov.w	r0, #59	; 0x3b
+200008f6:	f04f 013f 	mov.w	r1, #63	; 0x3f
+200008fa:	f04f 0263 	mov.w	r2, #99	; 0x63
+200008fe:	f04f 033f 	mov.w	r3, #63	; 0x3f
+20000902:	f7ff fe9f 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(99,30,99,63);
+20000906:	f04f 0063 	mov.w	r0, #99	; 0x63
+2000090a:	f04f 011e 	mov.w	r1, #30
+2000090e:	f04f 0263 	mov.w	r2, #99	; 0x63
+20000912:	f04f 033f 	mov.w	r3, #63	; 0x3f
+20000916:	f7ff fe95 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(59,63,59,98);
+2000091a:	f04f 003b 	mov.w	r0, #59	; 0x3b
+2000091e:	f04f 013f 	mov.w	r1, #63	; 0x3f
+20000922:	f04f 023b 	mov.w	r2, #59	; 0x3b
+20000926:	f04f 0362 	mov.w	r3, #98	; 0x62
+2000092a:	f7ff fe8b 	bl	20000644 <LCD_drawLine>
+
+	// Stall for 1 second
+	start_time = MSS_TIM1_get_current_value();
+2000092e:	f7ff fe43 	bl	200005b8 <MSS_TIM1_get_current_value>
+20000932:	4603      	mov	r3, r0
+20000934:	607b      	str	r3, [r7, #4]
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+20000936:	f7ff fe3f 	bl	200005b8 <MSS_TIM1_get_current_value>
+2000093a:	4603      	mov	r3, r0
+2000093c:	687a      	ldr	r2, [r7, #4]
+2000093e:	ebc3 0202 	rsb	r2, r3, r2
+20000942:	f24e 03ff 	movw	r3, #57599	; 0xe0ff
+20000946:	f2c0 53f5 	movt	r3, #1525	; 0x5f5
+2000094a:	429a      	cmp	r2, r3
+2000094c:	d9f3      	bls.n	20000936 <LCD_countdown+0x11e>
+
+	// Draw large 1
+	LCD_clear();
+2000094e:	f7ff fe5f 	bl	20000610 <LCD_clear>
+	LCD_drawCircle(79,63,60);
+20000952:	f04f 004f 	mov.w	r0, #79	; 0x4f
+20000956:	f04f 013f 	mov.w	r1, #63	; 0x3f
+2000095a:	f04f 023c 	mov.w	r2, #60	; 0x3c
+2000095e:	f7ff fe9f 	bl	200006a0 <LCD_drawCircle>
+	LCD_drawLine(59,98,99,98);	// bottom
+20000962:	f04f 003b 	mov.w	r0, #59	; 0x3b
+20000966:	f04f 0162 	mov.w	r1, #98	; 0x62
+2000096a:	f04f 0263 	mov.w	r2, #99	; 0x63
+2000096e:	f04f 0362 	mov.w	r3, #98	; 0x62
+20000972:	f7ff fe67 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(79,98,79,30);	// middle
+20000976:	f04f 004f 	mov.w	r0, #79	; 0x4f
+2000097a:	f04f 0162 	mov.w	r1, #98	; 0x62
+2000097e:	f04f 024f 	mov.w	r2, #79	; 0x4f
+20000982:	f04f 031e 	mov.w	r3, #30
+20000986:	f7ff fe5d 	bl	20000644 <LCD_drawLine>
+	LCD_drawLine(59,38,79,30);	// top
+2000098a:	f04f 003b 	mov.w	r0, #59	; 0x3b
+2000098e:	f04f 0126 	mov.w	r1, #38	; 0x26
+20000992:	f04f 024f 	mov.w	r2, #79	; 0x4f
+20000996:	f04f 031e 	mov.w	r3, #30
+2000099a:	f7ff fe53 	bl	20000644 <LCD_drawLine>
+
+	// Stall for 1 second
+	start_time = MSS_TIM1_get_current_value();
+2000099e:	f7ff fe0b 	bl	200005b8 <MSS_TIM1_get_current_value>
+200009a2:	4603      	mov	r3, r0
+200009a4:	607b      	str	r3, [r7, #4]
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+200009a6:	f7ff fe07 	bl	200005b8 <MSS_TIM1_get_current_value>
+200009aa:	4603      	mov	r3, r0
+200009ac:	687a      	ldr	r2, [r7, #4]
+200009ae:	ebc3 0202 	rsb	r2, r3, r2
+200009b2:	f24e 03ff 	movw	r3, #57599	; 0xe0ff
+200009b6:	f2c0 53f5 	movt	r3, #1525	; 0x5f5
+200009ba:	429a      	cmp	r2, r3
+200009bc:	d9f3      	bls.n	200009a6 <LCD_countdown+0x18e>
+
+	LCD_clear();
+200009be:	f7ff fe27 	bl	20000610 <LCD_clear>
+}
+200009c2:	f107 0708 	add.w	r7, r7, #8
+200009c6:	46bd      	mov	sp, r7
+200009c8:	bd80      	pop	{r7, pc}
+200009ca:	bf00      	nop
+
+200009cc <main>:
+#include <stdio.h>
+#include "lcd.h"
+#include "drivers/mss_uart/mss_uart.h"
+
+
+int main() {
+200009cc:	b580      	push	{r7, lr}
+200009ce:	af00      	add	r7, sp, #0
+	LCD_init();
+200009d0:	f7ff fe0e 	bl	200005f0 <LCD_init>
+
+	//LCD_showRaceIntro();
+	LCD_countdown();
+200009d4:	f7ff ff20 	bl	20000818 <LCD_countdown>
+
+	while(1) {
+
+	}
+200009d8:	e7fe      	b.n	200009d8 <main+0xc>
+200009da:	bf00      	nop
+
+200009dc <NVIC_ClearPendingIRQ>:
+ *
+ * Clear the pending bit for the specified interrupt. 
+ * The interrupt number cannot be a negative value.
+ */
+static __INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+{
+200009dc:	b480      	push	{r7}
+200009de:	b083      	sub	sp, #12
+200009e0:	af00      	add	r7, sp, #0
+200009e2:	4603      	mov	r3, r0
+200009e4:	80fb      	strh	r3, [r7, #6]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+200009e6:	f24e 1300 	movw	r3, #57600	; 0xe100
+200009ea:	f2ce 0300 	movt	r3, #57344	; 0xe000
+200009ee:	f9b7 2006 	ldrsh.w	r2, [r7, #6]
+200009f2:	ea4f 1252 	mov.w	r2, r2, lsr #5
+200009f6:	88f9      	ldrh	r1, [r7, #6]
+200009f8:	f001 011f 	and.w	r1, r1, #31
+200009fc:	f04f 0001 	mov.w	r0, #1
+20000a00:	fa00 f101 	lsl.w	r1, r0, r1
+20000a04:	f102 0260 	add.w	r2, r2, #96	; 0x60
+20000a08:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+}
+20000a0c:	f107 070c 	add.w	r7, r7, #12
+20000a10:	46bd      	mov	sp, r7
+20000a12:	bc80      	pop	{r7}
+20000a14:	4770      	bx	lr
+20000a16:	bf00      	nop
+
+20000a18 <MSS_UART_init>:
 (
     mss_uart_instance_t* this_uart,
     uint32_t baud_rate,
     uint8_t line_config
 )
 {
-200007c4:	b580      	push	{r7, lr}
-200007c6:	b088      	sub	sp, #32
-200007c8:	af00      	add	r7, sp, #0
-200007ca:	60f8      	str	r0, [r7, #12]
-200007cc:	60b9      	str	r1, [r7, #8]
-200007ce:	4613      	mov	r3, r2
-200007d0:	71fb      	strb	r3, [r7, #7]
+20000a18:	b580      	push	{r7, lr}
+20000a1a:	b088      	sub	sp, #32
+20000a1c:	af00      	add	r7, sp, #0
+20000a1e:	60f8      	str	r0, [r7, #12]
+20000a20:	60b9      	str	r1, [r7, #8]
+20000a22:	4613      	mov	r3, r2
+20000a24:	71fb      	strb	r3, [r7, #7]
     uint16_t baud_value = 1U;
-200007d2:	f04f 0301 	mov.w	r3, #1
-200007d6:	82fb      	strh	r3, [r7, #22]
+20000a26:	f04f 0301 	mov.w	r3, #1
+20000a2a:	82fb      	strh	r3, [r7, #22]
     uint32_t pclk_freq = 0U;
-200007d8:	f04f 0300 	mov.w	r3, #0
-200007dc:	61bb      	str	r3, [r7, #24]
+20000a2c:	f04f 0300 	mov.w	r3, #0
+20000a30:	61bb      	str	r3, [r7, #24]
     uint32_t baud_value_l;
 
     /* The driver expects g_mss_uart0 and g_mss_uart1 to be the only
      * mss_uart_instance_t instances used to identify UART0 and UART1. */
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
-200007de:	68fa      	ldr	r2, [r7, #12]
-200007e0:	f241 0348 	movw	r3, #4168	; 0x1048
-200007e4:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200007e8:	429a      	cmp	r2, r3
-200007ea:	d007      	beq.n	200007fc <MSS_UART_init+0x38>
-200007ec:	68fa      	ldr	r2, [r7, #12]
-200007ee:	f241 0320 	movw	r3, #4128	; 0x1020
-200007f2:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200007f6:	429a      	cmp	r2, r3
-200007f8:	d000      	beq.n	200007fc <MSS_UART_init+0x38>
-200007fa:	be00      	bkpt	0x0000
+20000a32:	68fa      	ldr	r2, [r7, #12]
+20000a34:	f241 239c 	movw	r3, #4764	; 0x129c
+20000a38:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a3c:	429a      	cmp	r2, r3
+20000a3e:	d007      	beq.n	20000a50 <MSS_UART_init+0x38>
+20000a40:	68fa      	ldr	r2, [r7, #12]
+20000a42:	f241 2374 	movw	r3, #4724	; 0x1274
+20000a46:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a4a:	429a      	cmp	r2, r3
+20000a4c:	d000      	beq.n	20000a50 <MSS_UART_init+0x38>
+20000a4e:	be00      	bkpt	0x0000
 
     /* baud_rate should be greater than 0 */
     ASSERT( 0U < baud_rate );
-200007fc:	68bb      	ldr	r3, [r7, #8]
-200007fe:	2b00      	cmp	r3, #0
-20000800:	d100      	bne.n	20000804 <MSS_UART_init+0x40>
-20000802:	be00      	bkpt	0x0000
+20000a50:	68bb      	ldr	r3, [r7, #8]
+20000a52:	2b00      	cmp	r3, #0
+20000a54:	d100      	bne.n	20000a58 <MSS_UART_init+0x40>
+20000a56:	be00      	bkpt	0x0000
 
     /* Force the value of the CMSIS global variables holding the various system
      * clock frequencies to be updated. */
     SystemCoreClockUpdate();
-20000804:	f000 fa96 	bl	20000d34 <SystemCoreClockUpdate>
+20000a58:	f000 fa96 	bl	20000f88 <SystemCoreClockUpdate>
 
     if ( this_uart == &g_mss_uart0 )
-20000808:	68fa      	ldr	r2, [r7, #12]
-2000080a:	f241 0348 	movw	r3, #4168	; 0x1048
-2000080e:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000812:	429a      	cmp	r2, r3
-20000814:	d12e      	bne.n	20000874 <MSS_UART_init+0xb0>
+20000a5c:	68fa      	ldr	r2, [r7, #12]
+20000a5e:	f241 239c 	movw	r3, #4764	; 0x129c
+20000a62:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a66:	429a      	cmp	r2, r3
+20000a68:	d12e      	bne.n	20000ac8 <MSS_UART_init+0xb0>
     {
         this_uart->hw_reg = UART0;
-20000816:	68fb      	ldr	r3, [r7, #12]
-20000818:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
-2000081c:	601a      	str	r2, [r3, #0]
+20000a6a:	68fb      	ldr	r3, [r7, #12]
+20000a6c:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
+20000a70:	601a      	str	r2, [r3, #0]
         this_uart->hw_reg_bit = UART0_BITBAND;
-2000081e:	68fb      	ldr	r3, [r7, #12]
-20000820:	f04f 4284 	mov.w	r2, #1107296256	; 0x42000000
-20000824:	605a      	str	r2, [r3, #4]
+20000a72:	68fb      	ldr	r3, [r7, #12]
+20000a74:	f04f 4284 	mov.w	r2, #1107296256	; 0x42000000
+20000a78:	605a      	str	r2, [r3, #4]
         this_uart->irqn = UART0_IRQn;
-20000826:	68fb      	ldr	r3, [r7, #12]
-20000828:	f04f 020a 	mov.w	r2, #10
-2000082c:	811a      	strh	r2, [r3, #8]
+20000a7a:	68fb      	ldr	r3, [r7, #12]
+20000a7c:	f04f 020a 	mov.w	r2, #10
+20000a80:	811a      	strh	r2, [r3, #8]
 
         pclk_freq = g_FrequencyPCLK0;
-2000082e:	f640 73f8 	movw	r3, #4088	; 0xff8
-20000832:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000836:	681b      	ldr	r3, [r3, #0]
-20000838:	61bb      	str	r3, [r7, #24]
+20000a82:	f241 234c 	movw	r3, #4684	; 0x124c
+20000a86:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a8a:	681b      	ldr	r3, [r3, #0]
+20000a8c:	61bb      	str	r3, [r7, #24]
 
         /* reset UART0 */
         SYSREG->SOFT_RST_CR |= SYSREG_UART0_SOFTRESET_MASK;
-2000083a:	f242 0300 	movw	r3, #8192	; 0x2000
-2000083e:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000842:	f242 0200 	movw	r2, #8192	; 0x2000
-20000846:	f2ce 0204 	movt	r2, #57348	; 0xe004
-2000084a:	6b12      	ldr	r2, [r2, #48]	; 0x30
-2000084c:	f042 0280 	orr.w	r2, r2, #128	; 0x80
-20000850:	631a      	str	r2, [r3, #48]	; 0x30
+20000a8e:	f242 0300 	movw	r3, #8192	; 0x2000
+20000a92:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000a96:	f242 0200 	movw	r2, #8192	; 0x2000
+20000a9a:	f2ce 0204 	movt	r2, #57348	; 0xe004
+20000a9e:	6b12      	ldr	r2, [r2, #48]	; 0x30
+20000aa0:	f042 0280 	orr.w	r2, r2, #128	; 0x80
+20000aa4:	631a      	str	r2, [r3, #48]	; 0x30
         /* Clear any previously pended UART0 interrupt */
         NVIC_ClearPendingIRQ( UART0_IRQn );
-20000852:	f04f 000a 	mov.w	r0, #10
-20000856:	f7ff ff97 	bl	20000788 <NVIC_ClearPendingIRQ>
+20000aa6:	f04f 000a 	mov.w	r0, #10
+20000aaa:	f7ff ff97 	bl	200009dc <NVIC_ClearPendingIRQ>
         /* Take UART0 out of reset. */
         SYSREG->SOFT_RST_CR &= ~SYSREG_UART0_SOFTRESET_MASK;
-2000085a:	f242 0300 	movw	r3, #8192	; 0x2000
-2000085e:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000862:	f242 0200 	movw	r2, #8192	; 0x2000
-20000866:	f2ce 0204 	movt	r2, #57348	; 0xe004
-2000086a:	6b12      	ldr	r2, [r2, #48]	; 0x30
-2000086c:	f022 0280 	bic.w	r2, r2, #128	; 0x80
-20000870:	631a      	str	r2, [r3, #48]	; 0x30
-20000872:	e031      	b.n	200008d8 <MSS_UART_init+0x114>
+20000aae:	f242 0300 	movw	r3, #8192	; 0x2000
+20000ab2:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000ab6:	f242 0200 	movw	r2, #8192	; 0x2000
+20000aba:	f2ce 0204 	movt	r2, #57348	; 0xe004
+20000abe:	6b12      	ldr	r2, [r2, #48]	; 0x30
+20000ac0:	f022 0280 	bic.w	r2, r2, #128	; 0x80
+20000ac4:	631a      	str	r2, [r3, #48]	; 0x30
+20000ac6:	e031      	b.n	20000b2c <MSS_UART_init+0x114>
     }
     else
     {
         this_uart->hw_reg = UART1;
-20000874:	68fa      	ldr	r2, [r7, #12]
-20000876:	f240 0300 	movw	r3, #0
-2000087a:	f2c4 0301 	movt	r3, #16385	; 0x4001
-2000087e:	6013      	str	r3, [r2, #0]
+20000ac8:	68fa      	ldr	r2, [r7, #12]
+20000aca:	f240 0300 	movw	r3, #0
+20000ace:	f2c4 0301 	movt	r3, #16385	; 0x4001
+20000ad2:	6013      	str	r3, [r2, #0]
         this_uart->hw_reg_bit = UART1_BITBAND;
-20000880:	68fa      	ldr	r2, [r7, #12]
-20000882:	f240 0300 	movw	r3, #0
-20000886:	f2c4 2320 	movt	r3, #16928	; 0x4220
-2000088a:	6053      	str	r3, [r2, #4]
+20000ad4:	68fa      	ldr	r2, [r7, #12]
+20000ad6:	f240 0300 	movw	r3, #0
+20000ada:	f2c4 2320 	movt	r3, #16928	; 0x4220
+20000ade:	6053      	str	r3, [r2, #4]
         this_uart->irqn = UART1_IRQn;
-2000088c:	68fb      	ldr	r3, [r7, #12]
-2000088e:	f04f 020b 	mov.w	r2, #11
-20000892:	811a      	strh	r2, [r3, #8]
+20000ae0:	68fb      	ldr	r3, [r7, #12]
+20000ae2:	f04f 020b 	mov.w	r2, #11
+20000ae6:	811a      	strh	r2, [r3, #8]
 
         pclk_freq = g_FrequencyPCLK1;
-20000894:	f640 73fc 	movw	r3, #4092	; 0xffc
-20000898:	f2c2 0300 	movt	r3, #8192	; 0x2000
-2000089c:	681b      	ldr	r3, [r3, #0]
-2000089e:	61bb      	str	r3, [r7, #24]
+20000ae8:	f241 2350 	movw	r3, #4688	; 0x1250
+20000aec:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000af0:	681b      	ldr	r3, [r3, #0]
+20000af2:	61bb      	str	r3, [r7, #24]
 
         /* Reset UART1 */
         SYSREG->SOFT_RST_CR |= SYSREG_UART1_SOFTRESET_MASK;
-200008a0:	f242 0300 	movw	r3, #8192	; 0x2000
-200008a4:	f2ce 0304 	movt	r3, #57348	; 0xe004
-200008a8:	f242 0200 	movw	r2, #8192	; 0x2000
-200008ac:	f2ce 0204 	movt	r2, #57348	; 0xe004
-200008b0:	6b12      	ldr	r2, [r2, #48]	; 0x30
-200008b2:	f442 7280 	orr.w	r2, r2, #256	; 0x100
-200008b6:	631a      	str	r2, [r3, #48]	; 0x30
+20000af4:	f242 0300 	movw	r3, #8192	; 0x2000
+20000af8:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000afc:	f242 0200 	movw	r2, #8192	; 0x2000
+20000b00:	f2ce 0204 	movt	r2, #57348	; 0xe004
+20000b04:	6b12      	ldr	r2, [r2, #48]	; 0x30
+20000b06:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+20000b0a:	631a      	str	r2, [r3, #48]	; 0x30
         /* Clear any previously pended UART1 interrupt */
         NVIC_ClearPendingIRQ( UART1_IRQn );
-200008b8:	f04f 000b 	mov.w	r0, #11
-200008bc:	f7ff ff64 	bl	20000788 <NVIC_ClearPendingIRQ>
+20000b0c:	f04f 000b 	mov.w	r0, #11
+20000b10:	f7ff ff64 	bl	200009dc <NVIC_ClearPendingIRQ>
         /* Take UART1 out of reset. */
         SYSREG->SOFT_RST_CR &= ~SYSREG_UART1_SOFTRESET_MASK;
-200008c0:	f242 0300 	movw	r3, #8192	; 0x2000
-200008c4:	f2ce 0304 	movt	r3, #57348	; 0xe004
-200008c8:	f242 0200 	movw	r2, #8192	; 0x2000
-200008cc:	f2ce 0204 	movt	r2, #57348	; 0xe004
-200008d0:	6b12      	ldr	r2, [r2, #48]	; 0x30
-200008d2:	f422 7280 	bic.w	r2, r2, #256	; 0x100
-200008d6:	631a      	str	r2, [r3, #48]	; 0x30
+20000b14:	f242 0300 	movw	r3, #8192	; 0x2000
+20000b18:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000b1c:	f242 0200 	movw	r2, #8192	; 0x2000
+20000b20:	f2ce 0204 	movt	r2, #57348	; 0xe004
+20000b24:	6b12      	ldr	r2, [r2, #48]	; 0x30
+20000b26:	f422 7280 	bic.w	r2, r2, #256	; 0x100
+20000b2a:	631a      	str	r2, [r3, #48]	; 0x30
     }
 
     /* disable interrupts */
     this_uart->hw_reg->IER = 0U;
-200008d8:	68fb      	ldr	r3, [r7, #12]
-200008da:	681b      	ldr	r3, [r3, #0]
-200008dc:	f04f 0200 	mov.w	r2, #0
-200008e0:	711a      	strb	r2, [r3, #4]
+20000b2c:	68fb      	ldr	r3, [r7, #12]
+20000b2e:	681b      	ldr	r3, [r3, #0]
+20000b30:	f04f 0200 	mov.w	r2, #0
+20000b34:	711a      	strb	r2, [r3, #4]
      * The baud value is computed using the following equation:
      *      baud_value_l = PCLK_Frequency / (baud_rate * 16)
      * The baud value is rounded up or down depending on what would be the remainder
      * of the divide by 16 operation.
      */
     if( 0U < baud_rate )
-200008e2:	68bb      	ldr	r3, [r7, #8]
-200008e4:	2b00      	cmp	r3, #0
-200008e6:	d021      	beq.n	2000092c <MSS_UART_init+0x168>
+20000b36:	68bb      	ldr	r3, [r7, #8]
+20000b38:	2b00      	cmp	r3, #0
+20000b3a:	d021      	beq.n	20000b80 <MSS_UART_init+0x168>
     {
         baud_value_l = (uint32_t)(pclk_freq / baud_rate);
-200008e8:	69ba      	ldr	r2, [r7, #24]
-200008ea:	68bb      	ldr	r3, [r7, #8]
-200008ec:	fbb2 f3f3 	udiv	r3, r2, r3
-200008f0:	61fb      	str	r3, [r7, #28]
+20000b3c:	69ba      	ldr	r2, [r7, #24]
+20000b3e:	68bb      	ldr	r3, [r7, #8]
+20000b40:	fbb2 f3f3 	udiv	r3, r2, r3
+20000b44:	61fb      	str	r3, [r7, #28]
         if( baud_value_l & 0x00000008U )
-200008f2:	69fb      	ldr	r3, [r7, #28]
-200008f4:	f003 0308 	and.w	r3, r3, #8
-200008f8:	2b00      	cmp	r3, #0
-200008fa:	d006      	beq.n	2000090a <MSS_UART_init+0x146>
+20000b46:	69fb      	ldr	r3, [r7, #28]
+20000b48:	f003 0308 	and.w	r3, r3, #8
+20000b4c:	2b00      	cmp	r3, #0
+20000b4e:	d006      	beq.n	20000b5e <MSS_UART_init+0x146>
         {
             /* remainder above 0.5 */
             baud_value_l = (baud_value_l >> 4U) + 1U;        
-200008fc:	69fb      	ldr	r3, [r7, #28]
-200008fe:	ea4f 1313 	mov.w	r3, r3, lsr #4
-20000902:	f103 0301 	add.w	r3, r3, #1
-20000906:	61fb      	str	r3, [r7, #28]
-20000908:	e003      	b.n	20000912 <MSS_UART_init+0x14e>
+20000b50:	69fb      	ldr	r3, [r7, #28]
+20000b52:	ea4f 1313 	mov.w	r3, r3, lsr #4
+20000b56:	f103 0301 	add.w	r3, r3, #1
+20000b5a:	61fb      	str	r3, [r7, #28]
+20000b5c:	e003      	b.n	20000b66 <MSS_UART_init+0x14e>
         }
         else
         {
             /* remainder below 0.5 */
             baud_value_l = (baud_value_l >> 4U);
-2000090a:	69fb      	ldr	r3, [r7, #28]
-2000090c:	ea4f 1313 	mov.w	r3, r3, lsr #4
-20000910:	61fb      	str	r3, [r7, #28]
+20000b5e:	69fb      	ldr	r3, [r7, #28]
+20000b60:	ea4f 1313 	mov.w	r3, r3, lsr #4
+20000b64:	61fb      	str	r3, [r7, #28]
         }
     
         /* Check if the baud rate is supported by the PCLK */
         ASSERT( baud_value_l <= UINT16_MAX);
-20000912:	69fa      	ldr	r2, [r7, #28]
-20000914:	f64f 73ff 	movw	r3, #65535	; 0xffff
-20000918:	429a      	cmp	r2, r3
-2000091a:	d900      	bls.n	2000091e <MSS_UART_init+0x15a>
-2000091c:	be00      	bkpt	0x0000
+20000b66:	69fa      	ldr	r2, [r7, #28]
+20000b68:	f64f 73ff 	movw	r3, #65535	; 0xffff
+20000b6c:	429a      	cmp	r2, r3
+20000b6e:	d900      	bls.n	20000b72 <MSS_UART_init+0x15a>
+20000b70:	be00      	bkpt	0x0000
         if( baud_value_l <= (uint32_t)UINT16_MAX)
-2000091e:	69fa      	ldr	r2, [r7, #28]
-20000920:	f64f 73ff 	movw	r3, #65535	; 0xffff
-20000924:	429a      	cmp	r2, r3
-20000926:	d801      	bhi.n	2000092c <MSS_UART_init+0x168>
+20000b72:	69fa      	ldr	r2, [r7, #28]
+20000b74:	f64f 73ff 	movw	r3, #65535	; 0xffff
+20000b78:	429a      	cmp	r2, r3
+20000b7a:	d801      	bhi.n	20000b80 <MSS_UART_init+0x168>
         {
             baud_value = (uint16_t)baud_value_l;
-20000928:	69fb      	ldr	r3, [r7, #28]
-2000092a:	82fb      	strh	r3, [r7, #22]
+20000b7c:	69fb      	ldr	r3, [r7, #28]
+20000b7e:	82fb      	strh	r3, [r7, #22]
         }
     }
     
     /* set divisor latch */
     this_uart->hw_reg_bit->LCR_DLAB = (uint32_t)1;
-2000092c:	68fb      	ldr	r3, [r7, #12]
-2000092e:	685b      	ldr	r3, [r3, #4]
-20000930:	f04f 0201 	mov.w	r2, #1
-20000934:	f8c3 219c 	str.w	r2, [r3, #412]	; 0x19c
+20000b80:	68fb      	ldr	r3, [r7, #12]
+20000b82:	685b      	ldr	r3, [r3, #4]
+20000b84:	f04f 0201 	mov.w	r2, #1
+20000b88:	f8c3 219c 	str.w	r2, [r3, #412]	; 0x19c
 
     /* msb of baud value */
     this_uart->hw_reg->DMR = (uint8_t)(baud_value >> 8);
-20000938:	68fb      	ldr	r3, [r7, #12]
-2000093a:	681b      	ldr	r3, [r3, #0]
-2000093c:	8afa      	ldrh	r2, [r7, #22]
-2000093e:	ea4f 2212 	mov.w	r2, r2, lsr #8
-20000942:	b292      	uxth	r2, r2
-20000944:	b2d2      	uxtb	r2, r2
-20000946:	711a      	strb	r2, [r3, #4]
+20000b8c:	68fb      	ldr	r3, [r7, #12]
+20000b8e:	681b      	ldr	r3, [r3, #0]
+20000b90:	8afa      	ldrh	r2, [r7, #22]
+20000b92:	ea4f 2212 	mov.w	r2, r2, lsr #8
+20000b96:	b292      	uxth	r2, r2
+20000b98:	b2d2      	uxtb	r2, r2
+20000b9a:	711a      	strb	r2, [r3, #4]
     /* lsb of baud value */
     this_uart->hw_reg->DLR = (uint8_t)baud_value;
-20000948:	68fb      	ldr	r3, [r7, #12]
-2000094a:	681b      	ldr	r3, [r3, #0]
-2000094c:	8afa      	ldrh	r2, [r7, #22]
-2000094e:	b2d2      	uxtb	r2, r2
-20000950:	701a      	strb	r2, [r3, #0]
+20000b9c:	68fb      	ldr	r3, [r7, #12]
+20000b9e:	681b      	ldr	r3, [r3, #0]
+20000ba0:	8afa      	ldrh	r2, [r7, #22]
+20000ba2:	b2d2      	uxtb	r2, r2
+20000ba4:	701a      	strb	r2, [r3, #0]
 
     /* reset divisor latch */
     this_uart->hw_reg_bit->LCR_DLAB = (uint32_t)0;
-20000952:	68fb      	ldr	r3, [r7, #12]
-20000954:	685b      	ldr	r3, [r3, #4]
-20000956:	f04f 0200 	mov.w	r2, #0
-2000095a:	f8c3 219c 	str.w	r2, [r3, #412]	; 0x19c
+20000ba6:	68fb      	ldr	r3, [r7, #12]
+20000ba8:	685b      	ldr	r3, [r3, #4]
+20000baa:	f04f 0200 	mov.w	r2, #0
+20000bae:	f8c3 219c 	str.w	r2, [r3, #412]	; 0x19c
 
     /* set the line control register (bit length, stop bits, parity) */
     this_uart->hw_reg->LCR = line_config;
-2000095e:	68fb      	ldr	r3, [r7, #12]
-20000960:	681b      	ldr	r3, [r3, #0]
-20000962:	79fa      	ldrb	r2, [r7, #7]
-20000964:	731a      	strb	r2, [r3, #12]
+20000bb2:	68fb      	ldr	r3, [r7, #12]
+20000bb4:	681b      	ldr	r3, [r3, #0]
+20000bb6:	79fa      	ldrb	r2, [r7, #7]
+20000bb8:	731a      	strb	r2, [r3, #12]
 
     /* FIFO configuration */
     /* RX FIFO length = 1 byte, clear receiver FIFO, 
        clear transmitter FIFO, enable RXRDYN and TXRDYN pins. */
     this_uart->hw_reg->FCR = (uint8_t)MSS_UART_FIFO_SINGLE_BYTE | 
-20000966:	68fb      	ldr	r3, [r7, #12]
-20000968:	681b      	ldr	r3, [r3, #0]
-2000096a:	f04f 020e 	mov.w	r2, #14
-2000096e:	721a      	strb	r2, [r3, #8]
+20000bba:	68fb      	ldr	r3, [r7, #12]
+20000bbc:	681b      	ldr	r3, [r3, #0]
+20000bbe:	f04f 020e 	mov.w	r2, #14
+20000bc2:	721a      	strb	r2, [r3, #8]
                               FCR_CLEAR_RX_FIFO_MASK | FCR_CLEAR_TX_FIFO_MASK | 
                               FCR_ENABLE_TXRDY_RXRDY_MASK;
     /* disable loopback */
     this_uart->hw_reg_bit->MCR_LOOP = (uint32_t)0;
-20000970:	68fb      	ldr	r3, [r7, #12]
-20000972:	685b      	ldr	r3, [r3, #4]
-20000974:	f04f 0200 	mov.w	r2, #0
-20000978:	f8c3 2210 	str.w	r2, [r3, #528]	; 0x210
+20000bc4:	68fb      	ldr	r3, [r7, #12]
+20000bc6:	685b      	ldr	r3, [r3, #4]
+20000bc8:	f04f 0200 	mov.w	r2, #0
+20000bcc:	f8c3 2210 	str.w	r2, [r3, #528]	; 0x210
 
     /* Instance setup */
     this_uart->tx_buff_size = TX_COMPLETE;
-2000097c:	68fb      	ldr	r3, [r7, #12]
-2000097e:	f04f 0200 	mov.w	r2, #0
-20000982:	611a      	str	r2, [r3, #16]
+20000bd0:	68fb      	ldr	r3, [r7, #12]
+20000bd2:	f04f 0200 	mov.w	r2, #0
+20000bd6:	611a      	str	r2, [r3, #16]
     this_uart->tx_buffer = (const uint8_t *)0;
-20000984:	68fb      	ldr	r3, [r7, #12]
-20000986:	f04f 0200 	mov.w	r2, #0
-2000098a:	60da      	str	r2, [r3, #12]
+20000bd8:	68fb      	ldr	r3, [r7, #12]
+20000bda:	f04f 0200 	mov.w	r2, #0
+20000bde:	60da      	str	r2, [r3, #12]
     this_uart->tx_idx = 0U;
-2000098c:	68fb      	ldr	r3, [r7, #12]
-2000098e:	f04f 0200 	mov.w	r2, #0
-20000992:	615a      	str	r2, [r3, #20]
+20000be0:	68fb      	ldr	r3, [r7, #12]
+20000be2:	f04f 0200 	mov.w	r2, #0
+20000be6:	615a      	str	r2, [r3, #20]
 
     /* Default handlers for MSS UART interrupts */
     this_uart->rx_handler       = NULL_HANDLER;
-20000994:	68fb      	ldr	r3, [r7, #12]
-20000996:	f04f 0200 	mov.w	r2, #0
-2000099a:	61da      	str	r2, [r3, #28]
+20000be8:	68fb      	ldr	r3, [r7, #12]
+20000bea:	f04f 0200 	mov.w	r2, #0
+20000bee:	61da      	str	r2, [r3, #28]
     this_uart->tx_handler       = default_tx_handler;
-2000099c:	68fa      	ldr	r2, [r7, #12]
-2000099e:	f640 33c9 	movw	r3, #3017	; 0xbc9
-200009a2:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200009a6:	6213      	str	r3, [r2, #32]
+20000bf0:	68fa      	ldr	r2, [r7, #12]
+20000bf2:	f640 631d 	movw	r3, #3613	; 0xe1d
+20000bf6:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000bfa:	6213      	str	r3, [r2, #32]
     this_uart->linests_handler  = NULL_HANDLER;
-200009a8:	68fb      	ldr	r3, [r7, #12]
-200009aa:	f04f 0200 	mov.w	r2, #0
-200009ae:	619a      	str	r2, [r3, #24]
+20000bfc:	68fb      	ldr	r3, [r7, #12]
+20000bfe:	f04f 0200 	mov.w	r2, #0
+20000c02:	619a      	str	r2, [r3, #24]
     this_uart->modemsts_handler = NULL_HANDLER;
-200009b0:	68fb      	ldr	r3, [r7, #12]
-200009b2:	f04f 0200 	mov.w	r2, #0
-200009b6:	625a      	str	r2, [r3, #36]	; 0x24
+20000c04:	68fb      	ldr	r3, [r7, #12]
+20000c06:	f04f 0200 	mov.w	r2, #0
+20000c0a:	625a      	str	r2, [r3, #36]	; 0x24
 
     /* Initialize the sticky status */
     this_uart->status = 0U;
-200009b8:	68fb      	ldr	r3, [r7, #12]
-200009ba:	f04f 0200 	mov.w	r2, #0
-200009be:	729a      	strb	r2, [r3, #10]
+20000c0c:	68fb      	ldr	r3, [r7, #12]
+20000c0e:	f04f 0200 	mov.w	r2, #0
+20000c12:	729a      	strb	r2, [r3, #10]
 }
-200009c0:	f107 0720 	add.w	r7, r7, #32
-200009c4:	46bd      	mov	sp, r7
-200009c6:	bd80      	pop	{r7, pc}
+20000c14:	f107 0720 	add.w	r7, r7, #32
+20000c18:	46bd      	mov	sp, r7
+20000c1a:	bd80      	pop	{r7, pc}
 
-200009c8 <MSS_UART_polled_tx>:
+20000c1c <MSS_UART_polled_tx>:
 (
     mss_uart_instance_t * this_uart,
     const uint8_t * pbuff,
     uint32_t tx_size
 )
 {
-200009c8:	b480      	push	{r7}
-200009ca:	b089      	sub	sp, #36	; 0x24
-200009cc:	af00      	add	r7, sp, #0
-200009ce:	60f8      	str	r0, [r7, #12]
-200009d0:	60b9      	str	r1, [r7, #8]
-200009d2:	607a      	str	r2, [r7, #4]
+20000c1c:	b480      	push	{r7}
+20000c1e:	b089      	sub	sp, #36	; 0x24
+20000c20:	af00      	add	r7, sp, #0
+20000c22:	60f8      	str	r0, [r7, #12]
+20000c24:	60b9      	str	r1, [r7, #8]
+20000c26:	607a      	str	r2, [r7, #4]
     uint32_t char_idx = 0U;
-200009d4:	f04f 0300 	mov.w	r3, #0
-200009d8:	613b      	str	r3, [r7, #16]
+20000c28:	f04f 0300 	mov.w	r3, #0
+20000c2c:	613b      	str	r3, [r7, #16]
     uint32_t size_sent;
     uint8_t status;
 
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
-200009da:	68fa      	ldr	r2, [r7, #12]
-200009dc:	f241 0348 	movw	r3, #4168	; 0x1048
-200009e0:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200009e4:	429a      	cmp	r2, r3
-200009e6:	d007      	beq.n	200009f8 <MSS_UART_polled_tx+0x30>
-200009e8:	68fa      	ldr	r2, [r7, #12]
-200009ea:	f241 0320 	movw	r3, #4128	; 0x1020
-200009ee:	f2c2 0300 	movt	r3, #8192	; 0x2000
-200009f2:	429a      	cmp	r2, r3
-200009f4:	d000      	beq.n	200009f8 <MSS_UART_polled_tx+0x30>
-200009f6:	be00      	bkpt	0x0000
+20000c2e:	68fa      	ldr	r2, [r7, #12]
+20000c30:	f241 239c 	movw	r3, #4764	; 0x129c
+20000c34:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c38:	429a      	cmp	r2, r3
+20000c3a:	d007      	beq.n	20000c4c <MSS_UART_polled_tx+0x30>
+20000c3c:	68fa      	ldr	r2, [r7, #12]
+20000c3e:	f241 2374 	movw	r3, #4724	; 0x1274
+20000c42:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c46:	429a      	cmp	r2, r3
+20000c48:	d000      	beq.n	20000c4c <MSS_UART_polled_tx+0x30>
+20000c4a:	be00      	bkpt	0x0000
     ASSERT( pbuff != ( (uint8_t *)0 ) );
-200009f8:	68bb      	ldr	r3, [r7, #8]
-200009fa:	2b00      	cmp	r3, #0
-200009fc:	d100      	bne.n	20000a00 <MSS_UART_polled_tx+0x38>
-200009fe:	be00      	bkpt	0x0000
+20000c4c:	68bb      	ldr	r3, [r7, #8]
+20000c4e:	2b00      	cmp	r3, #0
+20000c50:	d100      	bne.n	20000c54 <MSS_UART_polled_tx+0x38>
+20000c52:	be00      	bkpt	0x0000
     ASSERT( tx_size > 0U );
-20000a00:	687b      	ldr	r3, [r7, #4]
-20000a02:	2b00      	cmp	r3, #0
-20000a04:	d100      	bne.n	20000a08 <MSS_UART_polled_tx+0x40>
-20000a06:	be00      	bkpt	0x0000
+20000c54:	687b      	ldr	r3, [r7, #4]
+20000c56:	2b00      	cmp	r3, #0
+20000c58:	d100      	bne.n	20000c5c <MSS_UART_polled_tx+0x40>
+20000c5a:	be00      	bkpt	0x0000
 
     if( ( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) ) &&
-20000a08:	68fa      	ldr	r2, [r7, #12]
-20000a0a:	f241 0348 	movw	r3, #4168	; 0x1048
-20000a0e:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000a12:	429a      	cmp	r2, r3
-20000a14:	d006      	beq.n	20000a24 <MSS_UART_polled_tx+0x5c>
-20000a16:	68fa      	ldr	r2, [r7, #12]
-20000a18:	f241 0320 	movw	r3, #4128	; 0x1020
-20000a1c:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000a20:	429a      	cmp	r2, r3
-20000a22:	d13d      	bne.n	20000aa0 <MSS_UART_polled_tx+0xd8>
-20000a24:	68bb      	ldr	r3, [r7, #8]
-20000a26:	2b00      	cmp	r3, #0
-20000a28:	d03a      	beq.n	20000aa0 <MSS_UART_polled_tx+0xd8>
-20000a2a:	687b      	ldr	r3, [r7, #4]
-20000a2c:	2b00      	cmp	r3, #0
-20000a2e:	d037      	beq.n	20000aa0 <MSS_UART_polled_tx+0xd8>
+20000c5c:	68fa      	ldr	r2, [r7, #12]
+20000c5e:	f241 239c 	movw	r3, #4764	; 0x129c
+20000c62:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c66:	429a      	cmp	r2, r3
+20000c68:	d006      	beq.n	20000c78 <MSS_UART_polled_tx+0x5c>
+20000c6a:	68fa      	ldr	r2, [r7, #12]
+20000c6c:	f241 2374 	movw	r3, #4724	; 0x1274
+20000c70:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c74:	429a      	cmp	r2, r3
+20000c76:	d13d      	bne.n	20000cf4 <MSS_UART_polled_tx+0xd8>
+20000c78:	68bb      	ldr	r3, [r7, #8]
+20000c7a:	2b00      	cmp	r3, #0
+20000c7c:	d03a      	beq.n	20000cf4 <MSS_UART_polled_tx+0xd8>
+20000c7e:	687b      	ldr	r3, [r7, #4]
+20000c80:	2b00      	cmp	r3, #0
+20000c82:	d037      	beq.n	20000cf4 <MSS_UART_polled_tx+0xd8>
          /* Remain in this loop until the entire input buffer
           * has been transferred to the UART.
           */
         do {
             /* Read the Line Status Register and update the sticky record */
             status = this_uart->hw_reg->LSR;
-20000a30:	68fb      	ldr	r3, [r7, #12]
-20000a32:	681b      	ldr	r3, [r3, #0]
-20000a34:	7d1b      	ldrb	r3, [r3, #20]
-20000a36:	76fb      	strb	r3, [r7, #27]
+20000c84:	68fb      	ldr	r3, [r7, #12]
+20000c86:	681b      	ldr	r3, [r3, #0]
+20000c88:	7d1b      	ldrb	r3, [r3, #20]
+20000c8a:	76fb      	strb	r3, [r7, #27]
             this_uart->status |= status;
-20000a38:	68fb      	ldr	r3, [r7, #12]
-20000a3a:	7a9a      	ldrb	r2, [r3, #10]
-20000a3c:	7efb      	ldrb	r3, [r7, #27]
-20000a3e:	ea42 0303 	orr.w	r3, r2, r3
-20000a42:	b2da      	uxtb	r2, r3
-20000a44:	68fb      	ldr	r3, [r7, #12]
-20000a46:	729a      	strb	r2, [r3, #10]
+20000c8c:	68fb      	ldr	r3, [r7, #12]
+20000c8e:	7a9a      	ldrb	r2, [r3, #10]
+20000c90:	7efb      	ldrb	r3, [r7, #27]
+20000c92:	ea42 0303 	orr.w	r3, r2, r3
+20000c96:	b2da      	uxtb	r2, r3
+20000c98:	68fb      	ldr	r3, [r7, #12]
+20000c9a:	729a      	strb	r2, [r3, #10]
 
             /* Check if TX FIFO is empty. */
             if( status & MSS_UART_THRE )
-20000a48:	7efb      	ldrb	r3, [r7, #27]
-20000a4a:	f003 0320 	and.w	r3, r3, #32
-20000a4e:	2b00      	cmp	r3, #0
-20000a50:	d023      	beq.n	20000a9a <MSS_UART_polled_tx+0xd2>
+20000c9c:	7efb      	ldrb	r3, [r7, #27]
+20000c9e:	f003 0320 	and.w	r3, r3, #32
+20000ca2:	2b00      	cmp	r3, #0
+20000ca4:	d023      	beq.n	20000cee <MSS_UART_polled_tx+0xd2>
             {
                 uint32_t fill_size = TX_FIFO_SIZE;
-20000a52:	f04f 0310 	mov.w	r3, #16
-20000a56:	61fb      	str	r3, [r7, #28]
+20000ca6:	f04f 0310 	mov.w	r3, #16
+20000caa:	61fb      	str	r3, [r7, #28]
 
                 /* Calculate the number of bytes to transmit. */
                 if ( tx_size < TX_FIFO_SIZE )
-20000a58:	687b      	ldr	r3, [r7, #4]
-20000a5a:	2b0f      	cmp	r3, #15
-20000a5c:	d801      	bhi.n	20000a62 <MSS_UART_polled_tx+0x9a>
+20000cac:	687b      	ldr	r3, [r7, #4]
+20000cae:	2b0f      	cmp	r3, #15
+20000cb0:	d801      	bhi.n	20000cb6 <MSS_UART_polled_tx+0x9a>
                 {
                     fill_size = tx_size;
-20000a5e:	687b      	ldr	r3, [r7, #4]
-20000a60:	61fb      	str	r3, [r7, #28]
+20000cb2:	687b      	ldr	r3, [r7, #4]
+20000cb4:	61fb      	str	r3, [r7, #28]
                 }
 
                 /* Fill the TX FIFO with the calculated the number of bytes. */
                 for ( size_sent = 0U; size_sent < fill_size; ++size_sent )
-20000a62:	f04f 0300 	mov.w	r3, #0
-20000a66:	617b      	str	r3, [r7, #20]
-20000a68:	e00e      	b.n	20000a88 <MSS_UART_polled_tx+0xc0>
+20000cb6:	f04f 0300 	mov.w	r3, #0
+20000cba:	617b      	str	r3, [r7, #20]
+20000cbc:	e00e      	b.n	20000cdc <MSS_UART_polled_tx+0xc0>
                 {
                     /* Send next character in the buffer. */
                     this_uart->hw_reg->THR = pbuff[char_idx++];
-20000a6a:	68fb      	ldr	r3, [r7, #12]
-20000a6c:	681b      	ldr	r3, [r3, #0]
-20000a6e:	68b9      	ldr	r1, [r7, #8]
-20000a70:	693a      	ldr	r2, [r7, #16]
-20000a72:	440a      	add	r2, r1
-20000a74:	7812      	ldrb	r2, [r2, #0]
-20000a76:	701a      	strb	r2, [r3, #0]
-20000a78:	693b      	ldr	r3, [r7, #16]
-20000a7a:	f103 0301 	add.w	r3, r3, #1
-20000a7e:	613b      	str	r3, [r7, #16]
+20000cbe:	68fb      	ldr	r3, [r7, #12]
+20000cc0:	681b      	ldr	r3, [r3, #0]
+20000cc2:	68b9      	ldr	r1, [r7, #8]
+20000cc4:	693a      	ldr	r2, [r7, #16]
+20000cc6:	440a      	add	r2, r1
+20000cc8:	7812      	ldrb	r2, [r2, #0]
+20000cca:	701a      	strb	r2, [r3, #0]
+20000ccc:	693b      	ldr	r3, [r7, #16]
+20000cce:	f103 0301 	add.w	r3, r3, #1
+20000cd2:	613b      	str	r3, [r7, #16]
                 {
                     fill_size = tx_size;
                 }
 
                 /* Fill the TX FIFO with the calculated the number of bytes. */
                 for ( size_sent = 0U; size_sent < fill_size; ++size_sent )
-20000a80:	697b      	ldr	r3, [r7, #20]
-20000a82:	f103 0301 	add.w	r3, r3, #1
-20000a86:	617b      	str	r3, [r7, #20]
-20000a88:	697a      	ldr	r2, [r7, #20]
-20000a8a:	69fb      	ldr	r3, [r7, #28]
-20000a8c:	429a      	cmp	r2, r3
-20000a8e:	d3ec      	bcc.n	20000a6a <MSS_UART_polled_tx+0xa2>
+20000cd4:	697b      	ldr	r3, [r7, #20]
+20000cd6:	f103 0301 	add.w	r3, r3, #1
+20000cda:	617b      	str	r3, [r7, #20]
+20000cdc:	697a      	ldr	r2, [r7, #20]
+20000cde:	69fb      	ldr	r3, [r7, #28]
+20000ce0:	429a      	cmp	r2, r3
+20000ce2:	d3ec      	bcc.n	20000cbe <MSS_UART_polled_tx+0xa2>
                     /* Send next character in the buffer. */
                     this_uart->hw_reg->THR = pbuff[char_idx++];
                 }
 
                 /* Calculate the number of untransmitted bytes remaining. */
                 tx_size -= size_sent;
-20000a90:	687a      	ldr	r2, [r7, #4]
-20000a92:	697b      	ldr	r3, [r7, #20]
-20000a94:	ebc3 0302 	rsb	r3, r3, r2
-20000a98:	607b      	str	r3, [r7, #4]
+20000ce4:	687a      	ldr	r2, [r7, #4]
+20000ce6:	697b      	ldr	r3, [r7, #20]
+20000ce8:	ebc3 0302 	rsb	r3, r3, r2
+20000cec:	607b      	str	r3, [r7, #4]
             }
         }while( tx_size );
-20000a9a:	687b      	ldr	r3, [r7, #4]
-20000a9c:	2b00      	cmp	r3, #0
-20000a9e:	d1c7      	bne.n	20000a30 <MSS_UART_polled_tx+0x68>
+20000cee:	687b      	ldr	r3, [r7, #4]
+20000cf0:	2b00      	cmp	r3, #0
+20000cf2:	d1c7      	bne.n	20000c84 <MSS_UART_polled_tx+0x68>
     }
 }
-20000aa0:	f107 0724 	add.w	r7, r7, #36	; 0x24
-20000aa4:	46bd      	mov	sp, r7
-20000aa6:	bc80      	pop	{r7}
-20000aa8:	4770      	bx	lr
-20000aaa:	bf00      	nop
+20000cf4:	f107 0724 	add.w	r7, r7, #36	; 0x24
+20000cf8:	46bd      	mov	sp, r7
+20000cfa:	bc80      	pop	{r7}
+20000cfc:	4770      	bx	lr
+20000cfe:	bf00      	nop
 
-20000aac <MSS_UART_isr>:
+20000d00 <MSS_UART_isr>:
 static void
 MSS_UART_isr
 (
     mss_uart_instance_t * this_uart
 )
 {
-20000aac:	b580      	push	{r7, lr}
-20000aae:	b084      	sub	sp, #16
-20000ab0:	af00      	add	r7, sp, #0
-20000ab2:	6078      	str	r0, [r7, #4]
+20000d00:	b580      	push	{r7, lr}
+20000d02:	b084      	sub	sp, #16
+20000d04:	af00      	add	r7, sp, #0
+20000d06:	6078      	str	r0, [r7, #4]
     uint8_t iirf;
 
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
-20000ab4:	687a      	ldr	r2, [r7, #4]
-20000ab6:	f241 0348 	movw	r3, #4168	; 0x1048
-20000aba:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000abe:	429a      	cmp	r2, r3
-20000ac0:	d007      	beq.n	20000ad2 <MSS_UART_isr+0x26>
-20000ac2:	687a      	ldr	r2, [r7, #4]
-20000ac4:	f241 0320 	movw	r3, #4128	; 0x1020
-20000ac8:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000acc:	429a      	cmp	r2, r3
-20000ace:	d000      	beq.n	20000ad2 <MSS_UART_isr+0x26>
-20000ad0:	be00      	bkpt	0x0000
+20000d08:	687a      	ldr	r2, [r7, #4]
+20000d0a:	f241 239c 	movw	r3, #4764	; 0x129c
+20000d0e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000d12:	429a      	cmp	r2, r3
+20000d14:	d007      	beq.n	20000d26 <MSS_UART_isr+0x26>
+20000d16:	687a      	ldr	r2, [r7, #4]
+20000d18:	f241 2374 	movw	r3, #4724	; 0x1274
+20000d1c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000d20:	429a      	cmp	r2, r3
+20000d22:	d000      	beq.n	20000d26 <MSS_UART_isr+0x26>
+20000d24:	be00      	bkpt	0x0000
 
     if ( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) )
-20000ad2:	687a      	ldr	r2, [r7, #4]
-20000ad4:	f241 0348 	movw	r3, #4168	; 0x1048
-20000ad8:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000adc:	429a      	cmp	r2, r3
-20000ade:	d006      	beq.n	20000aee <MSS_UART_isr+0x42>
-20000ae0:	687a      	ldr	r2, [r7, #4]
-20000ae2:	f241 0320 	movw	r3, #4128	; 0x1020
-20000ae6:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000aea:	429a      	cmp	r2, r3
-20000aec:	d167      	bne.n	20000bbe <MSS_UART_isr+0x112>
+20000d26:	687a      	ldr	r2, [r7, #4]
+20000d28:	f241 239c 	movw	r3, #4764	; 0x129c
+20000d2c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000d30:	429a      	cmp	r2, r3
+20000d32:	d006      	beq.n	20000d42 <MSS_UART_isr+0x42>
+20000d34:	687a      	ldr	r2, [r7, #4]
+20000d36:	f241 2374 	movw	r3, #4724	; 0x1274
+20000d3a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000d3e:	429a      	cmp	r2, r3
+20000d40:	d167      	bne.n	20000e12 <MSS_UART_isr+0x112>
     {
         iirf = this_uart->hw_reg->IIR & IIRF_MASK;
-20000aee:	687b      	ldr	r3, [r7, #4]
-20000af0:	681b      	ldr	r3, [r3, #0]
-20000af2:	7a1b      	ldrb	r3, [r3, #8]
-20000af4:	b2db      	uxtb	r3, r3
-20000af6:	f003 030f 	and.w	r3, r3, #15
-20000afa:	73fb      	strb	r3, [r7, #15]
+20000d42:	687b      	ldr	r3, [r7, #4]
+20000d44:	681b      	ldr	r3, [r3, #0]
+20000d46:	7a1b      	ldrb	r3, [r3, #8]
+20000d48:	b2db      	uxtb	r3, r3
+20000d4a:	f003 030f 	and.w	r3, r3, #15
+20000d4e:	73fb      	strb	r3, [r7, #15]
 
         switch ( iirf )
-20000afc:	7bfb      	ldrb	r3, [r7, #15]
-20000afe:	2b0c      	cmp	r3, #12
-20000b00:	d854      	bhi.n	20000bac <MSS_UART_isr+0x100>
-20000b02:	a201      	add	r2, pc, #4	; (adr r2, 20000b08 <MSS_UART_isr+0x5c>)
-20000b04:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
-20000b08:	20000b3d 	.word	0x20000b3d
-20000b0c:	20000bad 	.word	0x20000bad
-20000b10:	20000b59 	.word	0x20000b59
-20000b14:	20000bad 	.word	0x20000bad
-20000b18:	20000b75 	.word	0x20000b75
-20000b1c:	20000bad 	.word	0x20000bad
-20000b20:	20000b91 	.word	0x20000b91
-20000b24:	20000bad 	.word	0x20000bad
-20000b28:	20000bad 	.word	0x20000bad
-20000b2c:	20000bad 	.word	0x20000bad
-20000b30:	20000bad 	.word	0x20000bad
-20000b34:	20000bad 	.word	0x20000bad
-20000b38:	20000b75 	.word	0x20000b75
+20000d50:	7bfb      	ldrb	r3, [r7, #15]
+20000d52:	2b0c      	cmp	r3, #12
+20000d54:	d854      	bhi.n	20000e00 <MSS_UART_isr+0x100>
+20000d56:	a201      	add	r2, pc, #4	; (adr r2, 20000d5c <MSS_UART_isr+0x5c>)
+20000d58:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+20000d5c:	20000d91 	.word	0x20000d91
+20000d60:	20000e01 	.word	0x20000e01
+20000d64:	20000dad 	.word	0x20000dad
+20000d68:	20000e01 	.word	0x20000e01
+20000d6c:	20000dc9 	.word	0x20000dc9
+20000d70:	20000e01 	.word	0x20000e01
+20000d74:	20000de5 	.word	0x20000de5
+20000d78:	20000e01 	.word	0x20000e01
+20000d7c:	20000e01 	.word	0x20000e01
+20000d80:	20000e01 	.word	0x20000e01
+20000d84:	20000e01 	.word	0x20000e01
+20000d88:	20000e01 	.word	0x20000e01
+20000d8c:	20000dc9 	.word	0x20000dc9
         {
             case IIRF_MODEM_STATUS:  /* Modem status interrupt */
             {
                 ASSERT( NULL_HANDLER != this_uart->modemsts_handler );
-20000b3c:	687b      	ldr	r3, [r7, #4]
-20000b3e:	6a5b      	ldr	r3, [r3, #36]	; 0x24
-20000b40:	2b00      	cmp	r3, #0
-20000b42:	d100      	bne.n	20000b46 <MSS_UART_isr+0x9a>
-20000b44:	be00      	bkpt	0x0000
+20000d90:	687b      	ldr	r3, [r7, #4]
+20000d92:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+20000d94:	2b00      	cmp	r3, #0
+20000d96:	d100      	bne.n	20000d9a <MSS_UART_isr+0x9a>
+20000d98:	be00      	bkpt	0x0000
                 if( NULL_HANDLER != this_uart->modemsts_handler )
-20000b46:	687b      	ldr	r3, [r7, #4]
-20000b48:	6a5b      	ldr	r3, [r3, #36]	; 0x24
-20000b4a:	2b00      	cmp	r3, #0
-20000b4c:	d030      	beq.n	20000bb0 <MSS_UART_isr+0x104>
+20000d9a:	687b      	ldr	r3, [r7, #4]
+20000d9c:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+20000d9e:	2b00      	cmp	r3, #0
+20000da0:	d030      	beq.n	20000e04 <MSS_UART_isr+0x104>
                 {
                    (*(this_uart->modemsts_handler))( this_uart );
-20000b4e:	687b      	ldr	r3, [r7, #4]
-20000b50:	6a5b      	ldr	r3, [r3, #36]	; 0x24
-20000b52:	6878      	ldr	r0, [r7, #4]
-20000b54:	4798      	blx	r3
+20000da2:	687b      	ldr	r3, [r7, #4]
+20000da4:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+20000da6:	6878      	ldr	r0, [r7, #4]
+20000da8:	4798      	blx	r3
                 }
             }
             break;
-20000b56:	e032      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000daa:	e032      	b.n	20000e12 <MSS_UART_isr+0x112>
 
             case IIRF_THRE: /* Transmitter Holding Register Empty */
             {
                 ASSERT( NULL_HANDLER != this_uart->tx_handler );
-20000b58:	687b      	ldr	r3, [r7, #4]
-20000b5a:	6a1b      	ldr	r3, [r3, #32]
-20000b5c:	2b00      	cmp	r3, #0
-20000b5e:	d100      	bne.n	20000b62 <MSS_UART_isr+0xb6>
-20000b60:	be00      	bkpt	0x0000
+20000dac:	687b      	ldr	r3, [r7, #4]
+20000dae:	6a1b      	ldr	r3, [r3, #32]
+20000db0:	2b00      	cmp	r3, #0
+20000db2:	d100      	bne.n	20000db6 <MSS_UART_isr+0xb6>
+20000db4:	be00      	bkpt	0x0000
                 if ( NULL_HANDLER != this_uart->tx_handler )
-20000b62:	687b      	ldr	r3, [r7, #4]
-20000b64:	6a1b      	ldr	r3, [r3, #32]
-20000b66:	2b00      	cmp	r3, #0
-20000b68:	d024      	beq.n	20000bb4 <MSS_UART_isr+0x108>
+20000db6:	687b      	ldr	r3, [r7, #4]
+20000db8:	6a1b      	ldr	r3, [r3, #32]
+20000dba:	2b00      	cmp	r3, #0
+20000dbc:	d024      	beq.n	20000e08 <MSS_UART_isr+0x108>
                 {
                     (*(this_uart->tx_handler))( this_uart );
-20000b6a:	687b      	ldr	r3, [r7, #4]
-20000b6c:	6a1b      	ldr	r3, [r3, #32]
-20000b6e:	6878      	ldr	r0, [r7, #4]
-20000b70:	4798      	blx	r3
+20000dbe:	687b      	ldr	r3, [r7, #4]
+20000dc0:	6a1b      	ldr	r3, [r3, #32]
+20000dc2:	6878      	ldr	r0, [r7, #4]
+20000dc4:	4798      	blx	r3
                 }
             }
             break;
-20000b72:	e024      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000dc6:	e024      	b.n	20000e12 <MSS_UART_isr+0x112>
 
             case IIRF_RX_DATA:      /* Received Data Available */
             case IIRF_DATA_TIMEOUT: /* Received Data Timed-out */
             {
                 ASSERT( NULL_HANDLER != this_uart->rx_handler );
-20000b74:	687b      	ldr	r3, [r7, #4]
-20000b76:	69db      	ldr	r3, [r3, #28]
-20000b78:	2b00      	cmp	r3, #0
-20000b7a:	d100      	bne.n	20000b7e <MSS_UART_isr+0xd2>
-20000b7c:	be00      	bkpt	0x0000
+20000dc8:	687b      	ldr	r3, [r7, #4]
+20000dca:	69db      	ldr	r3, [r3, #28]
+20000dcc:	2b00      	cmp	r3, #0
+20000dce:	d100      	bne.n	20000dd2 <MSS_UART_isr+0xd2>
+20000dd0:	be00      	bkpt	0x0000
                 if ( NULL_HANDLER != this_uart->rx_handler )
-20000b7e:	687b      	ldr	r3, [r7, #4]
-20000b80:	69db      	ldr	r3, [r3, #28]
-20000b82:	2b00      	cmp	r3, #0
-20000b84:	d018      	beq.n	20000bb8 <MSS_UART_isr+0x10c>
+20000dd2:	687b      	ldr	r3, [r7, #4]
+20000dd4:	69db      	ldr	r3, [r3, #28]
+20000dd6:	2b00      	cmp	r3, #0
+20000dd8:	d018      	beq.n	20000e0c <MSS_UART_isr+0x10c>
                 {
                     (*(this_uart->rx_handler))( this_uart );
-20000b86:	687b      	ldr	r3, [r7, #4]
-20000b88:	69db      	ldr	r3, [r3, #28]
-20000b8a:	6878      	ldr	r0, [r7, #4]
-20000b8c:	4798      	blx	r3
+20000dda:	687b      	ldr	r3, [r7, #4]
+20000ddc:	69db      	ldr	r3, [r3, #28]
+20000dde:	6878      	ldr	r0, [r7, #4]
+20000de0:	4798      	blx	r3
                 }
             }
             break;
-20000b8e:	e016      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000de2:	e016      	b.n	20000e12 <MSS_UART_isr+0x112>
 
             case IIRF_RX_LINE_STATUS:  /* Line Status Interrupt */
             {
                 ASSERT( NULL_HANDLER != this_uart->linests_handler );
-20000b90:	687b      	ldr	r3, [r7, #4]
-20000b92:	699b      	ldr	r3, [r3, #24]
-20000b94:	2b00      	cmp	r3, #0
-20000b96:	d100      	bne.n	20000b9a <MSS_UART_isr+0xee>
-20000b98:	be00      	bkpt	0x0000
+20000de4:	687b      	ldr	r3, [r7, #4]
+20000de6:	699b      	ldr	r3, [r3, #24]
+20000de8:	2b00      	cmp	r3, #0
+20000dea:	d100      	bne.n	20000dee <MSS_UART_isr+0xee>
+20000dec:	be00      	bkpt	0x0000
                 if ( NULL_HANDLER != this_uart->linests_handler )
-20000b9a:	687b      	ldr	r3, [r7, #4]
-20000b9c:	699b      	ldr	r3, [r3, #24]
-20000b9e:	2b00      	cmp	r3, #0
-20000ba0:	d00c      	beq.n	20000bbc <MSS_UART_isr+0x110>
+20000dee:	687b      	ldr	r3, [r7, #4]
+20000df0:	699b      	ldr	r3, [r3, #24]
+20000df2:	2b00      	cmp	r3, #0
+20000df4:	d00c      	beq.n	20000e10 <MSS_UART_isr+0x110>
                 {
                    (*(this_uart->linests_handler))( this_uart );
-20000ba2:	687b      	ldr	r3, [r7, #4]
-20000ba4:	699b      	ldr	r3, [r3, #24]
-20000ba6:	6878      	ldr	r0, [r7, #4]
-20000ba8:	4798      	blx	r3
+20000df6:	687b      	ldr	r3, [r7, #4]
+20000df8:	699b      	ldr	r3, [r3, #24]
+20000dfa:	6878      	ldr	r0, [r7, #4]
+20000dfc:	4798      	blx	r3
                 }
             }
             break;
-20000baa:	e008      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000dfe:	e008      	b.n	20000e12 <MSS_UART_isr+0x112>
 
             default:
             {
                 ASSERT( INVALID_INTERRUPT );
-20000bac:	be00      	bkpt	0x0000
-20000bae:	e006      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000e00:	be00      	bkpt	0x0000
+20000e02:	e006      	b.n	20000e12 <MSS_UART_isr+0x112>
                 if( NULL_HANDLER != this_uart->modemsts_handler )
                 {
                    (*(this_uart->modemsts_handler))( this_uart );
                 }
             }
             break;
-20000bb0:	bf00      	nop
-20000bb2:	e004      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000e04:	bf00      	nop
+20000e06:	e004      	b.n	20000e12 <MSS_UART_isr+0x112>
                 if ( NULL_HANDLER != this_uart->tx_handler )
                 {
                     (*(this_uart->tx_handler))( this_uart );
                 }
             }
             break;
-20000bb4:	bf00      	nop
-20000bb6:	e002      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000e08:	bf00      	nop
+20000e0a:	e002      	b.n	20000e12 <MSS_UART_isr+0x112>
                 if ( NULL_HANDLER != this_uart->rx_handler )
                 {
                     (*(this_uart->rx_handler))( this_uart );
                 }
             }
             break;
-20000bb8:	bf00      	nop
-20000bba:	e000      	b.n	20000bbe <MSS_UART_isr+0x112>
+20000e0c:	bf00      	nop
+20000e0e:	e000      	b.n	20000e12 <MSS_UART_isr+0x112>
                 if ( NULL_HANDLER != this_uart->linests_handler )
                 {
                    (*(this_uart->linests_handler))( this_uart );
                 }
             }
             break;
-20000bbc:	bf00      	nop
+20000e10:	bf00      	nop
                 ASSERT( INVALID_INTERRUPT );
             }
             break;
         }
     }
 }
-20000bbe:	f107 0710 	add.w	r7, r7, #16
-20000bc2:	46bd      	mov	sp, r7
-20000bc4:	bd80      	pop	{r7, pc}
-20000bc6:	bf00      	nop
+20000e12:	f107 0710 	add.w	r7, r7, #16
+20000e16:	46bd      	mov	sp, r7
+20000e18:	bd80      	pop	{r7, pc}
+20000e1a:	bf00      	nop
 
-20000bc8 <default_tx_handler>:
+20000e1c <default_tx_handler>:
 static void
 default_tx_handler
 (
     mss_uart_instance_t * this_uart
 )
 {
-20000bc8:	b480      	push	{r7}
-20000bca:	b087      	sub	sp, #28
-20000bcc:	af00      	add	r7, sp, #0
-20000bce:	6078      	str	r0, [r7, #4]
+20000e1c:	b480      	push	{r7}
+20000e1e:	b087      	sub	sp, #28
+20000e20:	af00      	add	r7, sp, #0
+20000e22:	6078      	str	r0, [r7, #4]
     uint8_t status;
 
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
-20000bd0:	687a      	ldr	r2, [r7, #4]
-20000bd2:	f241 0348 	movw	r3, #4168	; 0x1048
-20000bd6:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000bda:	429a      	cmp	r2, r3
-20000bdc:	d007      	beq.n	20000bee <default_tx_handler+0x26>
-20000bde:	687a      	ldr	r2, [r7, #4]
-20000be0:	f241 0320 	movw	r3, #4128	; 0x1020
-20000be4:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000be8:	429a      	cmp	r2, r3
-20000bea:	d000      	beq.n	20000bee <default_tx_handler+0x26>
-20000bec:	be00      	bkpt	0x0000
+20000e24:	687a      	ldr	r2, [r7, #4]
+20000e26:	f241 239c 	movw	r3, #4764	; 0x129c
+20000e2a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e2e:	429a      	cmp	r2, r3
+20000e30:	d007      	beq.n	20000e42 <default_tx_handler+0x26>
+20000e32:	687a      	ldr	r2, [r7, #4]
+20000e34:	f241 2374 	movw	r3, #4724	; 0x1274
+20000e38:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e3c:	429a      	cmp	r2, r3
+20000e3e:	d000      	beq.n	20000e42 <default_tx_handler+0x26>
+20000e40:	be00      	bkpt	0x0000
     ASSERT( ( (uint8_t *)0 ) != this_uart->tx_buffer );
-20000bee:	687b      	ldr	r3, [r7, #4]
-20000bf0:	68db      	ldr	r3, [r3, #12]
-20000bf2:	2b00      	cmp	r3, #0
-20000bf4:	d100      	bne.n	20000bf8 <default_tx_handler+0x30>
-20000bf6:	be00      	bkpt	0x0000
+20000e42:	687b      	ldr	r3, [r7, #4]
+20000e44:	68db      	ldr	r3, [r3, #12]
+20000e46:	2b00      	cmp	r3, #0
+20000e48:	d100      	bne.n	20000e4c <default_tx_handler+0x30>
+20000e4a:	be00      	bkpt	0x0000
     ASSERT( 0U < this_uart->tx_buff_size );
-20000bf8:	687b      	ldr	r3, [r7, #4]
-20000bfa:	691b      	ldr	r3, [r3, #16]
-20000bfc:	2b00      	cmp	r3, #0
-20000bfe:	d100      	bne.n	20000c02 <default_tx_handler+0x3a>
-20000c00:	be00      	bkpt	0x0000
+20000e4c:	687b      	ldr	r3, [r7, #4]
+20000e4e:	691b      	ldr	r3, [r3, #16]
+20000e50:	2b00      	cmp	r3, #0
+20000e52:	d100      	bne.n	20000e56 <default_tx_handler+0x3a>
+20000e54:	be00      	bkpt	0x0000
 
     if( ( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) ) &&
-20000c02:	687a      	ldr	r2, [r7, #4]
-20000c04:	f241 0348 	movw	r3, #4168	; 0x1048
-20000c08:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000c0c:	429a      	cmp	r2, r3
-20000c0e:	d006      	beq.n	20000c1e <default_tx_handler+0x56>
-20000c10:	687a      	ldr	r2, [r7, #4]
-20000c12:	f241 0320 	movw	r3, #4128	; 0x1020
-20000c16:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000c1a:	429a      	cmp	r2, r3
-20000c1c:	d152      	bne.n	20000cc4 <default_tx_handler+0xfc>
+20000e56:	687a      	ldr	r2, [r7, #4]
+20000e58:	f241 239c 	movw	r3, #4764	; 0x129c
+20000e5c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e60:	429a      	cmp	r2, r3
+20000e62:	d006      	beq.n	20000e72 <default_tx_handler+0x56>
+20000e64:	687a      	ldr	r2, [r7, #4]
+20000e66:	f241 2374 	movw	r3, #4724	; 0x1274
+20000e6a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e6e:	429a      	cmp	r2, r3
+20000e70:	d152      	bne.n	20000f18 <default_tx_handler+0xfc>
         ( ( (uint8_t *)0 ) != this_uart->tx_buffer ) &&
-20000c1e:	687b      	ldr	r3, [r7, #4]
-20000c20:	68db      	ldr	r3, [r3, #12]
+20000e72:	687b      	ldr	r3, [r7, #4]
+20000e74:	68db      	ldr	r3, [r3, #12]
 
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
     ASSERT( ( (uint8_t *)0 ) != this_uart->tx_buffer );
     ASSERT( 0U < this_uart->tx_buff_size );
 
     if( ( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) ) &&
-20000c22:	2b00      	cmp	r3, #0
-20000c24:	d04e      	beq.n	20000cc4 <default_tx_handler+0xfc>
+20000e76:	2b00      	cmp	r3, #0
+20000e78:	d04e      	beq.n	20000f18 <default_tx_handler+0xfc>
         ( ( (uint8_t *)0 ) != this_uart->tx_buffer ) &&
         ( 0U < this_uart->tx_buff_size ) )
-20000c26:	687b      	ldr	r3, [r7, #4]
-20000c28:	691b      	ldr	r3, [r3, #16]
+20000e7a:	687b      	ldr	r3, [r7, #4]
+20000e7c:	691b      	ldr	r3, [r3, #16]
 
     ASSERT( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) );
     ASSERT( ( (uint8_t *)0 ) != this_uart->tx_buffer );
     ASSERT( 0U < this_uart->tx_buff_size );
 
     if( ( (this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1) ) &&
-20000c2a:	2b00      	cmp	r3, #0
-20000c2c:	d04a      	beq.n	20000cc4 <default_tx_handler+0xfc>
+20000e7e:	2b00      	cmp	r3, #0
+20000e80:	d04a      	beq.n	20000f18 <default_tx_handler+0xfc>
         ( ( (uint8_t *)0 ) != this_uart->tx_buffer ) &&
         ( 0U < this_uart->tx_buff_size ) )
     {
         /* Read the Line Status Register and update the sticky record. */
         status = this_uart->hw_reg->LSR;
-20000c2e:	687b      	ldr	r3, [r7, #4]
-20000c30:	681b      	ldr	r3, [r3, #0]
-20000c32:	7d1b      	ldrb	r3, [r3, #20]
-20000c34:	72fb      	strb	r3, [r7, #11]
+20000e82:	687b      	ldr	r3, [r7, #4]
+20000e84:	681b      	ldr	r3, [r3, #0]
+20000e86:	7d1b      	ldrb	r3, [r3, #20]
+20000e88:	72fb      	strb	r3, [r7, #11]
         this_uart->status |= status;
-20000c36:	687b      	ldr	r3, [r7, #4]
-20000c38:	7a9a      	ldrb	r2, [r3, #10]
-20000c3a:	7afb      	ldrb	r3, [r7, #11]
-20000c3c:	ea42 0303 	orr.w	r3, r2, r3
-20000c40:	b2da      	uxtb	r2, r3
-20000c42:	687b      	ldr	r3, [r7, #4]
-20000c44:	729a      	strb	r2, [r3, #10]
+20000e8a:	687b      	ldr	r3, [r7, #4]
+20000e8c:	7a9a      	ldrb	r2, [r3, #10]
+20000e8e:	7afb      	ldrb	r3, [r7, #11]
+20000e90:	ea42 0303 	orr.w	r3, r2, r3
+20000e94:	b2da      	uxtb	r2, r3
+20000e96:	687b      	ldr	r3, [r7, #4]
+20000e98:	729a      	strb	r2, [r3, #10]
 
         /*
          * This function should only be called as a result of a THRE interrupt.
          * Verify that this is true before proceeding to transmit data.
          */
         if ( status & MSS_UART_THRE )
-20000c46:	7afb      	ldrb	r3, [r7, #11]
-20000c48:	f003 0320 	and.w	r3, r3, #32
-20000c4c:	2b00      	cmp	r3, #0
-20000c4e:	d029      	beq.n	20000ca4 <default_tx_handler+0xdc>
+20000e9a:	7afb      	ldrb	r3, [r7, #11]
+20000e9c:	f003 0320 	and.w	r3, r3, #32
+20000ea0:	2b00      	cmp	r3, #0
+20000ea2:	d029      	beq.n	20000ef8 <default_tx_handler+0xdc>
         {
             uint32_t i;
             uint32_t fill_size = TX_FIFO_SIZE;
-20000c50:	f04f 0310 	mov.w	r3, #16
-20000c54:	613b      	str	r3, [r7, #16]
+20000ea4:	f04f 0310 	mov.w	r3, #16
+20000ea8:	613b      	str	r3, [r7, #16]
             uint32_t tx_remain = this_uart->tx_buff_size - this_uart->tx_idx;
-20000c56:	687b      	ldr	r3, [r7, #4]
-20000c58:	691a      	ldr	r2, [r3, #16]
-20000c5a:	687b      	ldr	r3, [r7, #4]
-20000c5c:	695b      	ldr	r3, [r3, #20]
-20000c5e:	ebc3 0302 	rsb	r3, r3, r2
-20000c62:	617b      	str	r3, [r7, #20]
+20000eaa:	687b      	ldr	r3, [r7, #4]
+20000eac:	691a      	ldr	r2, [r3, #16]
+20000eae:	687b      	ldr	r3, [r7, #4]
+20000eb0:	695b      	ldr	r3, [r3, #20]
+20000eb2:	ebc3 0302 	rsb	r3, r3, r2
+20000eb6:	617b      	str	r3, [r7, #20]
 
             /* Calculate the number of bytes to transmit. */
             if ( tx_remain < TX_FIFO_SIZE )
-20000c64:	697b      	ldr	r3, [r7, #20]
-20000c66:	2b0f      	cmp	r3, #15
-20000c68:	d801      	bhi.n	20000c6e <default_tx_handler+0xa6>
+20000eb8:	697b      	ldr	r3, [r7, #20]
+20000eba:	2b0f      	cmp	r3, #15
+20000ebc:	d801      	bhi.n	20000ec2 <default_tx_handler+0xa6>
             {
                 fill_size = tx_remain;
-20000c6a:	697b      	ldr	r3, [r7, #20]
-20000c6c:	613b      	str	r3, [r7, #16]
+20000ebe:	697b      	ldr	r3, [r7, #20]
+20000ec0:	613b      	str	r3, [r7, #16]
             }
 
             /* Fill the TX FIFO with the calculated the number of bytes. */
             for ( i = 0U; i < fill_size; ++i )
-20000c6e:	f04f 0300 	mov.w	r3, #0
-20000c72:	60fb      	str	r3, [r7, #12]
-20000c74:	e012      	b.n	20000c9c <default_tx_handler+0xd4>
+20000ec2:	f04f 0300 	mov.w	r3, #0
+20000ec6:	60fb      	str	r3, [r7, #12]
+20000ec8:	e012      	b.n	20000ef0 <default_tx_handler+0xd4>
             {
                 /* Send next character in the buffer. */
                 this_uart->hw_reg->THR = this_uart->tx_buffer[this_uart->tx_idx];
-20000c76:	687b      	ldr	r3, [r7, #4]
-20000c78:	681b      	ldr	r3, [r3, #0]
-20000c7a:	687a      	ldr	r2, [r7, #4]
-20000c7c:	68d1      	ldr	r1, [r2, #12]
-20000c7e:	687a      	ldr	r2, [r7, #4]
-20000c80:	6952      	ldr	r2, [r2, #20]
-20000c82:	440a      	add	r2, r1
-20000c84:	7812      	ldrb	r2, [r2, #0]
-20000c86:	701a      	strb	r2, [r3, #0]
+20000eca:	687b      	ldr	r3, [r7, #4]
+20000ecc:	681b      	ldr	r3, [r3, #0]
+20000ece:	687a      	ldr	r2, [r7, #4]
+20000ed0:	68d1      	ldr	r1, [r2, #12]
+20000ed2:	687a      	ldr	r2, [r7, #4]
+20000ed4:	6952      	ldr	r2, [r2, #20]
+20000ed6:	440a      	add	r2, r1
+20000ed8:	7812      	ldrb	r2, [r2, #0]
+20000eda:	701a      	strb	r2, [r3, #0]
                 ++this_uart->tx_idx;
-20000c88:	687b      	ldr	r3, [r7, #4]
-20000c8a:	695b      	ldr	r3, [r3, #20]
-20000c8c:	f103 0201 	add.w	r2, r3, #1
-20000c90:	687b      	ldr	r3, [r7, #4]
-20000c92:	615a      	str	r2, [r3, #20]
+20000edc:	687b      	ldr	r3, [r7, #4]
+20000ede:	695b      	ldr	r3, [r3, #20]
+20000ee0:	f103 0201 	add.w	r2, r3, #1
+20000ee4:	687b      	ldr	r3, [r7, #4]
+20000ee6:	615a      	str	r2, [r3, #20]
             {
                 fill_size = tx_remain;
             }
 
             /* Fill the TX FIFO with the calculated the number of bytes. */
             for ( i = 0U; i < fill_size; ++i )
-20000c94:	68fb      	ldr	r3, [r7, #12]
-20000c96:	f103 0301 	add.w	r3, r3, #1
-20000c9a:	60fb      	str	r3, [r7, #12]
-20000c9c:	68fa      	ldr	r2, [r7, #12]
-20000c9e:	693b      	ldr	r3, [r7, #16]
-20000ca0:	429a      	cmp	r2, r3
-20000ca2:	d3e8      	bcc.n	20000c76 <default_tx_handler+0xae>
+20000ee8:	68fb      	ldr	r3, [r7, #12]
+20000eea:	f103 0301 	add.w	r3, r3, #1
+20000eee:	60fb      	str	r3, [r7, #12]
+20000ef0:	68fa      	ldr	r2, [r7, #12]
+20000ef2:	693b      	ldr	r3, [r7, #16]
+20000ef4:	429a      	cmp	r2, r3
+20000ef6:	d3e8      	bcc.n	20000eca <default_tx_handler+0xae>
                 ++this_uart->tx_idx;
             }
         }
 
         /* Flag Tx as complete if all data has been pushed into the Tx FIFO. */
         if ( this_uart->tx_idx == this_uart->tx_buff_size )
-20000ca4:	687b      	ldr	r3, [r7, #4]
-20000ca6:	695a      	ldr	r2, [r3, #20]
-20000ca8:	687b      	ldr	r3, [r7, #4]
-20000caa:	691b      	ldr	r3, [r3, #16]
-20000cac:	429a      	cmp	r2, r3
-20000cae:	d109      	bne.n	20000cc4 <default_tx_handler+0xfc>
+20000ef8:	687b      	ldr	r3, [r7, #4]
+20000efa:	695a      	ldr	r2, [r3, #20]
+20000efc:	687b      	ldr	r3, [r7, #4]
+20000efe:	691b      	ldr	r3, [r3, #16]
+20000f00:	429a      	cmp	r2, r3
+20000f02:	d109      	bne.n	20000f18 <default_tx_handler+0xfc>
         {
             this_uart->tx_buff_size = TX_COMPLETE;
-20000cb0:	687b      	ldr	r3, [r7, #4]
-20000cb2:	f04f 0200 	mov.w	r2, #0
-20000cb6:	611a      	str	r2, [r3, #16]
+20000f04:	687b      	ldr	r3, [r7, #4]
+20000f06:	f04f 0200 	mov.w	r2, #0
+20000f0a:	611a      	str	r2, [r3, #16]
             /* disables TX interrupt */
             this_uart->hw_reg_bit->IER_ETBEI = 0U;
-20000cb8:	687b      	ldr	r3, [r7, #4]
-20000cba:	685b      	ldr	r3, [r3, #4]
-20000cbc:	f04f 0200 	mov.w	r2, #0
-20000cc0:	f8c3 2084 	str.w	r2, [r3, #132]	; 0x84
+20000f0c:	687b      	ldr	r3, [r7, #4]
+20000f0e:	685b      	ldr	r3, [r3, #4]
+20000f10:	f04f 0200 	mov.w	r2, #0
+20000f14:	f8c3 2084 	str.w	r2, [r3, #132]	; 0x84
         }
     }
 }
-20000cc4:	f107 071c 	add.w	r7, r7, #28
-20000cc8:	46bd      	mov	sp, r7
-20000cca:	bc80      	pop	{r7}
-20000ccc:	4770      	bx	lr
-20000cce:	bf00      	nop
+20000f18:	f107 071c 	add.w	r7, r7, #28
+20000f1c:	46bd      	mov	sp, r7
+20000f1e:	bc80      	pop	{r7}
+20000f20:	4770      	bx	lr
+20000f22:	bf00      	nop
 
-20000cd0 <UART0_IRQHandler>:
+20000f24 <UART0_IRQHandler>:
 #if defined(__GNUC__)
 __attribute__((__interrupt__)) void UART0_IRQHandler( void )
 #else
 void UART0_IRQHandler( void )
 #endif
 {
-20000cd0:	4668      	mov	r0, sp
-20000cd2:	f020 0107 	bic.w	r1, r0, #7
-20000cd6:	468d      	mov	sp, r1
-20000cd8:	b589      	push	{r0, r3, r7, lr}
-20000cda:	af00      	add	r7, sp, #0
+20000f24:	4668      	mov	r0, sp
+20000f26:	f020 0107 	bic.w	r1, r0, #7
+20000f2a:	468d      	mov	sp, r1
+20000f2c:	b589      	push	{r0, r3, r7, lr}
+20000f2e:	af00      	add	r7, sp, #0
     MSS_UART_isr( &g_mss_uart0 );
-20000cdc:	f241 0048 	movw	r0, #4168	; 0x1048
-20000ce0:	f2c2 0000 	movt	r0, #8192	; 0x2000
-20000ce4:	f7ff fee2 	bl	20000aac <MSS_UART_isr>
+20000f30:	f241 209c 	movw	r0, #4764	; 0x129c
+20000f34:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000f38:	f7ff fee2 	bl	20000d00 <MSS_UART_isr>
     NVIC_ClearPendingIRQ( UART0_IRQn );
-20000ce8:	f04f 000a 	mov.w	r0, #10
-20000cec:	f7ff fd4c 	bl	20000788 <NVIC_ClearPendingIRQ>
+20000f3c:	f04f 000a 	mov.w	r0, #10
+20000f40:	f7ff fd4c 	bl	200009dc <NVIC_ClearPendingIRQ>
 }
-20000cf0:	46bd      	mov	sp, r7
-20000cf2:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
-20000cf6:	4685      	mov	sp, r0
-20000cf8:	4770      	bx	lr
-20000cfa:	bf00      	nop
+20000f44:	46bd      	mov	sp, r7
+20000f46:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
+20000f4a:	4685      	mov	sp, r0
+20000f4c:	4770      	bx	lr
+20000f4e:	bf00      	nop
 
-20000cfc <UART1_IRQHandler>:
+20000f50 <UART1_IRQHandler>:
 #if defined(__GNUC__)
 __attribute__((__interrupt__)) void UART1_IRQHandler( void )
 #else
 void UART1_IRQHandler( void )
 #endif
 {
-20000cfc:	4668      	mov	r0, sp
-20000cfe:	f020 0107 	bic.w	r1, r0, #7
-20000d02:	468d      	mov	sp, r1
-20000d04:	b589      	push	{r0, r3, r7, lr}
-20000d06:	af00      	add	r7, sp, #0
+20000f50:	4668      	mov	r0, sp
+20000f52:	f020 0107 	bic.w	r1, r0, #7
+20000f56:	468d      	mov	sp, r1
+20000f58:	b589      	push	{r0, r3, r7, lr}
+20000f5a:	af00      	add	r7, sp, #0
     MSS_UART_isr( &g_mss_uart1 );
-20000d08:	f241 0020 	movw	r0, #4128	; 0x1020
-20000d0c:	f2c2 0000 	movt	r0, #8192	; 0x2000
-20000d10:	f7ff fecc 	bl	20000aac <MSS_UART_isr>
+20000f5c:	f241 2074 	movw	r0, #4724	; 0x1274
+20000f60:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000f64:	f7ff fecc 	bl	20000d00 <MSS_UART_isr>
     NVIC_ClearPendingIRQ( UART1_IRQn );
-20000d14:	f04f 000b 	mov.w	r0, #11
-20000d18:	f7ff fd36 	bl	20000788 <NVIC_ClearPendingIRQ>
+20000f68:	f04f 000b 	mov.w	r0, #11
+20000f6c:	f7ff fd36 	bl	200009dc <NVIC_ClearPendingIRQ>
 }
-20000d1c:	46bd      	mov	sp, r7
-20000d1e:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
-20000d22:	4685      	mov	sp, r0
-20000d24:	4770      	bx	lr
-20000d26:	bf00      	nop
+20000f70:	46bd      	mov	sp, r7
+20000f72:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
+20000f76:	4685      	mov	sp, r0
+20000f78:	4770      	bx	lr
+20000f7a:	bf00      	nop
 
-20000d28 <SystemInit>:
+20000f7c <SystemInit>:
 
 /***************************************************************************//**
  * See system_a2fxxxm3f.h for details.
  */
 void SystemInit(void)
 {
-20000d28:	b480      	push	{r7}
-20000d2a:	af00      	add	r7, sp, #0
+20000f7c:	b480      	push	{r7}
+20000f7e:	af00      	add	r7, sp, #0
     /*
      * Do not make use of global variables or make any asumptions regarding
      * memory content if modifying this function. The memory content has not been
      * initialised by the time this function is called by the start-up code.
      */
 }
-20000d2c:	46bd      	mov	sp, r7
-20000d2e:	bc80      	pop	{r7}
-20000d30:	4770      	bx	lr
-20000d32:	bf00      	nop
+20000f80:	46bd      	mov	sp, r7
+20000f82:	bc80      	pop	{r7}
+20000f84:	4770      	bx	lr
+20000f86:	bf00      	nop
 
-20000d34 <SystemCoreClockUpdate>:
+20000f88 <SystemCoreClockUpdate>:
 
 /***************************************************************************//**
  *
  */
 void SystemCoreClockUpdate (void)
 {
-20000d34:	b580      	push	{r7, lr}
-20000d36:	b08a      	sub	sp, #40	; 0x28
-20000d38:	af00      	add	r7, sp, #0
+20000f88:	b580      	push	{r7, lr}
+20000f8a:	b08a      	sub	sp, #40	; 0x28
+20000f8c:	af00      	add	r7, sp, #0
     uint32_t PclkDiv0;
     uint32_t PclkDiv1;
     uint32_t AceDiv;
     uint32_t FabDiv;
 
     const uint32_t pclk_div_lut[4] = { 1uL, 2uL, 4uL, 1uL };
-20000d3a:	f640 73bc 	movw	r3, #4028	; 0xfbc
-20000d3e:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000d42:	46bc      	mov	ip, r7
-20000d44:	cb0f      	ldmia	r3!, {r0, r1, r2, r3}
-20000d46:	e88c 000f 	stmia.w	ip, {r0, r1, r2, r3}
+20000f8e:	f241 2310 	movw	r3, #4624	; 0x1210
+20000f92:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000f96:	46bc      	mov	ip, r7
+20000f98:	cb0f      	ldmia	r3!, {r0, r1, r2, r3}
+20000f9a:	e88c 000f 	stmia.w	ip, {r0, r1, r2, r3}
 
     /* Read PCLK dividers from system registers. Multiply the value read from
      * system register by two to get actual divider value. */
     PclkDiv0 = pclk_div_lut[((SYSREG->MSS_CLK_CR >> PCLK0_DIV_SHIFT) & PCLK_DIV_MASK)];
-20000d4a:	f242 0300 	movw	r3, #8192	; 0x2000
-20000d4e:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000d52:	6c9b      	ldr	r3, [r3, #72]	; 0x48
-20000d54:	ea4f 0393 	mov.w	r3, r3, lsr #2
-20000d58:	f003 0303 	and.w	r3, r3, #3
-20000d5c:	ea4f 0383 	mov.w	r3, r3, lsl #2
-20000d60:	f107 0228 	add.w	r2, r7, #40	; 0x28
-20000d64:	4413      	add	r3, r2
-20000d66:	f853 3c28 	ldr.w	r3, [r3, #-40]
-20000d6a:	613b      	str	r3, [r7, #16]
+20000f9e:	f242 0300 	movw	r3, #8192	; 0x2000
+20000fa2:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000fa6:	6c9b      	ldr	r3, [r3, #72]	; 0x48
+20000fa8:	ea4f 0393 	mov.w	r3, r3, lsr #2
+20000fac:	f003 0303 	and.w	r3, r3, #3
+20000fb0:	ea4f 0383 	mov.w	r3, r3, lsl #2
+20000fb4:	f107 0228 	add.w	r2, r7, #40	; 0x28
+20000fb8:	4413      	add	r3, r2
+20000fba:	f853 3c28 	ldr.w	r3, [r3, #-40]
+20000fbe:	613b      	str	r3, [r7, #16]
     PclkDiv1 = pclk_div_lut[((SYSREG->MSS_CLK_CR >> PCLK1_DIV_SHIFT) & PCLK_DIV_MASK)];
-20000d6c:	f242 0300 	movw	r3, #8192	; 0x2000
-20000d70:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000d74:	6c9b      	ldr	r3, [r3, #72]	; 0x48
-20000d76:	ea4f 1313 	mov.w	r3, r3, lsr #4
-20000d7a:	f003 0303 	and.w	r3, r3, #3
-20000d7e:	ea4f 0383 	mov.w	r3, r3, lsl #2
-20000d82:	f107 0228 	add.w	r2, r7, #40	; 0x28
-20000d86:	4413      	add	r3, r2
-20000d88:	f853 3c28 	ldr.w	r3, [r3, #-40]
-20000d8c:	617b      	str	r3, [r7, #20]
+20000fc0:	f242 0300 	movw	r3, #8192	; 0x2000
+20000fc4:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000fc8:	6c9b      	ldr	r3, [r3, #72]	; 0x48
+20000fca:	ea4f 1313 	mov.w	r3, r3, lsr #4
+20000fce:	f003 0303 	and.w	r3, r3, #3
+20000fd2:	ea4f 0383 	mov.w	r3, r3, lsl #2
+20000fd6:	f107 0228 	add.w	r2, r7, #40	; 0x28
+20000fda:	4413      	add	r3, r2
+20000fdc:	f853 3c28 	ldr.w	r3, [r3, #-40]
+20000fe0:	617b      	str	r3, [r7, #20]
     AceDiv = pclk_div_lut[((SYSREG->MSS_CLK_CR >> ACE_DIV_SHIFT) & PCLK_DIV_MASK)];
-20000d8e:	f242 0300 	movw	r3, #8192	; 0x2000
-20000d92:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000d96:	6c9b      	ldr	r3, [r3, #72]	; 0x48
-20000d98:	ea4f 1393 	mov.w	r3, r3, lsr #6
-20000d9c:	f003 0303 	and.w	r3, r3, #3
-20000da0:	ea4f 0383 	mov.w	r3, r3, lsl #2
-20000da4:	f107 0228 	add.w	r2, r7, #40	; 0x28
-20000da8:	4413      	add	r3, r2
-20000daa:	f853 3c28 	ldr.w	r3, [r3, #-40]
-20000dae:	61bb      	str	r3, [r7, #24]
+20000fe2:	f242 0300 	movw	r3, #8192	; 0x2000
+20000fe6:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20000fea:	6c9b      	ldr	r3, [r3, #72]	; 0x48
+20000fec:	ea4f 1393 	mov.w	r3, r3, lsr #6
+20000ff0:	f003 0303 	and.w	r3, r3, #3
+20000ff4:	ea4f 0383 	mov.w	r3, r3, lsl #2
+20000ff8:	f107 0228 	add.w	r2, r7, #40	; 0x28
+20000ffc:	4413      	add	r3, r2
+20000ffe:	f853 3c28 	ldr.w	r3, [r3, #-40]
+20001002:	61bb      	str	r3, [r7, #24]
     {
         /* Compute the FPGA fabric frequency divider. */
         uint32_t obdiv;
         uint32_t obdivhalf;
         
         obdiv = (SYSREG->MSS_CCC_DIV_CR >> OBDIV_SHIFT) & OBDIV_MASK;
-20000db0:	f242 0300 	movw	r3, #8192	; 0x2000
-20000db4:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000db8:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
-20000dba:	ea4f 2313 	mov.w	r3, r3, lsr #8
-20000dbe:	f003 031f 	and.w	r3, r3, #31
-20000dc2:	623b      	str	r3, [r7, #32]
+20001004:	f242 0300 	movw	r3, #8192	; 0x2000
+20001008:	f2ce 0304 	movt	r3, #57348	; 0xe004
+2000100c:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
+2000100e:	ea4f 2313 	mov.w	r3, r3, lsr #8
+20001012:	f003 031f 	and.w	r3, r3, #31
+20001016:	623b      	str	r3, [r7, #32]
         obdivhalf = (SYSREG->MSS_CCC_DIV_CR >> OBDIVHALF_SHIFT) & OBDIVHALF_MASK;
-20000dc4:	f242 0300 	movw	r3, #8192	; 0x2000
-20000dc8:	f2ce 0304 	movt	r3, #57348	; 0xe004
-20000dcc:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
-20000dce:	ea4f 3353 	mov.w	r3, r3, lsr #13
-20000dd2:	f003 0301 	and.w	r3, r3, #1
-20000dd6:	627b      	str	r3, [r7, #36]	; 0x24
+20001018:	f242 0300 	movw	r3, #8192	; 0x2000
+2000101c:	f2ce 0304 	movt	r3, #57348	; 0xe004
+20001020:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
+20001022:	ea4f 3353 	mov.w	r3, r3, lsr #13
+20001026:	f003 0301 	and.w	r3, r3, #1
+2000102a:	627b      	str	r3, [r7, #36]	; 0x24
         FabDiv = obdiv + 1uL;
-20000dd8:	6a3b      	ldr	r3, [r7, #32]
-20000dda:	f103 0301 	add.w	r3, r3, #1
-20000dde:	61fb      	str	r3, [r7, #28]
+2000102c:	6a3b      	ldr	r3, [r7, #32]
+2000102e:	f103 0301 	add.w	r3, r3, #1
+20001032:	61fb      	str	r3, [r7, #28]
         if ( obdivhalf != 0uL )
-20000de0:	6a7b      	ldr	r3, [r7, #36]	; 0x24
-20000de2:	2b00      	cmp	r3, #0
-20000de4:	d003      	beq.n	20000dee <SystemCoreClockUpdate+0xba>
+20001034:	6a7b      	ldr	r3, [r7, #36]	; 0x24
+20001036:	2b00      	cmp	r3, #0
+20001038:	d003      	beq.n	20001042 <SystemCoreClockUpdate+0xba>
         {
             FabDiv = FabDiv * 2uL;
-20000de6:	69fb      	ldr	r3, [r7, #28]
-20000de8:	ea4f 0343 	mov.w	r3, r3, lsl #1
-20000dec:	61fb      	str	r3, [r7, #28]
+2000103a:	69fb      	ldr	r3, [r7, #28]
+2000103c:	ea4f 0343 	mov.w	r3, r3, lsl #1
+20001040:	61fb      	str	r3, [r7, #28]
     }
     
     /* Retrieve FCLK from eNVM spare pages if Actel system boot programmed as part of the system. */
     
     /* Read system clock from eNVM spare pages. */
     SystemCoreClock = GetSystemClock();
-20000dee:	f000 f849 	bl	20000e84 <GetSystemClock>
-20000df2:	4602      	mov	r2, r0
-20000df4:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000df8:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000dfc:	601a      	str	r2, [r3, #0]
+20001042:	f000 f849 	bl	200010d8 <GetSystemClock>
+20001046:	4602      	mov	r2, r0
+20001048:	f241 2348 	movw	r3, #4680	; 0x1248
+2000104c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20001050:	601a      	str	r2, [r3, #0]
     g_FrequencyPCLK0 = SystemCoreClock / PclkDiv0;
-20000dfe:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000e02:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e06:	681a      	ldr	r2, [r3, #0]
-20000e08:	693b      	ldr	r3, [r7, #16]
-20000e0a:	fbb2 f2f3 	udiv	r2, r2, r3
-20000e0e:	f640 73f8 	movw	r3, #4088	; 0xff8
-20000e12:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e16:	601a      	str	r2, [r3, #0]
+20001052:	f241 2348 	movw	r3, #4680	; 0x1248
+20001056:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000105a:	681a      	ldr	r2, [r3, #0]
+2000105c:	693b      	ldr	r3, [r7, #16]
+2000105e:	fbb2 f2f3 	udiv	r2, r2, r3
+20001062:	f241 234c 	movw	r3, #4684	; 0x124c
+20001066:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000106a:	601a      	str	r2, [r3, #0]
     g_FrequencyPCLK1 = SystemCoreClock / PclkDiv1;
-20000e18:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000e1c:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e20:	681a      	ldr	r2, [r3, #0]
-20000e22:	697b      	ldr	r3, [r7, #20]
-20000e24:	fbb2 f2f3 	udiv	r2, r2, r3
-20000e28:	f640 73fc 	movw	r3, #4092	; 0xffc
-20000e2c:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e30:	601a      	str	r2, [r3, #0]
+2000106c:	f241 2348 	movw	r3, #4680	; 0x1248
+20001070:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20001074:	681a      	ldr	r2, [r3, #0]
+20001076:	697b      	ldr	r3, [r7, #20]
+20001078:	fbb2 f2f3 	udiv	r2, r2, r3
+2000107c:	f241 2350 	movw	r3, #4688	; 0x1250
+20001080:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20001084:	601a      	str	r2, [r3, #0]
     g_FrequencyACE = SystemCoreClock / AceDiv;
-20000e32:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000e36:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e3a:	681a      	ldr	r2, [r3, #0]
-20000e3c:	69bb      	ldr	r3, [r7, #24]
-20000e3e:	fbb2 f2f3 	udiv	r2, r2, r3
-20000e42:	f241 0300 	movw	r3, #4096	; 0x1000
-20000e46:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e4a:	601a      	str	r2, [r3, #0]
+20001086:	f241 2348 	movw	r3, #4680	; 0x1248
+2000108a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000108e:	681a      	ldr	r2, [r3, #0]
+20001090:	69bb      	ldr	r3, [r7, #24]
+20001092:	fbb2 f2f3 	udiv	r2, r2, r3
+20001096:	f241 2354 	movw	r3, #4692	; 0x1254
+2000109a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000109e:	601a      	str	r2, [r3, #0]
     g_FrequencyFPGA = SystemCoreClock / FabDiv;
-20000e4c:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000e50:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e54:	681a      	ldr	r2, [r3, #0]
-20000e56:	69fb      	ldr	r3, [r7, #28]
-20000e58:	fbb2 f2f3 	udiv	r2, r2, r3
-20000e5c:	f241 0304 	movw	r3, #4100	; 0x1004
-20000e60:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e64:	601a      	str	r2, [r3, #0]
+200010a0:	f241 2348 	movw	r3, #4680	; 0x1248
+200010a4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200010a8:	681a      	ldr	r2, [r3, #0]
+200010aa:	69fb      	ldr	r3, [r7, #28]
+200010ac:	fbb2 f2f3 	udiv	r2, r2, r3
+200010b0:	f241 2358 	movw	r3, #4696	; 0x1258
+200010b4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200010b8:	601a      	str	r2, [r3, #0]
     
     /* Keep SystemFrequency as well as SystemCoreClock for legacy reasons. */
     SystemFrequency = SystemCoreClock;
-20000e66:	f640 73f4 	movw	r3, #4084	; 0xff4
-20000e6a:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e6e:	681a      	ldr	r2, [r3, #0]
-20000e70:	f640 73f0 	movw	r3, #4080	; 0xff0
-20000e74:	f2c2 0300 	movt	r3, #8192	; 0x2000
-20000e78:	601a      	str	r2, [r3, #0]
+200010ba:	f241 2348 	movw	r3, #4680	; 0x1248
+200010be:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200010c2:	681a      	ldr	r2, [r3, #0]
+200010c4:	f241 2344 	movw	r3, #4676	; 0x1244
+200010c8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200010cc:	601a      	str	r2, [r3, #0]
 }
-20000e7a:	f107 0728 	add.w	r7, r7, #40	; 0x28
-20000e7e:	46bd      	mov	sp, r7
-20000e80:	bd80      	pop	{r7, pc}
-20000e82:	bf00      	nop
+200010ce:	f107 0728 	add.w	r7, r7, #40	; 0x28
+200010d2:	46bd      	mov	sp, r7
+200010d4:	bd80      	pop	{r7, pc}
+200010d6:	bf00      	nop
 
-20000e84 <GetSystemClock>:
+200010d8 <GetSystemClock>:
  * retrieved from eNVM spare pages.
  * The FCLK frequency value selected in the MSS Configurator software tool is
  * stored in eNVM spare pages as part of the Actel system boot configuration data.
  */
 uint32_t GetSystemClock( void )
 {
-20000e84:	b480      	push	{r7}
-20000e86:	b08b      	sub	sp, #44	; 0x2c
-20000e88:	af00      	add	r7, sp, #0
+200010d8:	b480      	push	{r7}
+200010da:	b08b      	sub	sp, #44	; 0x2c
+200010dc:	af00      	add	r7, sp, #0
     uint32_t fclk = 0uL;
-20000e8a:	f04f 0300 	mov.w	r3, #0
-20000e8e:	607b      	str	r3, [r7, #4]
+200010de:	f04f 0300 	mov.w	r3, #0
+200010e2:	607b      	str	r3, [r7, #4]
     
     uint32_t * p_sysboot_key = SYSBOOT_KEY_ADDR;
-20000e90:	f640 031c 	movw	r3, #2076	; 0x81c
-20000e94:	f2c6 0308 	movt	r3, #24584	; 0x6008
-20000e98:	60bb      	str	r3, [r7, #8]
+200010e4:	f640 031c 	movw	r3, #2076	; 0x81c
+200010e8:	f2c6 0308 	movt	r3, #24584	; 0x6008
+200010ec:	60bb      	str	r3, [r7, #8]
     uint32_t * p_idcode = IDCODE_LOCATION;
-20000e9a:	f240 2330 	movw	r3, #560	; 0x230
-20000e9e:	f2c6 0308 	movt	r3, #24584	; 0x6008
-20000ea2:	60fb      	str	r3, [r7, #12]
+200010ee:	f240 2330 	movw	r3, #560	; 0x230
+200010f2:	f2c6 0308 	movt	r3, #24584	; 0x6008
+200010f6:	60fb      	str	r3, [r7, #12]
     uint32_t idcode;
 	
     idcode = *p_idcode & ~IDCODE_DEV_REV_MASK;
-20000ea4:	68fb      	ldr	r3, [r7, #12]
-20000ea6:	681b      	ldr	r3, [r3, #0]
-20000ea8:	f023 4370 	bic.w	r3, r3, #4026531840	; 0xf0000000
-20000eac:	613b      	str	r3, [r7, #16]
+200010f8:	68fb      	ldr	r3, [r7, #12]
+200010fa:	681b      	ldr	r3, [r3, #0]
+200010fc:	f023 4370 	bic.w	r3, r3, #4026531840	; 0xf0000000
+20001100:	613b      	str	r3, [r7, #16]
 	
     if ( A2F060IFX_ID == idcode )
-20000eae:	693a      	ldr	r2, [r7, #16]
-20000eb0:	f241 13cf 	movw	r3, #4559	; 0x11cf
-20000eb4:	f2c0 53a1 	movt	r3, #1441	; 0x5a1
-20000eb8:	429a      	cmp	r2, r3
-20000eba:	d108      	bne.n	20000ece <GetSystemClock+0x4a>
+20001102:	693a      	ldr	r2, [r7, #16]
+20001104:	f241 13cf 	movw	r3, #4559	; 0x11cf
+20001108:	f2c0 53a1 	movt	r3, #1441	; 0x5a1
+2000110c:	429a      	cmp	r2, r3
+2000110e:	d108      	bne.n	20001122 <GetSystemClock+0x4a>
     {
         uint32_t *p_fclk = SYSBOOT_A2F060_FCLK_ADDR;
-20000ebc:	f64e 732c 	movw	r3, #61228	; 0xef2c
-20000ec0:	f2c6 0301 	movt	r3, #24577	; 0x6001
-20000ec4:	617b      	str	r3, [r7, #20]
+20001110:	f64e 732c 	movw	r3, #61228	; 0xef2c
+20001114:	f2c6 0301 	movt	r3, #24577	; 0x6001
+20001118:	617b      	str	r3, [r7, #20]
         fclk = *p_fclk;
-20000ec6:	697b      	ldr	r3, [r7, #20]
-20000ec8:	681b      	ldr	r3, [r3, #0]
-20000eca:	607b      	str	r3, [r7, #4]
-20000ecc:	e03d      	b.n	20000f4a <GetSystemClock+0xc6>
+2000111a:	697b      	ldr	r3, [r7, #20]
+2000111c:	681b      	ldr	r3, [r3, #0]
+2000111e:	607b      	str	r3, [r7, #4]
+20001120:	e03d      	b.n	2000119e <GetSystemClock+0xc6>
     }
     else if ( SYSBOOT_KEY_VALUE == *p_sysboot_key )
-20000ece:	68bb      	ldr	r3, [r7, #8]
-20000ed0:	681a      	ldr	r2, [r3, #0]
-20000ed2:	f244 3341 	movw	r3, #17217	; 0x4341
-20000ed6:	f6c4 4354 	movt	r3, #19540	; 0x4c54
-20000eda:	429a      	cmp	r2, r3
-20000edc:	d135      	bne.n	20000f4a <GetSystemClock+0xc6>
+20001122:	68bb      	ldr	r3, [r7, #8]
+20001124:	681a      	ldr	r2, [r3, #0]
+20001126:	f244 3341 	movw	r3, #17217	; 0x4341
+2000112a:	f6c4 4354 	movt	r3, #19540	; 0x4c54
+2000112e:	429a      	cmp	r2, r3
+20001130:	d135      	bne.n	2000119e <GetSystemClock+0xc6>
     {
         /* Actel system boot programmed, check if it has the FCLK value stored. */
         uint32_t *p_sysboot_version = SYSBOOT_VERSION_ADDR;
-20000ede:	f640 0340 	movw	r3, #2112	; 0x840
-20000ee2:	f2c6 0308 	movt	r3, #24584	; 0x6008
-20000ee6:	61bb      	str	r3, [r7, #24]
+20001132:	f640 0340 	movw	r3, #2112	; 0x840
+20001136:	f2c6 0308 	movt	r3, #24584	; 0x6008
+2000113a:	61bb      	str	r3, [r7, #24]
         uint32_t sysboot_version = *p_sysboot_version;
-20000ee8:	69bb      	ldr	r3, [r7, #24]
-20000eea:	681b      	ldr	r3, [r3, #0]
-20000eec:	61fb      	str	r3, [r7, #28]
+2000113c:	69bb      	ldr	r3, [r7, #24]
+2000113e:	681b      	ldr	r3, [r3, #0]
+20001140:	61fb      	str	r3, [r7, #28]
         
         sysboot_version &= SYSBOOT_VERSION_MASK;
-20000eee:	69fb      	ldr	r3, [r7, #28]
-20000ef0:	f023 437f 	bic.w	r3, r3, #4278190080	; 0xff000000
-20000ef4:	61fb      	str	r3, [r7, #28]
+20001142:	69fb      	ldr	r3, [r7, #28]
+20001144:	f023 437f 	bic.w	r3, r3, #4278190080	; 0xff000000
+20001148:	61fb      	str	r3, [r7, #28]
         
         if ( sysboot_version >= MIN_SYSBOOT_VERSION )
-20000ef6:	69fa      	ldr	r2, [r7, #28]
-20000ef8:	f240 3300 	movw	r3, #768	; 0x300
-20000efc:	f2c0 0301 	movt	r3, #1
-20000f00:	429a      	cmp	r2, r3
-20000f02:	d922      	bls.n	20000f4a <GetSystemClock+0xc6>
+2000114a:	69fa      	ldr	r2, [r7, #28]
+2000114c:	f240 3300 	movw	r3, #768	; 0x300
+20001150:	f2c0 0301 	movt	r3, #1
+20001154:	429a      	cmp	r2, r3
+20001156:	d922      	bls.n	2000119e <GetSystemClock+0xc6>
         {
             /* Handle change of eNVM location of FCLK between 1.3.x and 2.x.x versions of the system boot. */
             if ( sysboot_version < SYSBOOT_VERSION_2_X )
-20000f04:	69fa      	ldr	r2, [r7, #28]
-20000f06:	f64f 73ff 	movw	r3, #65535	; 0xffff
-20000f0a:	f2c0 0301 	movt	r3, #1
-20000f0e:	429a      	cmp	r2, r3
-20000f10:	d808      	bhi.n	20000f24 <GetSystemClock+0xa0>
+20001158:	69fa      	ldr	r2, [r7, #28]
+2000115a:	f64f 73ff 	movw	r3, #65535	; 0xffff
+2000115e:	f2c0 0301 	movt	r3, #1
+20001162:	429a      	cmp	r2, r3
+20001164:	d808      	bhi.n	20001178 <GetSystemClock+0xa0>
             {
                 /* Read FCLK value from MSS configurator generated configuration
                  * data stored in eNVM spare pages as part of system boot version 1.3.x
                  * configuration tables. */
                 uint32_t *p_fclk = SYSBOOT_1_3_FCLK_ADDR;
-20000f12:	f241 632c 	movw	r3, #5676	; 0x162c
-20000f16:	f2c6 0308 	movt	r3, #24584	; 0x6008
-20000f1a:	623b      	str	r3, [r7, #32]
+20001166:	f241 632c 	movw	r3, #5676	; 0x162c
+2000116a:	f2c6 0308 	movt	r3, #24584	; 0x6008
+2000116e:	623b      	str	r3, [r7, #32]
                 fclk = *p_fclk;
-20000f1c:	6a3b      	ldr	r3, [r7, #32]
-20000f1e:	681b      	ldr	r3, [r3, #0]
-20000f20:	607b      	str	r3, [r7, #4]
-20000f22:	e012      	b.n	20000f4a <GetSystemClock+0xc6>
+20001170:	6a3b      	ldr	r3, [r7, #32]
+20001172:	681b      	ldr	r3, [r3, #0]
+20001174:	607b      	str	r3, [r7, #4]
+20001176:	e012      	b.n	2000119e <GetSystemClock+0xc6>
             }
             else if ( sysboot_version < MAX_SYSBOOT_VERSION )
-20000f24:	69fa      	ldr	r2, [r7, #28]
-20000f26:	f64f 73ff 	movw	r3, #65535	; 0xffff
-20000f2a:	f2c0 0302 	movt	r3, #2
-20000f2e:	429a      	cmp	r2, r3
-20000f30:	d808      	bhi.n	20000f44 <GetSystemClock+0xc0>
+20001178:	69fa      	ldr	r2, [r7, #28]
+2000117a:	f64f 73ff 	movw	r3, #65535	; 0xffff
+2000117e:	f2c0 0302 	movt	r3, #2
+20001182:	429a      	cmp	r2, r3
+20001184:	d808      	bhi.n	20001198 <GetSystemClock+0xc0>
             {
                 /* Read FCLK value from MSS configurator generated configuration
                  * data stored in eNVM spare pages as part of system boot version 2.x.x
                  * configuration tables. */
                 uint32_t *p_fclk = SYSBOOT_2_x_FCLK_ADDR;
-20000f32:	f641 63ac 	movw	r3, #7852	; 0x1eac
-20000f36:	f2c6 0308 	movt	r3, #24584	; 0x6008
-20000f3a:	627b      	str	r3, [r7, #36]	; 0x24
+20001186:	f641 63ac 	movw	r3, #7852	; 0x1eac
+2000118a:	f2c6 0308 	movt	r3, #24584	; 0x6008
+2000118e:	627b      	str	r3, [r7, #36]	; 0x24
                 fclk = *p_fclk;
-20000f3c:	6a7b      	ldr	r3, [r7, #36]	; 0x24
-20000f3e:	681b      	ldr	r3, [r3, #0]
-20000f40:	607b      	str	r3, [r7, #4]
-20000f42:	e002      	b.n	20000f4a <GetSystemClock+0xc6>
+20001190:	6a7b      	ldr	r3, [r7, #36]	; 0x24
+20001192:	681b      	ldr	r3, [r3, #0]
+20001194:	607b      	str	r3, [r7, #4]
+20001196:	e002      	b.n	2000119e <GetSystemClock+0xc6>
             }
             else
             {
                 fclk = 0uL;
-20000f44:	f04f 0300 	mov.w	r3, #0
-20000f48:	607b      	str	r3, [r7, #4]
+20001198:	f04f 0300 	mov.w	r3, #0
+2000119c:	607b      	str	r3, [r7, #4]
             }
         }
     }
     
     if ( 0uL == fclk )
-20000f4a:	687b      	ldr	r3, [r7, #4]
-20000f4c:	2b00      	cmp	r3, #0
-20000f4e:	d105      	bne.n	20000f5c <GetSystemClock+0xd8>
+2000119e:	687b      	ldr	r3, [r7, #4]
+200011a0:	2b00      	cmp	r3, #0
+200011a2:	d105      	bne.n	200011b0 <GetSystemClock+0xd8>
         /* 
          * Could not retrieve FCLK from system boot configuration data. Fall back
          * to using SMARTFUSION_FCLK_FREQ which must then be defined as part of
          * project settings.
          */
         ASSERT( SMARTFUSION_FCLK_FREQ_DEFINED );
-20000f50:	be00      	bkpt	0x0000
+200011a4:	be00      	bkpt	0x0000
         fclk = SMARTFUSION_FCLK_FREQ;
-20000f52:	f647 0340 	movw	r3, #30784	; 0x7840
-20000f56:	f2c0 137d 	movt	r3, #381	; 0x17d
-20000f5a:	607b      	str	r3, [r7, #4]
+200011a6:	f647 0340 	movw	r3, #30784	; 0x7840
+200011aa:	f2c0 137d 	movt	r3, #381	; 0x17d
+200011ae:	607b      	str	r3, [r7, #4]
     }
     
     return fclk;
-20000f5c:	687b      	ldr	r3, [r7, #4]
+200011b0:	687b      	ldr	r3, [r7, #4]
 }
-20000f5e:	4618      	mov	r0, r3
-20000f60:	f107 072c 	add.w	r7, r7, #44	; 0x2c
-20000f64:	46bd      	mov	sp, r7
-20000f66:	bc80      	pop	{r7}
-20000f68:	4770      	bx	lr
-20000f6a:	bf00      	nop
+200011b2:	4618      	mov	r0, r3
+200011b4:	f107 072c 	add.w	r7, r7, #44	; 0x2c
+200011b8:	46bd      	mov	sp, r7
+200011ba:	bc80      	pop	{r7}
+200011bc:	4770      	bx	lr
+200011be:	bf00      	nop
 
-20000f6c <__libc_init_array>:
-20000f6c:	b570      	push	{r4, r5, r6, lr}
-20000f6e:	f640 76e4 	movw	r6, #4068	; 0xfe4
-20000f72:	f640 75e4 	movw	r5, #4068	; 0xfe4
-20000f76:	f2c2 0600 	movt	r6, #8192	; 0x2000
-20000f7a:	f2c2 0500 	movt	r5, #8192	; 0x2000
-20000f7e:	1b76      	subs	r6, r6, r5
-20000f80:	10b6      	asrs	r6, r6, #2
-20000f82:	d006      	beq.n	20000f92 <__libc_init_array+0x26>
-20000f84:	2400      	movs	r4, #0
-20000f86:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
-20000f8a:	3401      	adds	r4, #1
-20000f8c:	4798      	blx	r3
-20000f8e:	42a6      	cmp	r6, r4
-20000f90:	d8f9      	bhi.n	20000f86 <__libc_init_array+0x1a>
-20000f92:	f640 75e4 	movw	r5, #4068	; 0xfe4
-20000f96:	f640 76e8 	movw	r6, #4072	; 0xfe8
-20000f9a:	f2c2 0500 	movt	r5, #8192	; 0x2000
-20000f9e:	f2c2 0600 	movt	r6, #8192	; 0x2000
-20000fa2:	1b76      	subs	r6, r6, r5
-20000fa4:	f000 f812 	bl	20000fcc <_init>
-20000fa8:	10b6      	asrs	r6, r6, #2
-20000faa:	d006      	beq.n	20000fba <__libc_init_array+0x4e>
-20000fac:	2400      	movs	r4, #0
-20000fae:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
-20000fb2:	3401      	adds	r4, #1
-20000fb4:	4798      	blx	r3
-20000fb6:	42a6      	cmp	r6, r4
-20000fb8:	d8f9      	bhi.n	20000fae <__libc_init_array+0x42>
-20000fba:	bd70      	pop	{r4, r5, r6, pc}
+200011c0 <__libc_init_array>:
+200011c0:	b570      	push	{r4, r5, r6, lr}
+200011c2:	f241 2638 	movw	r6, #4664	; 0x1238
+200011c6:	f241 2538 	movw	r5, #4664	; 0x1238
+200011ca:	f2c2 0600 	movt	r6, #8192	; 0x2000
+200011ce:	f2c2 0500 	movt	r5, #8192	; 0x2000
+200011d2:	1b76      	subs	r6, r6, r5
+200011d4:	10b6      	asrs	r6, r6, #2
+200011d6:	d006      	beq.n	200011e6 <__libc_init_array+0x26>
+200011d8:	2400      	movs	r4, #0
+200011da:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+200011de:	3401      	adds	r4, #1
+200011e0:	4798      	blx	r3
+200011e2:	42a6      	cmp	r6, r4
+200011e4:	d8f9      	bhi.n	200011da <__libc_init_array+0x1a>
+200011e6:	f241 2538 	movw	r5, #4664	; 0x1238
+200011ea:	f241 263c 	movw	r6, #4668	; 0x123c
+200011ee:	f2c2 0500 	movt	r5, #8192	; 0x2000
+200011f2:	f2c2 0600 	movt	r6, #8192	; 0x2000
+200011f6:	1b76      	subs	r6, r6, r5
+200011f8:	f000 f812 	bl	20001220 <_init>
+200011fc:	10b6      	asrs	r6, r6, #2
+200011fe:	d006      	beq.n	2000120e <__libc_init_array+0x4e>
+20001200:	2400      	movs	r4, #0
+20001202:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+20001206:	3401      	adds	r4, #1
+20001208:	4798      	blx	r3
+2000120a:	42a6      	cmp	r6, r4
+2000120c:	d8f9      	bhi.n	20001202 <__libc_init_array+0x42>
+2000120e:	bd70      	pop	{r4, r5, r6, pc}
 
-20000fbc <C.18.2576>:
-20000fbc:	0001 0000 0002 0000 0004 0000 0001 0000     ................
+20001210 <C.18.2576>:
+20001210:	0001 0000 0002 0000 0004 0000 0001 0000     ................
 
-20000fcc <_init>:
-20000fcc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-20000fce:	bf00      	nop
-20000fd0:	bcf8      	pop	{r3, r4, r5, r6, r7}
-20000fd2:	bc08      	pop	{r3}
-20000fd4:	469e      	mov	lr, r3
-20000fd6:	4770      	bx	lr
+20001220 <_init>:
+20001220:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+20001222:	bf00      	nop
+20001224:	bcf8      	pop	{r3, r4, r5, r6, r7}
+20001226:	bc08      	pop	{r3}
+20001228:	469e      	mov	lr, r3
+2000122a:	4770      	bx	lr
 
-20000fd8 <_fini>:
-20000fd8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-20000fda:	bf00      	nop
-20000fdc:	bcf8      	pop	{r3, r4, r5, r6, r7}
-20000fde:	bc08      	pop	{r3}
-20000fe0:	469e      	mov	lr, r3
-20000fe2:	4770      	bx	lr
+2000122c <_fini>:
+2000122c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+2000122e:	bf00      	nop
+20001230:	bcf8      	pop	{r3, r4, r5, r6, r7}
+20001232:	bc08      	pop	{r3}
+20001234:	469e      	mov	lr, r3
+20001236:	4770      	bx	lr
 
-20000fe4 <__frame_dummy_init_array_entry>:
-20000fe4:	0485 2000                                   ... 
+20001238 <__frame_dummy_init_array_entry>:
+20001238:	0485 2000                                   ... 
 
-20000fe8 <__do_global_dtors_aux_fini_array_entry>:
-20000fe8:	0471 2000                                   q.. 
+2000123c <__do_global_dtors_aux_fini_array_entry>:
+2000123c:	0471 2000                                   q.. 

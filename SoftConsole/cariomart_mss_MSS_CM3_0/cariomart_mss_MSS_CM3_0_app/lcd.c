@@ -1,5 +1,6 @@
 #include "lcd.h"
 #include "drivers/mss_uart/mss_uart.h"
+#include "drivers/mss_timer/mss_timer.h"
 
 
 void LCD_init(void) {
@@ -100,18 +101,26 @@ void LCD_showRaceIntro() {
 	LCD_defaultTextSettings();
 }
 
-void LCD_startCountdown() {
+void LCD_countdown() {
+	MSS_TIM1_init(MSS_TIMER_ONE_SHOT_MODE);
+	MSS_TIM1_load_immediate(0x7fffffff);
+	MSS_TIM1_start();
+
 	// Draw large 3
 	LCD_clear();
+	LCD_drawCircle(79,63,60);
 	LCD_drawLine(60,30,99,30);	// top
 	LCD_drawLine(60,98,99,98);	// bottom
 	LCD_drawLine(99,30,99,98);	// vert
 	LCD_drawLine(60,63,99,63);	// middle
 
 	// Stall for 1 second
+	uint32_t start_time = MSS_TIM1_get_current_value();
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
 
 	// Draw large 2
 	LCD_clear();
+	LCD_drawCircle(79,63,60);
 	LCD_drawLine(59,30,99,30);	// top
 	LCD_drawLine(59,98,99,98);	// bottom
 	LCD_drawLine(59,63,99,63);	// middle
@@ -119,15 +128,21 @@ void LCD_startCountdown() {
 	LCD_drawLine(59,63,59,98);
 
 	// Stall for 1 second
+	start_time = MSS_TIM1_get_current_value();
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
 
 	// Draw large 1
 	LCD_clear();
+	LCD_drawCircle(79,63,60);
 	LCD_drawLine(59,98,99,98);	// bottom
 	LCD_drawLine(79,98,79,30);	// middle
 	LCD_drawLine(59,38,79,30);	// top
 
 	// Stall for 1 second
+	start_time = MSS_TIM1_get_current_value();
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
 
+	LCD_clear();
 }
 
 void LCD_showP1first() {

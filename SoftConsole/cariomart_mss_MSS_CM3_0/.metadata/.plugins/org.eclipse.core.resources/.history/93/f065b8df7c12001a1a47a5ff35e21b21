@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "lcd.h"
+#include "drivers/mss_uart/mss_uart.h"
+#include "drivers/mss_timer/mss_timer.h"
+
+
+int main() {
+	LCD_init();
+	MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
+	MSS_TIM1_load_immediate(0xefffffff);
+	MSS_TIM1_start();
+
+
+	//LCD_startCountdown();
+
+	while(1) {
+		printf("Timer: %i\r\n", (int)MSS_TIM1_get_current_value());
+	}
+}

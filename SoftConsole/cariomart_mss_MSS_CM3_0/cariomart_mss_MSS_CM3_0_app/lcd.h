@@ -61,7 +61,7 @@ void LCD_defaultTextSettings();
 void LCD_showRaceIntro();
 
 // Starting animation for the race
-void LCD_startCountdown();
+void LCD_countdown();
 
 // Display race positions with player 1 in first
 void LCD_showP1first();
