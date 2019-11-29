@@ -1,0 +1,10 @@
+KEY IDE_DES_TOOL "Ide"
+KEY IDE_DES_ADB_PATH "C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_mss.adb"
+LIST SOURCE_FILES
+VALUE "C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\cariomart_mss.pdc;pdc"
+ENDLIST
+LIST OPTIONAL_FILES
+VALUE "C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\cariomart_mss.pdc;Used"
+ENDLIST
+LIST VCD_FILES
+ENDLIST

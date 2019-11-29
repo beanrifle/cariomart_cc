@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>cariomart_toplevel</design>
+	<target_edif>C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.edn</target_edif>
+</SynplifyOutput>

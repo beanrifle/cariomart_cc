@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "lcd.h"
+
+int main() {
+	LCD_init();
+
+	LCD_drawLine(0, 60, 159, 60);
+	LCD_eraseBlock(10, 10, 90, 90);
+
+
+	while(1) {
+
+	}
+}

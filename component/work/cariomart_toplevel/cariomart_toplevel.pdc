@@ -1,0 +1,81 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.8 SP1 11.8.1.12
+# Family: SmartFusion , Die: A2F200M3F , Package: 484 FBGA
+# Date generated: Thu Nov 28 20:04:16 2019 
+
+
+# 
+# User Groups
+# 
+
+define_group -name UART_1
+
+define_group -name UART_0_PADs
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+# User Group UART_0_PADs
+
+set_io UART_0_RXD            \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION INPUT
+
+
+set_io UART_0_TXD            \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION OUTPUT
+
+
+# User Group UART_1
+
+set_io UART_1_RXD       \
+    -GROUP_NAME UART_1  \
+    -DIRECTION INPUT
+
+
+set_io UART_1_TXD       \
+    -GROUP_NAME UART_1  \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io UART_0_RXD -GROUP_NAME UART_0_PADs -DIRECTION INPUT 
+# set_io UART_0_TXD -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 

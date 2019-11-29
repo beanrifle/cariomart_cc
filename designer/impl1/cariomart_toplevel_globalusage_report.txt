@@ -1,0 +1,14 @@
+********************************************************************
+                            Global Usage Report
+********************************************************************
+  
+Product: Designer
+Release: Libero SoC v11.8 SP1
+Version: 11.8.1.12
+Date: Thu Nov 28 20:29:22 2019
+Design Name: cariomart_toplevel  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
+Design State: Post-Layout
+
+
+
+

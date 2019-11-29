@@ -1,0 +1,47 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Microsemi\\Projects\\cariomart_cc\\synthesis\\synwork\\cariomart_toplevel_comp.srs|-top|cariomart_toplevel|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Microsemi\\Projects\\cariomart_cc\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\proasic\\smartfusion.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\bin64\\c_ver.exe":1480000224
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\proasic\\smartfusion.v":1487963250
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\hypermods.v":1487963386
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\umr_capim.v":1487963386
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1487963386
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1487963386
+#CUR:"C:\\Microsemi\\Projects\\cariomart_cc\\component\\Actel\\SmartFusionMSS\\MSS\\2.5.200\\mss_comps.v":1574928134
+#CUR:"C:\\Microsemi\\Projects\\cariomart_cc\\component\\work\\cariomart_mss\\mss_tshell.v":1574989447
+#CUR:"C:\\Microsemi\\Projects\\cariomart_cc\\component\\work\\cariomart_mss\\MSS_CCC_0\\cariomart_mss_tmp_MSS_CCC_0_MSS_CCC.v":1574989444
+#CUR:"C:\\Microsemi\\Projects\\cariomart_cc\\component\\work\\cariomart_mss\\cariomart_mss.v":1574989447
+#CUR:"C:\\Microsemi\\Projects\\cariomart_cc\\component\\work\\cariomart_toplevel\\cariomart_toplevel.v":1574989457
+0			"C:\Microsemi\Projects\cariomart_cc\component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v" verilog
+1			"C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\mss_tshell.v" verilog
+2			"C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\MSS_CCC_0\cariomart_mss_tmp_MSS_CCC_0_MSS_CCC.v" verilog
+3			"C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\cariomart_mss.v" verilog
+4			"C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_toplevel\cariomart_toplevel.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 0
+3 0 1 2
+4 3
+#Dependency Lists(Users Of)
+0 3 2
+1 3
+2 3
+3 4
+4 -1
+#Design Unit to File Association
+module work cariomart_toplevel 4
+module work cariomart_mss 3
+module work cariomart_mss_tmp_MSS_CCC_0_MSS_CCC 2
+module work MSS_APB 1
+module work MSS_ALL 0
+module work MSS_CCC 0
+module work MSSINT 0
+module work INBUF_LVDS_MCCC 0
+module work INBUF_LVPECL_MCCC 0
+module work INBUF_MCCC 0
+module work BIBUF_OPEND_MSS 0
+module work BIBUF_MSS 0
+module work TRIBUFF_MSS 0
+module work OUTBUF_MSS 0
+module work INBUF_MSS 0
+module work MSS_LPXTLOSC 0
+module work MSS_XTLOSC 0

@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+#include "drivers/mss_uart/mss_uart.h"
+
+int main() {
+	MSS_UART_init(
+			&g_mss_uart1,
+			MSS_UART_115200_BAUD,
+			MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
+	);
+
+	uint8_t message[10] = "Hello World!";
+
+	MSS_UART_polled_tx( &g_mss_uart1, message, sizeof(message) );
+
+	while(1) {
+
+	}
+}

@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell cariomart_toplevel.verilog
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                      cariomart_mss         1       0.0        0.0
+                            
+                         TOTAL              3                  0.0
+----------------------------------------------------------------------
+Report for cell cariomart_mss.netlist
+     Instance path:  cariomart_mss_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                          INBUF_MSS         3       0.0        0.0
+                            MSS_APB         1       0.0        0.0
+                         OUTBUF_MSS         2       0.0        0.0
+                                VCC         1       0.0        0.0
+          cariomart_mss_tmp_MSS_CCC_0_MSS_CCC         1       0.0        0.0
+                            
+                         TOTAL              9                  0.0
+----------------------------------------------------------------------
+Report for cell cariomart_mss_tmp_MSS_CCC_0_MSS_CCC.netlist
+     Instance path:  cariomart_mss_0.MSS_CCC_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                            MSS_CCC         1       0.0        0.0
+                              RCOSC         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL              4                  0.0

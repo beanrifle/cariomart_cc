@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "lcd.h"
+
+int main() {
+	LCD_init();
+
+	LCD_printString("asdlkfjas;dlkf");
+
+	LCD_clear();
+
+	while(1) {
+
+	}
+}

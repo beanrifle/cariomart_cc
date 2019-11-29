@@ -1,0 +1,50 @@
+FlashPro
+Version: 11.8.1.12
+Release: Libero SoC v11.8 SP1
+
+Software Version: 11.8.1.12
+PDB file
+'C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_fp\cariomart_toplevel.pdb'
+has been loaded successfully.
+DESIGN : cariomart_toplevel;  CHECKSUM : 7226;  PDB_VERSION : 1.9
+Driver : 3.0.0 build 1
+programmer '78936' : FlashPro3
+Opened
+'C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_fp\cariomart_toplevel.pro'
+The 'open_project' command succeeded.
+The 'set_programming_file' command succeeded.
+The 'set_device_type' command succeeded.
+The 'set_device_package' command succeeded.
+Info: Adding Flash Memory data from file
+      C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_mss\MSS_ENVM_0\MSS_ENVM_0.efc.
+Info: Adding FPGA Array data from file
+      C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.fdb.
+PDB file
+'C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_fp\cariomart_toplevel.pdb'
+has been loaded successfully.
+DESIGN : cariomart_toplevel;  CHECKSUM : 7226;  PDB_VERSION : 1.9
+The 'update_programming_file' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer '78936' : Scan Chain...
+Warning: programmer '78936' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '78936' : Scan Chain PASSED.
+programmer '78936' : Executing action PROGRAM
+programmer '78936' : EXPORT FSN[48] = 014b3e606c4c
+programmer '78936' : Erase ...
+programmer '78936' : Completed erase
+programmer '78936' : EXPORT CHECKSUM[16] = 7226
+programmer '78936' : Programming FPGA Array
+programmer '78936' : Verifying FPGA Array
+programmer '78936' :         Verifying FPGA Array -- pass
+programmer '78936' : Program System Init and Boot Clients...
+programmer '78936' : Verify System Init and Boot Clients...
+programmer '78936' : Finished: Thu Nov 28 20:30:28 2019 (Elapsed time 00:00:37)
+programmer '78936' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

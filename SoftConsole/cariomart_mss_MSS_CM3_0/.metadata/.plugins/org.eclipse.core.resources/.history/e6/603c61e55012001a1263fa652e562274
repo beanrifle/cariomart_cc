@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "lcd.h"
+
+int main() {
+	LCD_init();
+
+	LCD_printString("Shit ass bitch\nCunt whore slut\nEat my ass bitch ass cunt");
+
+	LCD_clear();
+
+	while(1) {
+
+	}
+}

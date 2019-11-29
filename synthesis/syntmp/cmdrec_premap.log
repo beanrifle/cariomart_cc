@@ -1,0 +1,14 @@
+C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\m_proasic.exe  -mp  4  -prjfile  C:\Microsemi\Projects\cariomart_cc\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Microsemi\Projects\cariomart_cc\synthesis   -part A2F200M3F  -package FBGA484  -grade STD    -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Microsemi\Projects\cariomart_cc\synthesis\synlog\report\cariomart_toplevel_premap.xml  -top_level_module  cariomart_toplevel  -oedif  C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.edn  -conchk_prepass  C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel_cck.rpt   -freq 100.000   C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_prem.srd  -qsap  C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\proasic\smartfusion.v  -ologparam  C:\Microsemi\Projects\cariomart_cc\synthesis\syntmp\cariomart_toplevel.plg  -osyn  C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_prem.srd  -prjdir  C:\Microsemi\Projects\cariomart_cc\synthesis\  -prjname  cariomart_toplevel_syn  -log  C:\Microsemi\Projects\cariomart_cc\synthesis\synlog\cariomart_toplevel_premap.srr 
+rc:0 success:1 runtime:1
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\scratchproject.prs|io:o|time:1574989249|size:2244|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.edn|io:o|time:1574989252|size:98192|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel_cck.rpt|io:o|time:1574990941|size:23506|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_mult.srs|io:i|time:1574990940|size:1817|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_prem.srd|io:o|time:1574990941|size:9558|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.sap|io:o|time:1574990941|size:128|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\proasic\smartfusion.v|io:i|time:1487963250|size:72817|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\syntmp\cariomart_toplevel.plg|io:o|time:1574990940|size:0|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\synwork\cariomart_toplevel_prem.srd|io:o|time:1574990941|size:9558|exec:0
+file:C:\Microsemi\Projects\cariomart_cc\synthesis\synlog\cariomart_toplevel_premap.srr|io:o|time:1574990941|size:3509|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\m_proasic.exe|io:i|time:1479395834|size:10978304|exec:1
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\m_proasic.exe|io:i|time:1479397240|size:14125056|exec:1

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include "lcd.h"
+
+int main() {
+	LCD_init();
+
+	char string[] = "Shitty ass bitch";
+	LCD_printString(string, sizeof(string));
+
+	LCD_clear();
+
+	while(1) {
+
+	}
+}

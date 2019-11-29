@@ -1,0 +1,121 @@
+#include "lcd.h"
+#include "drivers/mss_uart/mss_uart.h"
+
+
+void LCD_init(void) {
+	MSS_UART_init(
+		&g_mss_uart1,
+		MSS_UART_115200_BAUD,
+		MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
+	);
+
+	textProps.horiz_indent = 1;
+	textProps.vert_indent = 1;
+	textProps.padding = 0;
+
+	LCD_setHome();
+}
+
+void LCD_clear(void) {
+	uint8_t bytes[2] = { 0x7c , 0x00 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+	LCD_setHome();
+}
+
+void LCD_printString(char* string) {
+	MSS_UART_polled_tx_string( &g_mss_uart1, (uint8_t*)string);
+	LCD_newLine();
+}
+
+void LCD_newLine() {
+	LCD_setLineNum(++textProps.line_num);
+}
+
+void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius) {
+	uint8_t bytes[6] = { 0x7c , 0x03 , x , 0x7f - y , radius , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , 0x7f - y1 , x2 , 0x7f - y2 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setX(uint8_t x) {
+	uint8_t bytes[3] = { 0x7c , 0x18 , x };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setY(uint8_t y) {
+	uint8_t bytes[3] = { 0x7c , 0x19 , y };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setHome() {
+	LCD_setLineNum(0);
+}
+
+void LCD_setLineNum(int line) {
+	LCD_setX(textProps.horiz_indent);
+	LCD_setY((127 - textProps.vert_indent) - (line * (8 + textProps.padding)));
+	textProps.line_num = line;
+}
+
+void LCD_setProps(int vert_indent, int horiz_indent, int padding) {
+	textProps.horiz_indent = vert_indent;
+	textProps.vert_indent = horiz_indent;
+	textProps.padding = padding;
+	LCD_setHome();
+}
+
+void LCD_defaultSettings() {
+	textProps.horiz_indent = 1;
+	textProps.vert_indent = 1;
+	textProps.padding = 0;
+	LCD_setHome();
+}
+
+void LCD_showRaceIntro() {
+	LCD_drawBox(10,10,150,20);
+	LCD_setProps(12,12,0);
+	LCD_printString("Welcome to CarioMart");
+	LCD_drawBox(5,5,155,25);
+	LCD_setProps(1,30,1);
+	LCD_printString("CarioMart is the greatest");
+	LCD_printString("EECS 373 project at the");
+	LCD_printString("expositon.")
+	LCD_printString("To play, press the button");
+	LCD_printString("on the center console.");
+}
+
+void LCD_startCountdown() {
+
+}
+
+void LCD_showP1first() {
+
+}
+
+void LCD_showP2first() {
+
+}
+
+void LCD_startCounter() {
+
+}
+
+void LCD_incrementCounter() {
+
+}
+
+
