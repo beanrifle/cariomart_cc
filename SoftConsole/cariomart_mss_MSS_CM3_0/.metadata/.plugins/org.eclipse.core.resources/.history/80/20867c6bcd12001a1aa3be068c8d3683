@@ -1,0 +1,7 @@
+#include "delay.h"
+#include "drivers/mss_timer/mss_timer.h"
+
+void delay(int ms) {
+	start_time = MSS_TIM1_get_current_value();
+	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+}

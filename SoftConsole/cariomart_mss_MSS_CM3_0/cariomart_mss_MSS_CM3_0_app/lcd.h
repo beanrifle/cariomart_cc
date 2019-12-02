@@ -10,7 +10,7 @@ typedef struct {
 	int padding;
 } PropsStruct;
 
-float time;
+int time;
 
 PropsStruct textProps;
 
@@ -37,6 +37,7 @@ void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
 void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius);
 
 // Erase a block of pixels given two corners of the box in x and y coordinates
+// Y coordinates are reversed, and 0 is at the bottom of the screen for this command
 void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
 
 // Set printing position of the display. Values between 0 and 154 are allowed
@@ -63,6 +64,9 @@ void LCD_showRaceIntro();
 // Starting animation for the race
 void LCD_countdown();
 
+// Draw the leaderboard onto the lower half of the screen without names
+void LCD_showLeaderboard();
+
 // Display race positions with player 1 in first
 void LCD_showP1first();
 
@@ -70,10 +74,15 @@ void LCD_showP1first();
 void LCD_showP2first();
 
 // Display race time starting from 0
-void LCD_startCounter();
+void LCD_startTimer();
 
 // Increment race time by 1 seconds (to be used in periodic interrupt)
-void LCD_incrementCounter();
+void LCD_incrementTimer();
+
+// Stop the timer from incrementing
+void LCD_stopTimer();
+
+__attribute__ ((interrupt)) void Timer1_IRQHandler();
 
 
 #endif

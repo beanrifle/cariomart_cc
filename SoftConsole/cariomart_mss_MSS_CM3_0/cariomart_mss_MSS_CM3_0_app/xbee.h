@@ -1,0 +1,12 @@
+#ifndef XBEE_H
+#define XBEE_H
+
+int p1lap, p2lap, p1powerup, p2powerup;
+
+// Initialize xbee for interrupt reception and transmit
+void XBEE_init(void);
+
+// Send a string over the xbee
+void XBEE_send(char* data);
+
+#endif

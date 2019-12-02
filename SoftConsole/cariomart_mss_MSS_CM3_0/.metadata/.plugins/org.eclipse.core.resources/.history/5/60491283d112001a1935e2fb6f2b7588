@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include "lcd.h"
+#include "delay.h"
+#include "drivers/mss_uart/mss_uart.h"
+
+
+int main() {
+	LCD_init();
+
+	//LCD_showRaceIntro();
+	//delay(6000);
+	//LCD_countdown();
+	//LCD_startTimer();
+
+	while(1) {
+
+	}
+}

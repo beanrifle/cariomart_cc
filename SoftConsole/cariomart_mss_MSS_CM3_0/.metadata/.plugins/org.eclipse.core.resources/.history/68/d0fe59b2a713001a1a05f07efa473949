@@ -1,0 +1,9 @@
+#ifndef XBEE_H
+#define XBEE_H
+
+// Initialize xbee for interrupt reception and transmit
+void XBEE_init(void);
+
+void XBEE_send(char* data);
+
+#endif

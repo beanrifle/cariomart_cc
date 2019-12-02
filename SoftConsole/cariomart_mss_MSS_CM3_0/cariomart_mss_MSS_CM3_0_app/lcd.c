@@ -1,4 +1,6 @@
+#include <string.h>
 #include "lcd.h"
+#include "utility.h"
 #include "drivers/mss_uart/mss_uart.h"
 #include "drivers/mss_timer/mss_timer.h"
 
@@ -29,22 +31,22 @@ void LCD_newLine() {
 }
 
 void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
-	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
-	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , 0x7f - y1 , x2 , 0x7f - y2 , 0x01 };
+	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius) {
-	uint8_t bytes[6] = { 0x7c , 0x03 , x , 0x7f - y , radius , 0x01 };
+	uint8_t bytes[6] = { 0x7c , 0x03 , x , (0x7f - y) , radius , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
-	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , 0x7f - y1 , x2 , 0x7f - y2 };
+	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , (0x7f - y1) , x2 , (0x7f - y2) };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
@@ -99,13 +101,10 @@ void LCD_showRaceIntro() {
 	LCD_drawBox(9,10,150,22);
 	LCD_drawBox(5,5,155,25);
 	LCD_defaultTextSettings();
+	delay(1000);
 }
 
 void LCD_countdown() {
-	MSS_TIM1_init(MSS_TIMER_ONE_SHOT_MODE);
-	MSS_TIM1_load_immediate(0x7fffffff);
-	MSS_TIM1_start();
-
 	// Draw large 3
 	LCD_clear();
 	LCD_drawCircle(79,63,60);
@@ -115,8 +114,7 @@ void LCD_countdown() {
 	LCD_drawLine(60,63,99,63);	// middle
 
 	// Stall for 1 second
-	uint32_t start_time = MSS_TIM1_get_current_value();
-	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+	delay(1000);
 
 	// Draw large 2
 	LCD_clear();
@@ -128,8 +126,7 @@ void LCD_countdown() {
 	LCD_drawLine(59,63,59,98);
 
 	// Stall for 1 second
-	start_time = MSS_TIM1_get_current_value();
-	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+	delay(1000);
 
 	// Draw large 1
 	LCD_clear();
@@ -139,26 +136,75 @@ void LCD_countdown() {
 	LCD_drawLine(59,38,79,30);	// top
 
 	// Stall for 1 second
-	start_time = MSS_TIM1_get_current_value();
-	while ((start_time - MSS_TIM1_get_current_value()) < 100000000);
+	delay(1000);
+}
 
-	LCD_clear();
+void LCD_showLeaderboard() {
+	LCD_drawBox(15,50,144,120);
+	LCD_setTextProps(47,55,0);
+	LCD_printString("Leaderboard");
+	LCD_setTextProps(19,69,7);
+	LCD_printString("1.");
+	LCD_printString("2.");
+	LCD_drawBox(48,15,108,30);
 }
 
 void LCD_showP1first() {
-
+	LCD_setTextProps(35,69,7);
+	LCD_printString("Player 1");
+	LCD_printString("Player 2");
 }
 
 void LCD_showP2first() {
-
+	LCD_setTextProps(35,69,7);
+	LCD_printString("Player 2");
+	LCD_printString("Player 1");
 }
 
-void LCD_startCounter() {
+void LCD_startTimer() {
+	time = 0;
+	LCD_clear();
+	LCD_drawBox(48,15,108,30);
+	LCD_setTextProps(62,19,0);
+	LCD_printString("0:00:0");
 
+	// Start periodic interrupt
+	MSS_TIM1_init( MSS_TIMER_PERIODIC_MODE );
+	MSS_TIM1_load_background(100000000);
+	MSS_TIM1_enable_irq();
+	MSS_TIM1_start();
 }
 
-void LCD_incrementCounter() {
+void LCD_incrementTimer() {
+	++time;
+	char timeStr[15] = "";
 
+	// Minutes
+	if (time/60 == 0) strcat(timeStr, "0");
+	else strcat(timeStr, itoa(time/60));
+
+	// Seconds
+	strcat(timeStr,":");
+	if (time%60 == 0) strcat(timeStr, "00");
+	else if (time%60 < 10) {
+		strcat(timeStr, "0");
+		strcat(timeStr,itoa(time%60));
+	}
+	else strcat(timeStr,itoa(time%60));
+
+	// Milliseconds
+	strcat(timeStr,":0");
+
+	LCD_setTextProps(62,19,0);
+	LCD_printString(timeStr);
 }
 
+void LCD_stopTimer() {
+	MSS_TIM1_stop();
+	MSS_TIM1_disable_irq();
+}
 
+__attribute__ ((interrupt)) void Timer1_IRQHandler() {
+	LCD_incrementTimer();
+	MSS_TIM1_clear_irq();
+}

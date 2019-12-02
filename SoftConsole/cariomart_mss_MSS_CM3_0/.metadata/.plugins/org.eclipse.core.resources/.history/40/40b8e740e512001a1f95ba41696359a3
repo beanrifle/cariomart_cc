@@ -1,0 +1,10 @@
+#include "utility.h"
+#include "drivers/mss_timer/mss_timer.h"
+#include "stdio.h"
+
+void delay(int ms) {
+	MSS_TIM2_init(MSS_TIMER_ONE_SHOT_MODE);
+	MSS_TIM2_load_immediate(ms * 100000);
+	MSS_TIM2_start();
+	while (MSS_TIM2_get_current_value() > 0);
+}

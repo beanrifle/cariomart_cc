@@ -1,0 +1,5 @@
+#include "xbee.h"
+
+void XBEE_init(void);
+
+void XBEE_send(char* data);
