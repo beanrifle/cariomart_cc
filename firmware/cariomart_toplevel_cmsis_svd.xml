@@ -2,7 +2,7 @@
 <device>
   <name>cariomart_toplevel</name>
   <version>1.0</version>
-  <description>CMSIS description for cariomart_toplevel.  Created by Microsemi SmartDesign on Thu Nov 28 20:04:18 2019</description>
+  <description>CMSIS description for cariomart_toplevel.  Created by Microsemi SmartDesign on Mon Dec 02 19:49:29 2019</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

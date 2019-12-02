@@ -1,0 +1,89 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lcd.h"
+#include "utility.h"
+#include "xbee.h"
+#include "drivers/mss_uart/mss_uart.h"
+
+int race_status;
+
+int main() {
+	//LCD_init();
+	XBEE_init();
+	while (1) {
+		printf("P1 Lap: %i, P2 Lap: %i, P1 Powerup: %i,P2 Powerup: %i\r\n",p1lap,p2lap,p1powerup,p2powerup);
+		delay(500);
+		if (p1powerup) p1powerup = 0;
+		if (p2powerup) p2powerup = 0;
+		if (p1lap > 3) p1lap = 1;
+		if (p2lap > 3) p2lap = 1;
+	}
+	//srand(234);
+
+	/*while(1) {
+		LCD_showRaceIntro();
+
+		while (race_status == 0);
+
+		LCD_countdown();
+
+		// Broadcast the race status
+		XBEE_send("0,1\r\n");
+
+		LCD_startTimer();
+
+		int leaderboard_shown = 0, lap_stats = 1;
+		p1lap = 1, p2lap = 1, p1powerup = 0, p2powerup = 0;
+
+		while (1) {
+			// Show the leaderboard if any player is in second lap
+			if (!leaderboard_shown && (p1lap > 1 || p2lap > 1)) {
+				LCD_showLeaderboard();
+				leaderboard_shown = 1;
+			}
+
+			// Check for a winner
+			if (p1lap >= 4) {
+				LCD_clear();
+				LCD_setTextProps(39, 55, 0);
+				LCD_printString("Player 1 Wins!");
+				break;
+			}
+			else if (p2lap >= 4) {
+				LCD_clear();
+				LCD_setTextProps(39, 55, 0);
+				LCD_printString("Player 2 Wins!");
+				break;
+			}
+
+			// Update the leaderboard when someone crosses the finish line
+			if (leaderboard_shown && lap_stats == p1lap && p2lap > p1lap) {
+				LCD_showP2first();
+				++lap_stats;
+			}
+			else if (leaderboard_shown && lap_stats == p2lap && p1lap > p2lap) {
+				LCD_showP1first();
+				++lap_stats;
+			}
+			else lap_stats = (p1lap > p2lap) ? p1lap : p2lap;
+
+			// Handle powerups
+			if (p1powerup) {
+				if (rand() % 2 == 0) XBEE_send("4,0\r\n");
+				else XBEE_send("5,1\r\n");
+				p1powerup = 0;
+			}
+			if (p2powerup) {
+				if (rand() % 2 == 0) XBEE_send("5,0\r\n");
+				else XBEE_send("4,1\r\n");
+				p2powerup = 0;
+			}
+		}
+
+		// Game over, stop the cars
+		XBEE_send("0,0\r\n");
+		race_status = 0;
+		delay(10000);
+
+	}*/
+}

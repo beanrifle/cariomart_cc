@@ -11,9 +11,9 @@ The Export-map command succeeded ( 00:00:07 )
 CHECKSUM: 7226
 Wrote to the file: C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.fdb
 
-The Export command succeeded ( 00:00:09 )
+The Export command succeeded ( 00:00:08 )
 Design saved to file C:/Microsemi/Projects/cariomart_cc/designer/impl1/cariomart_toplevel.adb.
 
-The Execute Script command succeeded ( 00:00:10 )
+The Execute Script command succeeded ( 00:00:09 )
 Design closed.
 

@@ -13,7 +13,7 @@ Opened an existing Libero design cariomart_toplevel.adb.
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 Wrote timing report to file: cariomart_toplevel_maxdelay_timing_report.txt
 
-The Report command succeeded ( 00:00:02 )
+The Report command succeeded ( 00:00:01 )
 Wrote timing report to file: cariomart_toplevel_mindelay_timing_report.txt
 
 The Report command succeeded ( 00:00:00 )
