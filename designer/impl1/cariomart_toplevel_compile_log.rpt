@@ -17,7 +17,7 @@ Imported the files:
    C:\Microsemi\Projects\cariomart_cc\synthesis\cariomart_toplevel.edn
    C:\Microsemi\Projects\cariomart_cc\component\work\cariomart_toplevel\cariomart_toplevel.pdc
 
-The Import command succeeded ( 00:00:02 )
+The Import command succeeded ( 00:00:03 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -34,7 +34,7 @@ Speed grade : STD
 Temp        : 0:25:85
 Voltage     : 1.58:1.50:1.42
 
-Keep Existing Physical Constraints : No
+Keep Existing Physical Constraints : Yes
 Keep Existing Timing Constraints   : Yes
 
 pdc_abort_on_error                 : Yes
@@ -58,7 +58,6 @@ Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_EMCRWn drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_EMCDBOE drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_CALIBOUT drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_WDINT drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_M2FRESETn drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_DEEPSLEEP drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_SLEEP drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_TXEV drives no load.
@@ -123,9 +122,6 @@ Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_CMP10 drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_CMP11 drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPREADY drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPSLVERR drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPSEL drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPENABLE drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWRITE drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_VCC15GOOD drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_VCC33GOOD drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_EMCBYTEN[0] drives no load.
@@ -330,59 +326,45 @@ Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPRDATA[28] drives no load
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPRDATA[29] drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPRDATA[30] drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_FABPRDATA[31] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[0] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[1] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[2] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[3] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[4] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[5] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[6] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[7] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[8] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[9] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[10] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[11] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[12] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[13] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[14] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[15] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[16] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[17] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[18] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPADDR[19] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[0] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[1] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[2] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[3] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[4] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[5] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[6] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[7] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[8] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[9] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[10] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[11] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[12] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[13] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[14] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[15] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[16] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[17] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[18] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[19] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[20] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[21] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[22] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[23] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[24] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[25] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[26] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[27] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[28] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[29] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[30] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_ADLIB_INST_MSSPWDATA[31] drives no load.
-Warning: CMP201: Net cariomart_mss_0/MSS_CCC_0/I_MSSCCC_GLA drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[12] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[13] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[14] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[15] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[16] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[17] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[18] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPADDR[19] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[1] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[2] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[3] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[4] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[5] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[6] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[7] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[8] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[9] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[10] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[11] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[12] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[13] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[14] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[15] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[16] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[17] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[18] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[19] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[20] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[21] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[22] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[23] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[24] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[25] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[26] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[27] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[28] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[29] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[30] drives no load.
+Warning: CMP201: Net cariomart_mss_0/MSSPWDATA[31] drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_CCC_0/I_MSSCCC_GLB drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_CCC_0/I_MSSCCC_GLC drives no load.
 Warning: CMP201: Net cariomart_mss_0/MSS_CCC_0/I_MSSCCC_LOCK drives no load.
@@ -397,18 +379,11 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        0
+  - Logic combining:        27
 
-    Total macros optimized  0
+    Total macros optimized  27
 
-There were 0 error(s) and 334 warning(s) in this design.
-=====================================================================
-
-Reading user pdc (Physical Design Constraints) file(s) postcompile
-
-
-There were 0 error(s) and 0 warning(s) in reading the user pdc.
-
+There were 0 error(s) and 316 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
@@ -417,12 +392,19 @@ Reading previous post-compile physical placement constraints.
 There were 0 error(s) and 0 warning(s).
 
 =====================================================================
+
+Reading user pdc (Physical Design Constraints) file(s) postcompile
+
+
+There were 0 error(s) and 0 warning(s) in reading the user pdc.
+
+=====================================================================
 Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:      0  Total:   4608   (0.00%)
-    Fabric IO (W/ clocks)      Used:      0  Total:     94   (0.00%)
+    Fabric                     Used:    192  Total:   4608   (4.17%)
+    Fabric IO (W/ clocks)      Used:      5  Total:     94   (5.32%)
     Fabric Differential IO     Used:      0  Total:     47   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     32   (0.00%)
     Dedicated MSS IO           Used:      5  Total:     43   (11.63%)
@@ -450,15 +432,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 0            | 0
-    SEQ     | 0            | 0
+    COMB    | 159          | 159
+    SEQ     | 33           | 33
 
 I/O Function:
 
     Type                                  | w/o register  | w/ register  | w/ DDR register
     --------------------------------------|---------------|--------------|----------------
-    Input I/O                             | 0             | 0            | 0
-    Output I/O                            | 0             | 0            | 0
+    Input I/O                             | 2             | 0            | 0
+    Output I/O                            | 3             | 0            | 0
     Bidirectional I/O                     | 0             | 0            | 0
     Differential Input I/O Pairs          | 0             | 0            | 0
     Differential Output I/O Pairs         | 0             | 0            | 0
@@ -469,9 +451,71 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 2     | 3      | 0
+
+I/O Placement:
+
+    Locked  :   5 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
 
 Net information report:
 =======================
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    34      CLK_NET       Net   : FAB_CLK
+                          Driver: cariomart_mss_0/MSS_CCC_0/I_MSSCCC
+                          Source: ESSENTIAL
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    16      INT_NET       Net   : interupt_generator_mux_0/N_80_0
+                          Driver: interupt_generator_mux_0/last_button_state_RNIJ9OG
+    15      INT_NET       Net   : interupt_generator_mux_0/N_81_0
+                          Driver: interupt_generator_mux_0/last_button_state_RNINTPQ4
+    14      INT_NET       Net   : interupt_generator_mux_0/N_81
+                          Driver: interupt_generator_mux_0/last_button_state_RNINTPQ4_0
+    14      INT_NET       Net   : interupt_generator_mux_0/N_80
+                          Driver: interupt_generator_mux_0/last_button_state_RNIJ9OG_0
+    8       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[0]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_10
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[7]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_33
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[6]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_30
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[15]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_60
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[13]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_54
+    6       INT_NET       Net   : interupt_generator_mux_0/debounce_counter_2[0]
+                          Driver: interupt_generator_mux_0/debounce_counter_4_v_0[0]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    16      INT_NET       Net   : interupt_generator_mux_0/N_80_0
+                          Driver: interupt_generator_mux_0/last_button_state_RNIJ9OG
+    15      INT_NET       Net   : interupt_generator_mux_0/N_81_0
+                          Driver: interupt_generator_mux_0/last_button_state_RNINTPQ4
+    14      INT_NET       Net   : interupt_generator_mux_0/N_81
+                          Driver: interupt_generator_mux_0/last_button_state_RNINTPQ4_0
+    14      INT_NET       Net   : interupt_generator_mux_0/N_80
+                          Driver: interupt_generator_mux_0/last_button_state_RNIJ9OG_0
+    8       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[0]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_10
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[7]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_33
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[6]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_30
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[15]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_60
+    7       INT_NET       Net   : interupt_generator_mux_0/DWACT_FDEC_E[13]
+                          Driver: interupt_generator_mux_0/debounce_counter_0_I_54
+    6       INT_NET       Net   : interupt_generator_mux_0/debounce_counter_2[0]
+                          Driver: interupt_generator_mux_0/debounce_counter_4_v_0[0]
 
 The Compile command succeeded ( 00:00:01 )
 Wrote status report to file: cariomart_toplevel_compile_report.txt
@@ -485,6 +529,6 @@ Wrote pin report to file: cariomart_toplevel_report_pin_bynumber.txt
 The Report command succeeded ( 00:00:01 )
 Design saved to file C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.adb.
 
-The Execute Script command succeeded ( 00:00:07 )
+The Execute Script command succeeded ( 00:00:08 )
 Design closed.
 

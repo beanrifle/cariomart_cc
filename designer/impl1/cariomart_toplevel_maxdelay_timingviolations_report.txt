@@ -2,7 +2,7 @@ Timing Violation Report Max Delay Analysis
 
 SmartTime Version Libero SoC v11.8 SP1
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP1 (Version 11.8.1.12)
-Date: Mon Dec 02 19:50:06 2019
+Date: Tue Dec 03 23:14:07 2019
 
 
 Design: cariomart_toplevel
@@ -20,5 +20,267 @@ Using Enhanced Min Delay Analysis
 Scenario for Timing Analysis: Primary
 
 
-No Path
+Path 1
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  10.357
+  Slack (ns):                  -0.886
+  Arrival (ns):                15.608
+  Required (ns):               14.722
+
+Path 2
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  10.352
+  Slack (ns):                  -0.880
+  Arrival (ns):                15.602
+  Required (ns):               14.722
+
+Path 3
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[18]:D
+  Delay (ns):                  10.263
+  Slack (ns):                  -0.788
+  Arrival (ns):                15.514
+  Required (ns):               14.726
+
+Path 4
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[18]:D
+  Delay (ns):                  10.258
+  Slack (ns):                  -0.782
+  Arrival (ns):                15.508
+  Required (ns):               14.726
+
+Path 5
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[22]:D
+  Delay (ns):                  10.206
+  Slack (ns):                  -0.731
+  Arrival (ns):                15.457
+  Required (ns):               14.726
+
+Path 6
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[22]:D
+  Delay (ns):                  10.201
+  Slack (ns):                  -0.725
+  Arrival (ns):                15.451
+  Required (ns):               14.726
+
+Path 7
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[17]:D
+  Delay (ns):                  10.166
+  Slack (ns):                  -0.695
+  Arrival (ns):                15.417
+  Required (ns):               14.722
+
+Path 8
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[17]:D
+  Delay (ns):                  10.161
+  Slack (ns):                  -0.689
+  Arrival (ns):                15.411
+  Required (ns):               14.722
+
+Path 9
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[27]:D
+  Delay (ns):                  10.080
+  Slack (ns):                  -0.609
+  Arrival (ns):                15.331
+  Required (ns):               14.722
+
+Path 10
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[27]:D
+  Delay (ns):                  10.075
+  Slack (ns):                  -0.603
+  Arrival (ns):                15.325
+  Required (ns):               14.722
+
+Path 11
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[24]:D
+  Delay (ns):                  9.967
+  Slack (ns):                  -0.489
+  Arrival (ns):                15.218
+  Required (ns):               14.729
+
+Path 12
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[15]:D
+  Delay (ns):                  9.961
+  Slack (ns):                  -0.486
+  Arrival (ns):                15.212
+  Required (ns):               14.726
+
+Path 13
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[24]:D
+  Delay (ns):                  9.962
+  Slack (ns):                  -0.483
+  Arrival (ns):                15.212
+  Required (ns):               14.729
+
+Path 14
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[15]:D
+  Delay (ns):                  9.956
+  Slack (ns):                  -0.480
+  Arrival (ns):                15.206
+  Required (ns):               14.726
+
+Path 15
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[16]:D
+  Delay (ns):                  9.857
+  Slack (ns):                  -0.403
+  Arrival (ns):                15.108
+  Required (ns):               14.705
+
+Path 16
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[25]:D
+  Delay (ns):                  9.876
+  Slack (ns):                  -0.401
+  Arrival (ns):                15.127
+  Required (ns):               14.726
+
+Path 17
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[16]:D
+  Delay (ns):                  9.852
+  Slack (ns):                  -0.397
+  Arrival (ns):                15.102
+  Required (ns):               14.705
+
+Path 18
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[25]:D
+  Delay (ns):                  9.871
+  Slack (ns):                  -0.395
+  Arrival (ns):                15.121
+  Required (ns):               14.726
+
+Path 19
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[26]:D
+  Delay (ns):                  9.835
+  Slack (ns):                  -0.357
+  Arrival (ns):                15.086
+  Required (ns):               14.729
+
+Path 20
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[26]:D
+  Delay (ns):                  9.830
+  Slack (ns):                  -0.351
+  Arrival (ns):                15.080
+  Required (ns):               14.729
+
+Path 21
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[23]:D
+  Delay (ns):                  9.760
+  Slack (ns):                  -0.289
+  Arrival (ns):                15.011
+  Required (ns):               14.722
+
+Path 22
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[23]:D
+  Delay (ns):                  9.755
+  Slack (ns):                  -0.283
+  Arrival (ns):                15.005
+  Required (ns):               14.722
+
+Path 23
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[14]:D
+  Delay (ns):                  9.745
+  Slack (ns):                  -0.270
+  Arrival (ns):                14.996
+  Required (ns):               14.726
+
+Path 24
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[14]:D
+  Delay (ns):                  9.740
+  Slack (ns):                  -0.264
+  Arrival (ns):                14.990
+  Required (ns):               14.726
+
+Path 25
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[19]:D
+  Delay (ns):                  9.684
+  Slack (ns):                  -0.207
+  Arrival (ns):                14.935
+  Required (ns):               14.728
+
+Path 26
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[19]:D
+  Delay (ns):                  9.679
+  Slack (ns):                  -0.201
+  Arrival (ns):                14.929
+  Required (ns):               14.728
+
+Path 27
+  From:                        interupt_generator_mux_0/debounce_counter[5]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  9.694
+  Slack (ns):                  -0.181
+  Arrival (ns):                14.903
+  Required (ns):               14.722
+
+Path 28
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[12]:D
+  Delay (ns):                  9.561
+  Slack (ns):                  -0.128
+  Arrival (ns):                14.812
+  Required (ns):               14.684
+
+Path 29
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[12]:D
+  Delay (ns):                  9.559
+  Slack (ns):                  -0.125
+  Arrival (ns):                14.809
+  Required (ns):               14.684
+
+Path 30
+  From:                        interupt_generator_mux_0/last_button_state:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[21]:D
+  Delay (ns):                  9.560
+  Slack (ns):                  -0.085
+  Arrival (ns):                14.811
+  Required (ns):               14.726
+
+Path 31
+  From:                        interupt_generator_mux_0/db:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[21]:D
+  Delay (ns):                  9.555
+  Slack (ns):                  -0.079
+  Arrival (ns):                14.805
+  Required (ns):               14.726
+
+Path 32
+  From:                        interupt_generator_mux_0/debounce_counter[21]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  9.515
+  Slack (ns):                  -0.041
+  Arrival (ns):                14.763
+  Required (ns):               14.722
+
+Path 33
+  From:                        interupt_generator_mux_0/debounce_counter[5]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[2]:D
+  Delay (ns):                  9.539
+  Slack (ns):                  -0.009
+  Arrival (ns):                14.748
+  Required (ns):               14.739
 

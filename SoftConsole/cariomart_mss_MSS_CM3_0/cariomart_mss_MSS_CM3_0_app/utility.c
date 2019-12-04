@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "utility.h"
 #include "drivers/mss_timer/mss_timer.h"
 

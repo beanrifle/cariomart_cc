@@ -1,12 +1,15 @@
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP1 (Version 11.8.1.12)
 
-Date      :  Mon Dec 02 19:49:30 2019
+Date      :  Tue Dec 03 23:13:09 2019
 Project   :  C:\Microsemi\Projects\cariomart_cc
 Component :  cariomart_toplevel
 Family    :  SmartFusion
 
 
 HDL source files for all Synthesis and Simulation tools:
+    C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3.v
+    C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3_iaddr_reg.v
+    C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v
     C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_toplevel/cariomart_toplevel.v
 
 Stimulus files for all Simulation tools:

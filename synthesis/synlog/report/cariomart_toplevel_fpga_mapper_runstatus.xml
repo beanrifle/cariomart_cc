@@ -13,7 +13,7 @@ The file contains the job information from mapper to be displayed as part of the
 </job_status>
 <job_info>
 <info name="Notes">
-<data>7</data>
+<data>11</data>
 <report_link name="more">
 <data>C:\Microsemi\Projects\cariomart_cc\synthesis\synlog\report\cariomart_toplevel_fpga_mapper_notes.txt</data>
 </report_link>
@@ -37,10 +37,10 @@ The file contains the job information from mapper to be displayed as part of the
 <data>0h:00m:00s</data>
 </info>
 <info name="Peak Memory">
-<data>111MB</data>
+<data>112MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1575334179</data>
+<data type="timestamp">1575432808</data>
 </info>
 </job_info>
 </job_run_status>

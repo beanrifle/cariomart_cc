@@ -13,10 +13,10 @@ Opened an existing Libero design cariomart_toplevel.adb.
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 Wrote timing report to file: cariomart_toplevel_maxdelay_timing_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:02 )
 Wrote timing report to file: cariomart_toplevel_mindelay_timing_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote timing_violations report to file: cariomart_toplevel_maxdelay_timingviolations_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -25,6 +25,6 @@ Wrote timing_violations report to file: cariomart_toplevel_mindelay_timingviolat
 The Report command succeeded ( 00:00:00 )
 Design saved to file C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.adb.
 
-The Execute Script command succeeded ( 00:00:03 )
+The Execute Script command succeeded ( 00:00:04 )
 Design closed.
 

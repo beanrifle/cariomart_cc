@@ -5,9 +5,16 @@
 Product: Designer
 Release: Libero SoC v11.8 SP1
 Version: 11.8.1.12
-Date: Mon Dec 02 19:50:01 2019
+Date: Tue Dec 03 23:13:59 2019
 Design Name: cariomart_toplevel  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
 Design State: Post-Layout
+
+The following nets have been routed to a chip global resource:
+
+    Fanout            Name
+    ----------------------
+    34                Net   : FAB_CLK
+                      Driver: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1
 
 
 

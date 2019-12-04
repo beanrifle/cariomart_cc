@@ -3,7 +3,7 @@
 
 # Version: v11.8 SP1 11.8.1.12
 # Family: SmartFusion , Die: A2F200M3F , Package: 484 FBGA
-# Date generated: Mon Dec 02 19:49:27 2019 
+# Date generated: Tue Dec 03 23:13:05 2019 
 
 
 # 
@@ -36,45 +36,24 @@ define_group -name UART_0_PADs
 # Dedicated Peripheral I/O Settings
 # 
 
+# User Group UART_0_PADs
+
+set_io UART_0_RXD            \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION INPUT
+
+
+set_io UART_0_TXD            \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION OUTPUT
+
+
 
 # 
 # Unlocked I/O settings
 # The I/Os in this section are unplaced or placed but are not locked
 # the other listed attributes have been applied
 # 
-
-set_io MSS_RESET_N    \
-    -iostd LVTTL      \
-    -DIRECTION INPUT
-
-
-# User Group UART_0_PADs
-
-set_io UART_0_RXD            \
-    -iostd LVTTL             \
-    -GROUP_NAME UART_0_PADs  \
-    -DIRECTION INPUT
-
-
-set_io UART_0_TXD            \
-    -iostd LVTTL             \
-    -GROUP_NAME UART_0_PADs  \
-    -DIRECTION OUTPUT
-
-
-# User Group UART_1
-
-set_io UART_1_RXD       \
-    -iostd LVTTL        \
-    -GROUP_NAME UART_1  \
-    -DIRECTION INPUT
-
-
-set_io UART_1_TXD       \
-    -iostd LVTTL        \
-    -GROUP_NAME UART_1  \
-    -DIRECTION OUTPUT
-
 
 
 #
@@ -91,3 +70,11 @@ set_io UART_1_TXD       \
 # set_io UART_0_TXD -iostd LVTTL -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 
 # set_io UART_1_RXD -iostd LVTTL -GROUP_NAME UART_1 -DIRECTION INPUT 
 # set_io UART_1_TXD -iostd LVTTL -GROUP_NAME UART_1 -DIRECTION OUTPUT 
+# set_io UART_0_RXD -GROUP_NAME UART_0_PADs -DIRECTION INPUT 
+# set_io UART_0_TXD -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 
+# set_io UART_0_RXD -GROUP_NAME UART_0_PADs -DIRECTION INPUT 
+# set_io UART_0_TXD -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 
+# set_io UART_0_RXD -GROUP_NAME UART_0_PADs -DIRECTION INPUT 
+# set_io UART_0_TXD -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 
+# set_io UART_0_RXD -GROUP_NAME UART_0_PADs -DIRECTION INPUT 
+# set_io UART_0_TXD -GROUP_NAME UART_0_PADs -DIRECTION OUTPUT 

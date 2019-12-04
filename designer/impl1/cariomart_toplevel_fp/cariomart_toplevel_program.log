@@ -6,7 +6,7 @@ Software Version: 11.8.1.12
 PDB file
 'C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_fp\cariomart_toplevel.pdb'
 has been loaded successfully.
-DESIGN : cariomart_toplevel;  CHECKSUM : 7226;  PDB_VERSION : 1.9
+DESIGN : cariomart_toplevel;  CHECKSUM : CC0D;  PDB_VERSION : 1.9
 Driver : 3.0.0 build 1
 programmer '78936' : FlashPro3
 Opened
@@ -22,7 +22,7 @@ Info: Adding FPGA Array data from file
 PDB file
 'C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_fp\cariomart_toplevel.pdb'
 has been loaded successfully.
-DESIGN : cariomart_toplevel;  CHECKSUM : 7226;  PDB_VERSION : 1.9
+DESIGN : cariomart_toplevel;  CHECKSUM : 2B73;  PDB_VERSION : 1.9
 The 'update_programming_file' command succeeded.
 The 'set_programming_action' command succeeded.
 programmer '78936' : Scan Chain...
@@ -33,13 +33,13 @@ programmer '78936' : Executing action PROGRAM
 programmer '78936' : EXPORT FSN[48] = 014b3e606c4c
 programmer '78936' : Erase ...
 programmer '78936' : Completed erase
-programmer '78936' : EXPORT CHECKSUM[16] = 7226
+programmer '78936' : EXPORT CHECKSUM[16] = 2b73
 programmer '78936' : Programming FPGA Array
 programmer '78936' : Verifying FPGA Array
 programmer '78936' :         Verifying FPGA Array -- pass
 programmer '78936' : Program System Init and Boot Clients...
 programmer '78936' : Verify System Init and Boot Clients...
-programmer '78936' : Finished: Mon Dec 02 19:51:08 2019 (Elapsed time 00:00:38)
+programmer '78936' : Finished: Tue Dec 03 23:15:24 2019 (Elapsed time 00:00:36)
 programmer '78936' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

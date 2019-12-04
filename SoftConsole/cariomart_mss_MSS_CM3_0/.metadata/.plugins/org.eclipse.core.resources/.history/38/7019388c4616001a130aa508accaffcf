@@ -1,0 +1,242 @@
+#include <string.h>
+#include "lcd.h"
+#include "utility.h"
+#include "mux.h"
+#include "drivers/mss_uart/mss_uart.h"
+#include "drivers/mss_timer/mss_timer.h"
+#include "hal/hal.h"
+
+
+void LCD_init(void) {
+	MSS_UART_init(
+		&g_mss_uart1,
+		MSS_UART_115200_BAUD,
+		MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
+	);
+	MUX_changeSource(1);
+	LCD_defaultTextSettings();
+}
+
+void LCD_clear(void) {
+	MUX_changeSource(1);
+	uint8_t bytes[2] = { 0x7c , 0x00 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+	LCD_setHome();
+}
+
+void LCD_send(char* string) {
+	MSS_UART_polled_tx_string( &g_mss_uart1, (uint8_t*)string);
+}
+
+void LCD_print(char* string) {
+	MUX_changeSource(1);
+	LCD_send(string);
+}
+
+void LCD_println(char* string) {
+	psr_t interrupt_status = HAL_disable_interrupts();
+	MUX_changeSource(1);
+	LCD_send(string);
+	LCD_newLine();
+	HAL_restore_interrupts(interrupt_status);
+}
+
+void LCD_newLine() {
+	LCD_setLineNum(++textProps.line_num);
+}
+
+void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
+	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
+	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius) {
+	MUX_changeSource(1);
+	uint8_t bytes[6] = { 0x7c , 0x03 , x , (0x7f - y) , radius , 0x01 };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
+	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , (0x7f - y1) , x2 , (0x7f - y2) };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setX(uint8_t x) {
+	MUX_changeSource(1);
+	uint8_t bytes[3] = { 0x7c , 0x18 , x };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setY(uint8_t y) {
+	MUX_changeSource(1);
+	uint8_t bytes[3] = { 0x7c , 0x19 , y };
+	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
+}
+
+void LCD_setHome() {
+	LCD_setLineNum(0);
+}
+
+void LCD_setLineNum(int line) {
+	LCD_setX(textProps.horiz_indent);
+	LCD_setY((127 - textProps.vert_indent) - (line * (8 + textProps.padding)));
+	textProps.line_num = line;
+}
+
+void LCD_setTextProps(int horiz_indent, int vert_indent, int padding) {
+	textProps.vert_indent = vert_indent;
+	textProps.horiz_indent = horiz_indent;
+	textProps.padding = padding;
+	LCD_setHome();
+}
+
+void LCD_defaultTextSettings() {
+	textProps.horiz_indent = 1;
+	textProps.vert_indent = 1;
+	textProps.padding = 0;
+	LCD_setHome();
+}
+
+void LCD_showRaceIntro() {
+	LCD_clear();
+	LCD_setTextProps(20,13,0);
+	LCD_println("Welcome to CarioMart");
+	LCD_setTextProps(1,32,2);
+	LCD_println("CarioMart is the greatest");
+	LCD_println("EECS 373 project at the");
+	LCD_println("expositon.");
+	LCD_println("To play, grab a controller");
+	LCD_println("and use tilt controls to");
+	LCD_println("steer and the button to");
+	LCD_println("accelerate. To begin,");
+	LCD_println("press the button on the");
+	LCD_println("center console.");
+	LCD_drawBox(9,10,150,22);
+	LCD_drawBox(5,5,155,25);
+	LCD_defaultTextSettings();
+	delay(1000);
+}
+
+void LCD_countdown() {
+	// Draw large 3
+	LCD_clear();
+	LCD_drawCircle(79,63,60);
+	LCD_drawLine(60,30,99,30);	// top
+	LCD_drawLine(60,98,99,98);	// bottom
+	LCD_drawLine(99,30,99,98);	// vert
+	LCD_drawLine(60,63,99,63);	// middle
+
+	// Stall for 1 second
+	delay(1000);
+
+	// Draw large 2
+	LCD_clear();
+	LCD_drawCircle(79,63,60);
+	LCD_drawLine(59,30,99,30);	// top
+	LCD_drawLine(59,98,99,98);	// bottom
+	LCD_drawLine(59,63,99,63);	// middle
+	LCD_drawLine(99,30,99,63);
+	LCD_drawLine(59,63,59,98);
+
+	// Stall for 1 second
+	delay(1000);
+
+	// Draw large 1
+	LCD_clear();
+	LCD_drawCircle(79,63,60);
+	LCD_drawLine(59,98,99,98);	// bottom
+	LCD_drawLine(79,98,79,30);	// middle
+	LCD_drawLine(59,38,79,30);	// top
+
+	// Stall for 1 second
+	delay(1000);
+}
+
+void LCD_showLeaderboard() {
+	psr_t interrupt_status = HAL_disable_interrupts();
+	LCD_drawBox(15,50,144,120);
+	LCD_setTextProps(47,55,0);
+	LCD_print("Leaderboard");
+	LCD_setTextProps(19,69,7);
+	LCD_println("1.");
+	LCD_println("2.");
+	LCD_drawBox(48,15,108,30);
+	delay(10);
+	HAL_restore_interrupts(interrupt_status);
+}
+
+void LCD_showP1first() {
+	psr_t interrupt_status = HAL_disable_interrupts();
+	LCD_setTextProps(35,69,7);
+	LCD_println("Player 1");
+	LCD_println("Player 2");
+	delay(10);
+	HAL_restore_interrupts(interrupt_status);
+}
+
+void LCD_showP2first() {
+	psr_t interrupt_status = HAL_disable_interrupts();
+	LCD_setTextProps(35,69,7);
+	LCD_println("Player 2");
+	LCD_println("Player 1");
+	delay(10);
+	HAL_restore_interrupts(interrupt_status);
+}
+
+void LCD_startTimer() {
+	time = 0;
+	LCD_clear();
+	LCD_drawBox(48,15,108,30);
+	LCD_setTextProps(62,19,0);
+	LCD_print("0:00:0");
+
+	// Start periodic interrupt
+	MSS_TIM1_init( MSS_TIMER_PERIODIC_MODE );
+	MSS_TIM1_load_background(100000000);
+	MSS_TIM1_enable_irq();
+	MSS_TIM1_start();
+}
+
+void LCD_incrementTimer() {
+	++time;
+	char timeStr[15] = "";
+
+	// Minutes
+	if (time/60 == 0) strcat(timeStr, "0");
+	else strcat(timeStr, itoa(time/60));
+
+	// Seconds
+	strcat(timeStr,":");
+	if (time%60 == 0) strcat(timeStr, "00");
+	else if (time%60 < 10) {
+		strcat(timeStr, "0");
+		strcat(timeStr,itoa(time%60));
+	}
+	else strcat(timeStr,itoa(time%60));
+
+	// Milliseconds
+	strcat(timeStr,":0");
+
+	LCD_setTextProps(62,19,0);
+	LCD_print(timeStr);
+}
+
+void LCD_stopTimer() {
+	MSS_TIM1_stop();
+	MSS_TIM1_disable_irq();
+}
+
+__attribute__ ((interrupt)) void Timer1_IRQHandler() {
+	LCD_incrementTimer();
+	int i = 1000;
+	while (i > 0) i--;
+	MSS_TIM1_clear_irq();
+}

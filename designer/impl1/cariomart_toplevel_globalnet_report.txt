@@ -5,7 +5,7 @@
 Product: Designer
 Release: Libero SoC v11.8 SP1
 Version: 11.8.1.12
-Date: Mon Dec 02 19:50:01 2019
+Date: Tue Dec 03 23:13:59 2019
 Design Name: cariomart_toplevel  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
 
 
@@ -20,9 +20,13 @@ Global Nets Information:
         |-----------------------------------------------------|
         |Name                |Core      |IO        |RAM       |
         |-----------------------------------------------------|
+        |FAB_CLK             |       33 |        0 |        0 |
+        |-----------------------------------------------------|
 
 Summary of Global Net Placement:
 
         |------------------------------------------------------------------------|
         |Global Net          |Assignment          |Violation                     |
+        |------------------------------------------------------------------------|
+        |FAB_CLK             |MIDDLE_LEFT         |                              |
         |------------------------------------------------------------------------|

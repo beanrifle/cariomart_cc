@@ -7,7 +7,12 @@ add_file -verilog "C:/Microsemi/Projects/cariomart_cc/component/Actel/SmartFusio
 add_file -verilog "C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/mss_tshell.v"
 add_file -verilog "C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/MSS_CCC_0/cariomart_mss_tmp_MSS_CCC_0_MSS_CCC.v"
 add_file -verilog "C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/cariomart_mss.v"
+add_file -verilog "C:/Microsemi/Projects/cariomart_cc/hdl/interrupt_generator_mux.v"
+add_file -verilog -lib COREAPB3_LIB "C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v"
+add_file -verilog -lib COREAPB3_LIB "C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3_iaddr_reg.v"
+add_file -verilog -lib COREAPB3_LIB "C:/Microsemi/Projects/cariomart_cc/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core_obfuscated/coreapb3.v"
 add_file -verilog "C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_toplevel/cariomart_toplevel.v"
+add_file -constraint "C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/mss_tshell_syn.sdc"
 
 
 

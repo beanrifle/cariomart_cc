@@ -2,7 +2,7 @@ Timing Report Min Delay Analysis
 
 SmartTime Version Libero SoC v11.8 SP1
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP1 (Version 11.8.1.12)
-Date: Mon Dec 02 19:50:06 2019
+Date: Tue Dec 03 23:14:06 2019
 
 
 Design: cariomart_toplevel
@@ -53,6 +53,16 @@ External Hold (ns):         N/A
 Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
+Clock Domain:               mss_ccc_gla1
+Period (ns):                10.886
+Frequency (MHz):            91.861
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        7.319
+External Hold (ns):         2.388
+Min Clock-To-Out (ns):      6.981
+Max Clock-To-Out (ns):      13.338
+
 Clock Domain:               mss_ccc_gla0
 Period (ns):                12.500
 Frequency (MHz):            80.000
@@ -74,8 +84,8 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
                             Input to Output
-Min Delay (ns):             N/A
-Max Delay (ns):             N/A
+Min Delay (ns):             2.785
+Max Delay (ns):             6.756
 
 END SUMMARY
 -----------------------------------------------------
@@ -230,6 +240,439 @@ END SET Asynchronous to Register
 
 ----------------------------------------------------
 
+Clock Domain mss_ccc_gla1
+
+SET Register to Register
+
+Path 1
+  From:                        interupt_generator_mux_0/debug_led:CLK
+  To:                          interupt_generator_mux_0/debug_led:D
+  Delay (ns):                  0.733
+  Slack (ns):                  0.733
+  Arrival (ns):                4.582
+  Required (ns):               3.849
+  Hold (ns):                   0.000
+
+Path 2
+  From:                        interupt_generator_mux_0/debounce_counter[27]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[27]:D
+  Delay (ns):                  1.115
+  Slack (ns):                  1.115
+  Arrival (ns):                4.974
+  Required (ns):               3.859
+  Hold (ns):                   0.000
+
+Path 3
+  From:                        interupt_generator_mux_0/debounce_counter[20]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  1.141
+  Slack (ns):                  1.141
+  Arrival (ns):                5.000
+  Required (ns):               3.859
+  Hold (ns):                   0.000
+
+Path 4
+  From:                        interupt_generator_mux_0/debounce_counter[17]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[17]:D
+  Delay (ns):                  1.165
+  Slack (ns):                  1.165
+  Arrival (ns):                5.024
+  Required (ns):               3.859
+  Hold (ns):                   0.000
+
+Path 5
+  From:                        interupt_generator_mux_0/debounce_counter[21]:CLK
+  To:                          interupt_generator_mux_0/debounce_counter[21]:D
+  Delay (ns):                  1.166
+  Slack (ns):                  1.166
+  Arrival (ns):                5.028
+  Required (ns):               3.862
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: interupt_generator_mux_0/debug_led:CLK
+  To: interupt_generator_mux_0/debug_led:D
+  data arrival time                              4.582
+  data required time                         -   3.849
+  slack                                          0.733
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.291          net: FAB_CLK
+  3.849                        interupt_generator_mux_0/debug_led:CLK (r)
+               +     0.249          cell: ADLIB:DFN1
+  4.098                        interupt_generator_mux_0/debug_led:Q (r)
+               +     0.138          net: debug_led_c
+  4.236                        interupt_generator_mux_0/debug_led_RNO:C (r)
+               +     0.198          cell: ADLIB:AX1C
+  4.434                        interupt_generator_mux_0/debug_led_RNO:Y (f)
+               +     0.148          net: interupt_generator_mux_0/debug_led_RNO
+  4.582                        interupt_generator_mux_0/debug_led:D (f)
+                                    
+  4.582                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.291          net: FAB_CLK
+  3.849                        interupt_generator_mux_0/debug_led:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1
+  3.849                        interupt_generator_mux_0/debug_led:D
+                                    
+  3.849                        data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        button
+  To:                          interupt_generator_mux_0/last_button_state:D
+  Delay (ns):                  1.536
+  Slack (ns):
+  Arrival (ns):                1.536
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          2.388
+
+Path 2
+  From:                        button
+  To:                          interupt_generator_mux_0/interrupt:D
+  Delay (ns):                  2.415
+  Slack (ns):
+  Arrival (ns):                2.415
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          1.504
+
+Path 3
+  From:                        button
+  To:                          interupt_generator_mux_0/debounce_counter[20]:D
+  Delay (ns):                  2.629
+  Slack (ns):
+  Arrival (ns):                2.629
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          1.290
+
+Path 4
+  From:                        button
+  To:                          interupt_generator_mux_0/debounce_counter[21]:D
+  Delay (ns):                  2.760
+  Slack (ns):
+  Arrival (ns):                2.760
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          1.162
+
+Path 5
+  From:                        button
+  To:                          interupt_generator_mux_0/db:D
+  Delay (ns):                  2.801
+  Slack (ns):
+  Arrival (ns):                2.801
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          1.122
+
+
+Expanded Path 1
+  From: button
+  To: interupt_generator_mux_0/last_button_state:D
+  data arrival time                              1.536
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        button (f)
+               +     0.000          net: button
+  0.000                        button_pad/U0/U0:PAD (f)
+               +     0.293          cell: ADLIB:IOPAD_IN
+  0.293                        button_pad/U0/U0:Y (f)
+               +     0.000          net: button_pad/U0/NET1
+  0.293                        button_pad/U0/U1:YIN (f)
+               +     0.017          cell: ADLIB:IOIN_IB
+  0.310                        button_pad/U0/U1:Y (f)
+               +     1.226          net: button_c
+  1.536                        interupt_generator_mux_0/last_button_state:D (f)
+                                    
+  1.536                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_ccc_gla1
+               +     0.000          Clock source
+  N/C                          cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  N/C
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  N/C                          cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  N/C                          cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.366          net: FAB_CLK
+  N/C                          interupt_generator_mux_0/last_button_state:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1
+  N/C                          interupt_generator_mux_0/last_button_state:D
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        interupt_generator_mux_0/select:CLK
+  To:                          out0
+  Delay (ns):                  3.129
+  Slack (ns):
+  Arrival (ns):                6.981
+  Required (ns):
+  Clock to Out (ns):           6.981
+
+Path 2
+  From:                        interupt_generator_mux_0/debug_led:CLK
+  To:                          debug_led
+  Delay (ns):                  3.282
+  Slack (ns):
+  Arrival (ns):                7.131
+  Required (ns):
+  Clock to Out (ns):           7.131
+
+Path 3
+  From:                        interupt_generator_mux_0/select:CLK
+  To:                          out1
+  Delay (ns):                  3.321
+  Slack (ns):
+  Arrival (ns):                7.173
+  Required (ns):
+  Clock to Out (ns):           7.173
+
+
+Expanded Path 1
+  From: interupt_generator_mux_0/select:CLK
+  To: out0
+  data arrival time                              6.981
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.294          net: FAB_CLK
+  3.852                        interupt_generator_mux_0/select:CLK (r)
+               +     0.249          cell: ADLIB:DFN1
+  4.101                        interupt_generator_mux_0/select:Q (r)
+               +     1.158          net: interupt_generator_mux_0/select
+  5.259                        interupt_generator_mux_0/select_RNISCTC_0:A (r)
+               +     0.200          cell: ADLIB:OR2
+  5.459                        interupt_generator_mux_0/select_RNISCTC_0:Y (r)
+               +     0.146          net: out0_c
+  5.605                        out0_pad/U0/U1:D (r)
+               +     0.257          cell: ADLIB:IOTRI_OB_EB
+  5.862                        out0_pad/U0/U1:DOUT (r)
+               +     0.000          net: out0_pad/U0/NET1
+  5.862                        out0_pad/U0/U0:D (r)
+               +     1.119          cell: ADLIB:IOPAD_TRI
+  6.981                        out0_pad/U0/U0:PAD (r)
+               +     0.000          net: out0
+  6.981                        out0 (r)
+                                    
+  6.981                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_ccc_gla1
+               +     0.000          Clock source
+  N/C                          cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  N/C
+                                    
+  N/C                          out0 (r)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+SET mss_ccc_gla0 to mss_ccc_gla1
+
+Path 1
+  From:                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          interupt_generator_mux_0/select:D
+  Delay (ns):                  2.651
+  Slack (ns):                  1.341
+  Arrival (ns):                5.208
+  Required (ns):               3.867
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To: interupt_generator_mux_0/select:D
+  data arrival time                              5.208
+  data required time                         -   3.867
+  slack                                          1.341
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla0
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLAMSS (r)
+               +     2.248          Clock generation
+  2.248
+               +     0.309          net: cariomart_mss_0/GLA0
+  2.557                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK (r)
+               +     1.640          cell: ADLIB:MSS_APB_IP
+  4.197                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:M2FRESETn (f)
+               +     0.077          net: cariomart_mss_0/MSS_ADLIB_INST/M2FRESETnINT_NET
+  4.274                        cariomart_mss_0/MSS_ADLIB_INST/U_46:PIN2INT (f)
+               +     0.045          cell: ADLIB:MSS_IF
+  4.319                        cariomart_mss_0/MSS_ADLIB_INST/U_46:PIN2 (f)
+               +     0.508          net: cariomart_mss_0_M2F_RESET_N
+  4.827                        interupt_generator_mux_0/select_RNO:A (f)
+               +     0.224          cell: ADLIB:NOR2B
+  5.051                        interupt_generator_mux_0/select_RNO:Y (f)
+               +     0.157          net: interupt_generator_mux_0/select_RNO
+  5.208                        interupt_generator_mux_0/select:D (f)
+                                    
+  5.208                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.309          net: FAB_CLK
+  3.867                        interupt_generator_mux_0/select:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1
+  3.867                        interupt_generator_mux_0/select:D
+                                    
+  3.867                        data required time
+
+
+END SET mss_ccc_gla0 to mss_ccc_gla1
+
+----------------------------------------------------
+
+SET mss_fabric_interface_clock to mss_ccc_gla1
+
+Path 1
+  From:                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          interupt_generator_mux_0/select:D
+  Delay (ns):                  3.269
+  Slack (ns):                  1.959
+  Arrival (ns):                5.826
+  Required (ns):               3.867
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: cariomart_mss_0/MSS_ADLIB_INST/U_CORE:GLB
+  To: interupt_generator_mux_0/select:D
+  data arrival time                              5.826
+  data required time                         -   3.867
+  slack                                          1.959
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_fabric_interface_clock
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:GLB (r)
+               +     2.557          Clock generation
+  2.557
+               +     1.663          cell: ADLIB:MSS_APB_IP
+  4.220                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:MSSPWDATA[0] (r)
+               +     0.059          net: cariomart_mss_0/MSS_ADLIB_INST/MSSPWDATA[0]INT_NET
+  4.279                        cariomart_mss_0/MSS_ADLIB_INST/U_36:PIN3INT (r)
+               +     0.040          cell: ADLIB:MSS_IF
+  4.319                        cariomart_mss_0/MSS_ADLIB_INST/U_36:PIN3 (r)
+               +     0.169          net: CoreAPB3_0_APBmslave0_PWDATA[0]
+  4.488                        interupt_generator_mux_0/select_RNO_0:B (r)
+               +     0.251          cell: ADLIB:MX2
+  4.739                        interupt_generator_mux_0/select_RNO_0:Y (r)
+               +     0.716          net: interupt_generator_mux_0/select_RNO_0
+  5.455                        interupt_generator_mux_0/select_RNO:B (r)
+               +     0.221          cell: ADLIB:NOR2B
+  5.676                        interupt_generator_mux_0/select_RNO:Y (r)
+               +     0.150          net: interupt_generator_mux_0/select_RNO
+  5.826                        interupt_generator_mux_0/select:D (r)
+                                    
+  5.826                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.309          net: FAB_CLK
+  3.867                        interupt_generator_mux_0/select:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1
+  3.867                        interupt_generator_mux_0/select:D
+                                    
+  3.867                        data required time
+
+
+END SET mss_fabric_interface_clock to mss_ccc_gla1
+
+----------------------------------------------------
+
 Clock Domain mss_ccc_gla0
 
 Info: The maximum frequency of this clock domain is limited by the period of pin cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK
@@ -279,7 +722,7 @@ Expanded Path 1
   N/C                          cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLAMSS (r)
                +     2.248          Clock generation
   N/C
-               +     0.371          net: cariomart_mss_0/MSS_ADLIB_INST_FCLK
+               +     0.371          net: cariomart_mss_0/GLA0
   N/C                          cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK (r)
                +     1.358          Library hold time: ADLIB:MSS_APB_IP
   N/C                          cariomart_mss_0/MSS_ADLIB_INST/U_CORE:MSSRESETn
@@ -318,6 +761,66 @@ SET Asynchronous to Register
 No Path
 
 END SET Asynchronous to Register
+
+----------------------------------------------------
+
+SET mss_ccc_gla1 to mss_ccc_gla0
+
+Path 1
+  From:                        interupt_generator_mux_0/interrupt:CLK
+  To:                          cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FABINT
+  Delay (ns):                  1.420
+  Slack (ns):                  1.419
+  Arrival (ns):                5.279
+  Required (ns):               3.860
+  Hold (ns):                   1.241
+
+
+Expanded Path 1
+  From: interupt_generator_mux_0/interrupt:CLK
+  To: cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FABINT
+  data arrival time                              5.279
+  data required time                         -   3.860
+  slack                                          1.419
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: cariomart_mss_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.301          net: FAB_CLK
+  3.859                        interupt_generator_mux_0/interrupt:CLK (r)
+               +     0.249          cell: ADLIB:DFN1E1
+  4.108                        interupt_generator_mux_0/interrupt:Q (r)
+               +     0.855          net: interupt_generator_mux_0_interrupt
+  4.963                        cariomart_mss_0/MSS_ADLIB_INST/U_60:PIN5 (r)
+               +     0.102          cell: ADLIB:MSS_IF
+  5.065                        cariomart_mss_0/MSS_ADLIB_INST/U_60:PIN5INT (r)
+               +     0.214          net: cariomart_mss_0/MSS_ADLIB_INST/FABINTINT_NET
+  5.279                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FABINT (r)
+                                    
+  5.279                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla0
+               +     0.000          Clock source
+  0.000                        cariomart_mss_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLAMSS (r)
+               +     2.248          Clock generation
+  2.248
+               +     0.371          net: cariomart_mss_0/GLA0
+  2.619                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FCLK (r)
+               +     1.241          Library hold time: ADLIB:MSS_APB_IP
+  3.860                        cariomart_mss_0/MSS_ADLIB_INST/U_CORE:FABINT
+                                    
+  3.860                        data required time
+
+
+END SET mss_ccc_gla1 to mss_ccc_gla0
 
 ----------------------------------------------------
 
@@ -375,7 +878,64 @@ Path set Pin to Pin
 
 SET Input to Output
 
-No Path
+Path 1
+  From:                        source
+  To:                          out1
+  Delay (ns):                  2.785
+  Slack (ns):
+  Arrival (ns):                2.785
+  Required (ns):
+
+Path 2
+  From:                        source
+  To:                          out0
+  Delay (ns):                  2.785
+  Slack (ns):
+  Arrival (ns):                2.785
+  Required (ns):
+
+
+Expanded Path 1
+  From: source
+  To: out1
+  data arrival time                              2.785
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        source (r)
+               +     0.000          net: source
+  0.000                        source_pad/U0/U0:PAD (r)
+               +     0.405          cell: ADLIB:IOPAD_IN
+  0.405                        source_pad/U0/U0:Y (r)
+               +     0.000          net: source_pad/U0/NET1
+  0.405                        source_pad/U0/U1:YIN (r)
+               +     0.018          cell: ADLIB:IOIN_IB
+  0.423                        source_pad/U0/U1:Y (r)
+               +     0.587          net: source_c
+  1.010                        interupt_generator_mux_0/select_RNISCTC:B (r)
+               +     0.253          cell: ADLIB:OR2A
+  1.263                        interupt_generator_mux_0/select_RNISCTC:Y (r)
+               +     0.146          net: out1_c
+  1.409                        out1_pad/U0/U1:D (r)
+               +     0.257          cell: ADLIB:IOTRI_OB_EB
+  1.666                        out1_pad/U0/U1:DOUT (r)
+               +     0.000          net: out1_pad/U0/NET1
+  1.666                        out1_pad/U0/U0:D (r)
+               +     1.119          cell: ADLIB:IOPAD_TRI
+  2.785                        out1_pad/U0/U0:PAD (r)
+               +     0.000          net: out1
+  2.785                        out1 (r)
+                                    
+  2.785                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          source (r)
+                                    
+  N/C                          out1 (r)
+                                    
+  N/C                          data required time
+
 
 END SET Input to Output
 

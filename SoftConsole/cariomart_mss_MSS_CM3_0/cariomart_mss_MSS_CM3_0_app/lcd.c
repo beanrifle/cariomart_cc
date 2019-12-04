@@ -1,29 +1,44 @@
 #include <string.h>
 #include "lcd.h"
 #include "utility.h"
+#include "mux.h"
 #include "drivers/mss_uart/mss_uart.h"
 #include "drivers/mss_timer/mss_timer.h"
+#include "hal/hal.h"
 
 
 void LCD_init(void) {
-	MSS_UART_init(
-		&g_mss_uart1,
-		MSS_UART_115200_BAUD,
-		MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
-	);
-
+	//MSS_UART_init(
+	//	&g_mss_uart1,
+	//	MSS_UART_115200_BAUD,
+	//	MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT
+	//);
+	MUX_changeSource(1);
 	LCD_defaultTextSettings();
 }
 
 void LCD_clear(void) {
+	MUX_changeSource(1);
 	uint8_t bytes[2] = { 0x7c , 0x00 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 	LCD_setHome();
 }
 
-void LCD_printString(char* string) {
+void LCD_send(char* string) {
 	MSS_UART_polled_tx_string( &g_mss_uart1, (uint8_t*)string);
+}
+
+void LCD_print(char* string) {
+	MUX_changeSource(1);
+	LCD_send(string);
+}
+
+void LCD_println(char* string) {
+	psr_t interrupt_status = HAL_disable_interrupts();
+	MUX_changeSource(1);
+	LCD_send(string);
 	LCD_newLine();
+	HAL_restore_interrupts(interrupt_status);
 }
 
 void LCD_newLine() {
@@ -31,31 +46,37 @@ void LCD_newLine() {
 }
 
 void LCD_drawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
 	uint8_t bytes[7] = { 0x7c , 0x0c , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_drawBox(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
 	uint8_t bytes[7] = { 0x7c , 0x0f , x1 , (0x7f - y1) , x2 , (0x7f - y2) , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_drawCircle(uint8_t x, uint8_t y, uint8_t radius) {
+	MUX_changeSource(1);
 	uint8_t bytes[6] = { 0x7c , 0x03 , x , (0x7f - y) , radius , 0x01 };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2) {
+	MUX_changeSource(1);
 	uint8_t bytes[6] = { 0x7c , 0x05 , x1 , (0x7f - y1) , x2 , (0x7f - y2) };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_setX(uint8_t x) {
+	MUX_changeSource(1);
 	uint8_t bytes[3] = { 0x7c , 0x18 , x };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
 
 void LCD_setY(uint8_t y) {
+	MUX_changeSource(1);
 	uint8_t bytes[3] = { 0x7c , 0x19 , y };
 	MSS_UART_polled_tx( &g_mss_uart1, bytes, sizeof(bytes) );
 }
@@ -87,17 +108,17 @@ void LCD_defaultTextSettings() {
 void LCD_showRaceIntro() {
 	LCD_clear();
 	LCD_setTextProps(20,13,0);
-	LCD_printString("Welcome to CarioMart");
+	LCD_println("Welcome to CarioMart");
 	LCD_setTextProps(1,32,2);
-	LCD_printString("CarioMart is the greatest");
-	LCD_printString("EECS 373 project at the");
-	LCD_printString("expositon.");
-	LCD_printString("To play, grab a controller");
-	LCD_printString("and use tilt controls to");
-	LCD_printString("steer and the button to");
-	LCD_printString("accelerate. To begin,");
-	LCD_printString("press the button on the");
-	LCD_printString("center console.");
+	LCD_println("CarioMart is the greatest");
+	LCD_println("EECS 373 project at the");
+	LCD_println("expositon.");
+	LCD_println("To play, grab a controller");
+	LCD_println("and use tilt controls to");
+	LCD_println("steer and the button to");
+	LCD_println("accelerate. To begin,");
+	LCD_println("press the button on the");
+	LCD_println("center console.");
 	LCD_drawBox(9,10,150,22);
 	LCD_drawBox(5,5,155,25);
 	LCD_defaultTextSettings();
@@ -121,6 +142,7 @@ void LCD_countdown() {
 	LCD_drawCircle(79,63,60);
 	LCD_drawLine(59,30,99,30);	// top
 	LCD_drawLine(59,98,99,98);	// bottom
+	delay(1);
 	LCD_drawLine(59,63,99,63);	// middle
 	LCD_drawLine(99,30,99,63);
 	LCD_drawLine(59,63,59,98);
@@ -140,25 +162,37 @@ void LCD_countdown() {
 }
 
 void LCD_showLeaderboard() {
+	psr_t interrupt_status = HAL_disable_interrupts();
 	LCD_drawBox(15,50,144,120);
 	LCD_setTextProps(47,55,0);
-	LCD_printString("Leaderboard");
+	LCD_print("Leaderboard");
 	LCD_setTextProps(19,69,7);
-	LCD_printString("1.");
-	LCD_printString("2.");
+	LCD_print("1.");
+	LCD_newLine();
+	LCD_print("2.");
 	LCD_drawBox(48,15,108,30);
+	delay(2);
+	HAL_restore_interrupts(interrupt_status);
 }
 
 void LCD_showP1first() {
+	psr_t interrupt_status = HAL_disable_interrupts();
 	LCD_setTextProps(35,69,7);
-	LCD_printString("Player 1");
-	LCD_printString("Player 2");
+	LCD_print("Player 1");
+	LCD_newLine();
+	LCD_print("Player 2");
+	delay(2);
+	HAL_restore_interrupts(interrupt_status);
 }
 
 void LCD_showP2first() {
+	psr_t interrupt_status = HAL_disable_interrupts();
 	LCD_setTextProps(35,69,7);
-	LCD_printString("Player 2");
-	LCD_printString("Player 1");
+	LCD_print("Player 2");
+	LCD_newLine();
+	LCD_print("Player 1");
+	delay(2);
+	HAL_restore_interrupts(interrupt_status);
 }
 
 void LCD_startTimer() {
@@ -166,7 +200,7 @@ void LCD_startTimer() {
 	LCD_clear();
 	LCD_drawBox(48,15,108,30);
 	LCD_setTextProps(62,19,0);
-	LCD_printString("0:00:0");
+	LCD_print("0:00:0");
 
 	// Start periodic interrupt
 	MSS_TIM1_init( MSS_TIMER_PERIODIC_MODE );
@@ -196,7 +230,7 @@ void LCD_incrementTimer() {
 	strcat(timeStr,":0");
 
 	LCD_setTextProps(62,19,0);
-	LCD_printString(timeStr);
+	LCD_print(timeStr);
 }
 
 void LCD_stopTimer() {
@@ -206,5 +240,7 @@ void LCD_stopTimer() {
 
 __attribute__ ((interrupt)) void Timer1_IRQHandler() {
 	LCD_incrementTimer();
+	int i = 1000;
+	while (i > 0) i--;
 	MSS_TIM1_clear_irq();
 }

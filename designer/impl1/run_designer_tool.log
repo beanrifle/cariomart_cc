@@ -1,0 +1,22 @@
+Microsemi Libero Software
+Version: 11.8.1.12
+Release: Libero SoC v11.8 SP1
+
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'C:\Microsemi\Projects\cariomart_cc\designer'
+Info: The design cariomart_toplevel.adb was last modified by software version 11.8.1.12.
+Opened an existing Libero design cariomart_toplevel.adb.
+
+The Execute Script command succeeded ( 00:00:28 )
+Design saved to file C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.adb.
+Wrote pin report to file:
+C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file:
+C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:01 )
+
+The Execute Script command succeeded ( 00:00:02 )
+Design closed.
+

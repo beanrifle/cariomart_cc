@@ -20,8 +20,14 @@ void LCD_init(void);
 // Clear the screen
 void LCD_clear(void);
 
-// Print string to LCD (maximum of 26 characters) and goes to a new line
-void LCD_printString(char* string);
+// To be used by other LCD functions
+void LCD_send(char* string);
+
+// Print string to LCD (maximum of 26 characters)
+void LCD_print(char* string);
+
+// Print string to LCD and go to a new line
+void LCD_println(char* string);
 
 // Goes to the next line
 void LCD_newLine();

@@ -7,13 +7,13 @@ Info: The design C:/Microsemi/Projects/cariomart_cc/designer/impl1/cariomart_top
 Opened an existing Libero design
 C:/Microsemi/Projects/cariomart_cc/designer/impl1/cariomart_toplevel.adb.
 
-The Export-map command succeeded ( 00:00:07 )
-CHECKSUM: 7226
+The Export-map command succeeded ( 00:00:09 )
+CHECKSUM: 2B73
 Wrote to the file: C:\Microsemi\Projects\cariomart_cc\designer\impl1\cariomart_toplevel.fdb
 
-The Export command succeeded ( 00:00:08 )
+The Export command succeeded ( 00:00:11 )
 Design saved to file C:/Microsemi/Projects/cariomart_cc/designer/impl1/cariomart_toplevel.adb.
 
-The Execute Script command succeeded ( 00:00:09 )
+The Execute Script command succeeded ( 00:00:12 )
 Design closed.
 

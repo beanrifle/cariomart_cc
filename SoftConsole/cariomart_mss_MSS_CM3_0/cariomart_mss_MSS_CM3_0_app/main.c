@@ -3,24 +3,43 @@
 #include "lcd.h"
 #include "utility.h"
 #include "xbee.h"
+#include "mux.h"
 #include "drivers/mss_uart/mss_uart.h"
 #include "drivers/mss_timer/mss_timer.h"
 
 int race_status;
 
-int main() {
-	LCD_init();
-	XBEE_init();
+__attribute__ ((interrupt)) void Fabric_IRQHandler( void ) {
+	printf("Interrupt triggered\r\n");
+	race_status = 1;
+	NVIC_ClearPendingIRQ( Fabric_IRQn );
+}
 
-	while(1) {
+int main() {
+	//XBEE_init();
+	//LCD_init();
+	NVIC_EnableIRQ(Fabric_IRQn);
+
+	race_status = 0;
+
+	printf("System Initialized\r\n");
+
+	while(1);
+
+	/*while(1) {
 		MSS_TIM2_init(MSS_TIMER_ONE_SHOT_MODE);
 		MSS_TIM2_load_immediate(125823134);
 		MSS_TIM2_start();
 		LCD_showRaceIntro();
 		srand(MSS_TIM1_get_current_value());
 
+		delay(1000);
+
+		NVIC_EnableIRQ(Fabric_IRQn);
 
 		while (race_status == 0);
+
+		NVIC_DisableIRQ(Fabric_IRQn);
 
 		LCD_countdown();
 
@@ -41,15 +60,17 @@ int main() {
 
 			// Check for a winner
 			if (p1lap >= 4) {
+				LCD_stopTimer();
 				LCD_clear();
 				LCD_setTextProps(39, 55, 0);
-				LCD_printString("Player 1 Wins!");
+				LCD_print("Player 1 Wins!");
 				break;
 			}
 			else if (p2lap >= 4) {
+				LCD_stopTimer();
 				LCD_clear();
 				LCD_setTextProps(39, 55, 0);
-				LCD_printString("Player 2 Wins!");
+				LCD_print("Player 2 Wins!");
 				break;
 			}
 
@@ -77,10 +98,9 @@ int main() {
 			}
 		}
 
-		// Game over, stop the cars
+		// Game over, stop the cars and timer
 		XBEE_send("0,0\r\n");
 		race_status = 0;
 		delay(10000);
-
-	}
+	}*/
 }

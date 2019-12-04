@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Mon Dec 02 19:50:02 2019 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Tue Dec 03 23:14:00 2019 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: Libero SoC v11.8 SP1
 Version: 11.8.1.12
@@ -10,7 +10,12 @@ Package: 484 FBGA
 *****************************************************************
 Port        |Pin |Fixed |Function           |I/O Std |Output Drive (mA) |Slew |Resistor Pull |Schmitt Trigger |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
 ------------|----|------|-------------------|--------|------------------|-----|--------------|----------------|-----|-----------------|------------|--------------|
+button       H5   Yes    GFC0/IO66NPB5V0     LVTTL    ---                ---   None           No               ---   ---               No           No
+debug_led    B19  Yes    GBB0/IO18NDB0V0     LVTTL    12                 High  None           ---              No    35                No           No
 MSS_RESET_N  R1   Yes    MSS_RESET_N         LVTTL    ---                ---   None           No               ---   ---               No           Yes
+out0         E3   Yes    GFA2/IO68PDB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+out1         F3   Yes    GFB2/IO68NDB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+source       G4   Yes    GFC1/IO66PPB5V0     LVTTL    ---                ---   None           No               ---   ---               No           No
 UART_0_RXD   U18  Yes    UART_0_RXD/GPIO_21  LVTTL    ---                ---   None           No               ---   ---               No           Yes
 UART_0_TXD   Y22  Yes    UART_0_TXD/GPIO_20  LVTTL    8                  High  None           ---              No    35                No           Yes
 UART_1_RXD   W22  Yes    UART_1_RXD/GPIO_29  LVTTL    ---                ---   None           No               ---   ---               No           Yes

@@ -1,6 +1,6 @@
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP1 (Version 11.8.1.12)
 
-Date      :  Mon Dec 02 19:49:22 2019
+Date      :  Tue Dec 03 23:13:01 2019
 Project   :  C:\Microsemi\Projects\cariomart_cc
 Component :  cariomart_mss
 Family    :  SmartFusion
@@ -13,6 +13,7 @@ HDL source files for all Synthesis and Simulation tools:
 HDL source files for Synopsys SynplifyPro Synthesis tool:
     C:/Microsemi/Projects/cariomart_cc/component/Actel/SmartFusionMSS/MSS/2.5.200/mss_comps.v
     C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/mss_tshell.v
+    C:/Microsemi/Projects/cariomart_cc/component/work/cariomart_mss/mss_tshell_syn.sdc
 
 Stimulus files for all Simulation tools:
     C:/Microsemi/Projects/cariomart_cc/component/Actel/SmartFusionMSS/MSS/2.5.200/CompileDssBfm.tcl

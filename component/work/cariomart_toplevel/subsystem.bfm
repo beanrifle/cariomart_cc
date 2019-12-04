@@ -1,5 +1,5 @@
 #===========================================================
-# Created by Microsemi SmartDesign Mon Dec 02 19:49:28 2019
+# Created by Microsemi SmartDesign Tue Dec 03 23:13:05 2019
 #
 # Syntax: 
 # ------- 
@@ -17,3 +17,4 @@
 # Define name and base address of each resource.
 #-----------------------------------------------------------
 
+memmap interupt_generator_mux_0 0x40050000;
