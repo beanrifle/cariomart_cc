@@ -27,9 +27,13 @@ void XBEE_rx_handler( mss_uart_instance_t * this_uart ) {
 	if (*rx_buff == '\r' || *rx_buff == '\n') rx_size = MSS_UART_get_rx( this_uart, (uint8_t*)rx_buff, sizeof(rx_buff) );
 	if (*rx_buff == '\r' || *rx_buff == '\n') rx_size = MSS_UART_get_rx( this_uart, (uint8_t*)rx_buff, sizeof(rx_buff) );
 
-	int i = 0;
-	while (*rx_buff != '\n' && *rx_buff != '\r' && i < 50) {
-		if (rx_size > 0 ) recieved_data[i++] = *rx_buff;
+	int i = 0, no_rcv = 0;
+	while (*rx_buff != '\n' && *rx_buff != '\r' && i < 50 && no_rcv < 500) {
+		if (rx_size > 0 ) {
+			recieved_data[i++] = *rx_buff;
+			no_rcv = 0;
+		}
+		else no_rcv++;
 		rx_size = MSS_UART_get_rx( this_uart, (uint8_t*)rx_buff, sizeof(rx_buff) );
 	}
 	recieved_data[i] = '\0';

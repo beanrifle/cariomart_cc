@@ -23,7 +23,7 @@ SUBDIRS := \
 # Microsemi SoftConsole IDE Variables
 ################################################################################
 
-BUILDCMD = arm-none-eabi-gcc -mthumb -mcpu=cortex-m3  -L"C:\Microsemi\Projects\cariomart_cc\SoftConsole\cariomart_mss_MSS_CM3_0\cariomart_mss_MSS_CM3_0_hw_platform\Debug" -TC:\Microsemi\Projects\cariomart_cc\SoftConsole\cariomart_mss_MSS_CM3_0\cariomart_mss_MSS_CM3_0_hw_platform\CMSIS\startup_gcc\debug-in-actel-smartfusion-esram.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections 
+BUILDCMD = arm-none-eabi-gcc -mthumb -mcpu=cortex-m3  -L"" -T -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections 
 SHELL := cmd.exe
 EXECUTABLE := cariomart_mss_MSS_CM3_0_app
 
